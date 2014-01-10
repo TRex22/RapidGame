@@ -1,55 +1,112 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>Rapidxna by TRex22</title>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Rapidxna : https://rapidxna.codeplex.com" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Rapidxna</title>
   </head>
 
   <body>
-    <div id="container">
-      <div class="inner">
 
-        <header>
-          <h1>Rapidxna</h1>
-          <h2>https://rapidxna.codeplex.com</h2>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/TRex22/RapidXNA">View on GitHub</a>
+
+          <h1 id="project_title">Rapidxna</h1>
+          <h2 id="project_tagline">https://rapidxna.codeplex.com</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/TRex22/RapidXNA/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/TRex22/RapidXNA/tarball/master">Download this project as a tar.gz file</a>
+            </section>
         </header>
+    </div>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/TRex22/RapidXNA/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/TRex22/RapidXNA/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/TRex22/RapidXNA" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
-
-        <hr>
-
-        <section id="main_content">
-          <h1>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
 <a name="rapidxna" class="anchor" href="#rapidxna"><span class="octicon octicon-link"></span></a>RapidXNA</h1>
 
-<p>original creator: <a href="https://github.com/edg3" class="user-mention">@edg3</a></p>
+<p><a href="https://github.com/edg3" class="user-mention">@edg3</a></p>
 
 <p><a href="https://rapidxna.codeplex.com">https://rapidxna.codeplex.com</a> for original SVN</p>
 
 <h1>
+<a name="about-rapidxna" class="anchor" href="#about-rapidxna"><span class="octicon octicon-link"></span></a>About RapidXNA</h1>
+
+<p>This is my attempt at migrating RapidXNA made by <a href="https://github.com/edg3" class="user-mention">@edg3</a> to GitHub,
+Upgrading it to work with MonoGame, and also getting it to work 
+in its 2.0 Alpha version with XNA.</p>
+
+<h1>
 <a name="todo" class="anchor" href="#todo"><span class="octicon octicon-link"></span></a>TODO</h1>
 
-<pre><code>-move TODOs to Issues
--Clean up readme
--Github Pages
--link to Ernest's random repo
--proper svn link or migration if possible
--Move Codeplex Issues to Github Issues
--Send Links To people involoved to join the GitHub Project
-    https://rapidxna.codeplex.com/team/view
+<ul>
+<li>[ ] move TODOs to Issues</li>
+<li>[ ] Clean up readme</li>
+<li>[ ] Github Pages</li>
+<li>[ ] link to Ernest's random repo</li>
+<li>[ ] proper svn link or migration if possible</li>
+<li>[ ] Move Codeplex Issues to Github Issues</li>
+<li>[ ] Send Links To people involoved to join the GitHub Project
+    <a href="https://rapidxna.codeplex.com/team/view">https://rapidxna.codeplex.com/team/view</a>
+</li>
+<li>[ ] Migrate Histories of SVN files?
+    May Leave on SVN, moving forward is more important</li>
+<li>[ ] Rename to something more friendly to XNA and MonoGame</li>
+</ul><h1>
+<a name="original-notes" class="anchor" href="#original-notes"><span class="octicon octicon-link"></span></a>Original Notes:</h1>
+
+<h2>
+<a name="about-rapidxna-1" class="anchor" href="#about-rapidxna-1"><span class="octicon octicon-link"></span></a>About RapidXNA</h2>
+
+<p>A simple framework that aims to make starting up new XNA projects for Windows, 
+Xbox 360 and Windows Phone 7 easier. Using RapidXNA you should be able to 
+easily port between the 3 platforms with only minor code changes to your projects.</p>
+
+<h2>
+<a name="news" class="anchor" href="#news"><span class="octicon octicon-link"></span></a>News:</h2>
+
+<p>RapidXNA 2.0 Alpha is available (it was meant to mimic functionality of 
+RapidXNA 1 for now. If someone can confirm that RapidXNA 1 works on XBOX I can 
+move it from Beta to Final release and focus on development of RapidXNA 2.0 that 
+will hopefully in the end support Windows, Mac, Linux, Windows Phone 7, and Xbox 360. 
+Furthermore, after RapidXNA 2.0 Release is ready I would like to look into extending to 
+include Android and iOS eventually (if possible).</p>
+
+<p>RapidXNA 2.0 worked out well, and much easier to use for the game development during 
+Ludum Dare than I could have hoped for, but once again I got stumped by the Visual Studio 
+built-in functions for creating "copy for" Windows Phone and the problem most likely propogates 
+to the Xbox 360 version, so after some thought and sleep Im going to stop development of 
+RapidXNA in favour of building a system that works in a unified way for 2D game dev on all 
+platforms I want to support. I will post more about it when I get what I want to do right.</p>
+
+<p><del>The RapidXNA 1 and 2.0 code will remain here though I will most probably not actively ~~
+~~do development on the code any more. Should anyone want to take over the dev of RapidXNA ~~
+~~send me a message/email and I can hand over project ownership.</del></p>
+
+<p>Notes:
+Please refer the the documentation for examples on how to use the framework.</p>
+
+<p>Latest Changes:</p>
+
+<pre><code>Added RapidEngine.Exit()
+Fixed accessibilty to RapidXNA.Service.ScreenService
 </code></pre>
+
+<p>Old Changes:</p>
+
+<p>Projects using RapidXNA
+Galactic Jump - coming soon</p>
+
+<p>Last edited Apr 24, 2012 at 11:21 AM by edg3, version 6</p>
 
 <h1>
 <a name="original-documentation" class="anchor" href="#original-documentation"><span class="octicon octicon-link"></span></a>Original Documentation</h1>
@@ -125,15 +182,18 @@ Apr 17, 2012 at 6:49 AM</p>
 <p>Add in a way to add a static loading screen image for when loading a new screen, or a game screen to draw/update when currently loading.</p>
 
 <p>Id #1000 | Release: None | Updated: Feb 1, 2013 at 6:01 AM by edg3 | Created: Jan 30, 2012 at 11:45 AM by edg3</p>
-        </section>
-
-        <footer>
-          Rapidxna is maintained by <a href="https://github.com/TRex22">TRex22</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-        
-      </div>
+      </section>
     </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Rapidxna maintained by <a href="https://github.com/TRex22">TRex22</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
   </body>
 </html>
