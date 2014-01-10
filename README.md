@@ -4,16 +4,71 @@ RapidXNA
 
 https://rapidxna.codeplex.com for original SVN
 
+About RapidXNA
+==============
+This is my attempt at migrating RapidXNA made by @edg3 to GitHub,
+Upgrading it to work with MonoGame, and also getting it to work 
+in its 2.0 Alpha version with XNA.
+
 TODO
 ====
-	-move TODOs to Issues
-	-Clean up readme
-	-Github Pages
-	-link to Ernest's random repo
-	-proper svn link or migration if possible
-	-Move Codeplex Issues to Github Issues
-	-Send Links To people involoved to join the GitHub Project
+- [ ] move TODOs to Issues
+- [ ] Clean up readme
+- [ ] Github Pages
+- [ ] link to Ernest's random repo
+- [ ] proper svn link or migration if possible
+- [ ] Move Codeplex Issues to Github Issues
+- [ ] Send Links To people involoved to join the GitHub Project
 		https://rapidxna.codeplex.com/team/view
+- [ ] Migrate Histories of SVN files?
+		May Leave on SVN, moving forward is more important
+- [ ] Rename to something more friendly to XNA and MonoGame
+
+Original Notes:
+===============
+
+
+About RapidXNA
+--------------
+A simple framework that aims to make starting up new XNA projects for Windows, 
+Xbox 360 and Windows Phone 7 easier. Using RapidXNA you should be able to 
+easily port between the 3 platforms with only minor code changes to your projects.
+
+News:
+-----
+RapidXNA 2.0 Alpha is available (it was meant to mimic functionality of 
+RapidXNA 1 for now. If someone can confirm that RapidXNA 1 works on XBOX I can 
+move it from Beta to Final release and focus on development of RapidXNA 2.0 that 
+will hopefully in the end support Windows, Mac, Linux, Windows Phone 7, and Xbox 360. 
+Furthermore, after RapidXNA 2.0 Release is ready I would like to look into extending to 
+include Android and iOS eventually (if possible).
+
+RapidXNA 2.0 worked out well, and much easier to use for the game development during 
+Ludum Dare than I could have hoped for, but once again I got stumped by the Visual Studio 
+built-in functions for creating "copy for" Windows Phone and the problem most likely propogates 
+to the Xbox 360 version, so after some thought and sleep Im going to stop development of 
+RapidXNA in favour of building a system that works in a unified way for 2D game dev on all 
+platforms I want to support. I will post more about it when I get what I want to do right.
+
+~~The RapidXNA 1 and 2.0 code will remain here though I will most probably not actively ~~
+~~do development on the code any more. Should anyone want to take over the dev of RapidXNA ~~
+~~send me a message/email and I can hand over project ownership.~~
+
+Notes:
+Please refer the the documentation for examples on how to use the framework.
+
+Latest Changes:
+
+    Added RapidEngine.Exit()
+    Fixed accessibilty to RapidXNA.Service.ScreenService
+
+
+Old Changes:
+
+Projects using RapidXNA
+Galactic Jump - coming soon
+
+Last edited Apr 24, 2012 at 11:21 AM by edg3, version 6
 
 Original Documentation
 ======================
