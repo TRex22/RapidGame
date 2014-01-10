@@ -23,6 +23,9 @@ TODO
 - [ ] Migrate Histories of SVN files?
 		May Leave on SVN, moving forward is more important
 - [ ] Rename to something more friendly to XNA and MonoGame
+- [ ] Fix up TODO Here with Task Lists Markdown
+ 		https://github.com/blog/1375-task-lists-in-gfm-issues-pulls-comments
+- [ ] Republish gh-pages
 
 Original Notes:
 ===============
