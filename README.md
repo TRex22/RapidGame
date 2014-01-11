@@ -12,6 +12,8 @@ in its 2.0 Alpha version with XNA.
 
 TODO
 ====
+- [ ] a task list item
+
 [ ] move TODOs to Issues
 [ ] Clean up readme
 [ ] Github Pages
