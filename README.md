@@ -12,20 +12,20 @@ in its 2.0 Alpha version with XNA.
 
 TODO
 ====
-- [ ] move TODOs to Issues
-- [ ] Clean up readme
-- [ ] Github Pages
-- [ ] link to Ernest's random repo
-- [ ] proper svn link or migration if possible
-- [ ] Move Codeplex Issues to Github Issues
-- [ ] Send Links To people involoved to join the GitHub Project
+[ ] move TODOs to Issues
+[ ] Clean up readme
+[ ] Github Pages
+[ ] link to Ernest's random repo
+[ ] proper svn link or migration if possible
+[ ] Move Codeplex Issues to Github Issues
+[ ] Send Links To people involoved to join the GitHub Project
 		https://rapidxna.codeplex.com/team/view
-- [ ] Migrate Histories of SVN files?
+[ ] Migrate Histories of SVN files?
 		May Leave on SVN, moving forward is more important
-- [ ] Rename to something more friendly to XNA and MonoGame
-- [ ] Fix up TODO Here with Task Lists Markdown
+[ ] Rename to something more friendly to XNA and MonoGame
+[ ] Fix up TODO Here with Task Lists Markdown
  		https://github.com/blog/1375-task-lists-in-gfm-issues-pulls-comments
-- [ ] Republish gh-pages
+[ ] Republish gh-pages
 
 Original Notes:
 ===============
