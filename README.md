@@ -31,7 +31,27 @@ Contributions are welcome, but first I would like prospective contributers
 to either create their own branch (after sending me a message) or fork the
 project and then contribute. Afterwards send pull/merge requests to develop.
 
+Milestones
+==========
+
 Milestone 1
 -----------
 The first milestone of the project is to setup a function project outline,
 complete the RapidXNA 2 Alpha and complete the migration from the SVN repo.
+
+Requirements
+============
+
+To Effectively Load and Build the Source or a Project
+-----------------------------------------------------
+RapidXNA requires XNA Game Studio, Visual Studio (c#) 2010 and Windows Phone 
+sdk 7.
+
+RapidGame and Mono Related projects will require MonoGame 3 for VS 2012, 
+although MonoDevelop could also be used if desired. Also the Mono SDK is needed.
+
+To Run a Project
+----------------
+RapidXNA Requires the XNA Redistributable for Windows.
+RapidGame will require OpenAl, and other related Redistributables, such
+as DirectX, OpenGL, Unity ect...

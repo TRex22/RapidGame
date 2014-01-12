@@ -1,0 +1,7 @@
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA_2.0_alpha\RapidXNA 2.0\RapidXNA 2.0 Helpers\bin\Debug\RapidXNA 2.0 Helpers.dll
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA_2.0_alpha\RapidXNA 2.0\RapidXNA 2.0 Helpers\bin\Debug\RapidXNA 2.0 Helpers.pdb
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA_2.0_alpha\RapidXNA 2.0\RapidXNA 2.0 Helpers\bin\Debug\Microsoft.Xna.Framework.dll
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA_2.0_alpha\RapidXNA 2.0\RapidXNA 2.0 Helpers\bin\Debug\Microsoft.Xna.Framework.xml
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA_2.0_alpha\RapidXNA 2.0\RapidXNA 2.0 Helpers\obj\Debug\RapidXNA 2.0 Helpers.dll
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA_2.0_alpha\RapidXNA 2.0\RapidXNA 2.0 Helpers\obj\Debug\RapidXNA 2.0 Helpers.pdb
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA_2.0_alpha\RapidXNA 2.0\RapidXNA 2.0 Helpers\obj\Debug\RapidXNA 2.0 Helpers.csprojResolveAssemblyReference.cache

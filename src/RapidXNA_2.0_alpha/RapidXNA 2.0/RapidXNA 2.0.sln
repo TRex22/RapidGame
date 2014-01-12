@@ -1,11 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+# Visual C# Express 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RapidXNA 2.0", "RapidXNA 2.0\RapidXNA 2.0.csproj", "{F8B798F9-4679-45B0-8DC9-FE49D54E8C54}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5E3E8EDC-5CA1-4195-BFC2-2D37333CA0EC} = {5E3E8EDC-5CA1-4195-BFC2-2D37333CA0EC}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RapidXNA 2.0 WP7", "RapidXNA 2.0\RapidXNA 2.0 WP7.csproj", "{7E1ECD5D-E124-4696-BB67-B0654FDC6B8A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CE2BCEEE-F439-4C7C-98EE-1182494C877C} = {CE2BCEEE-F439-4C7C-98EE-1182494C877C}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RapidXNA 2.0 360", "RapidXNA 2.0\RapidXNA 2.0 360.csproj", "{CE2BCEEE-F439-4C7C-98EE-1182494C877C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5E3E8EDC-5CA1-4195-BFC2-2D37333CA0EC} = {5E3E8EDC-5CA1-4195-BFC2-2D37333CA0EC}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RapidXNA 2.0 Helpers", "RapidXNA 2.0 Helpers\RapidXNA 2.0 Helpers.csproj", "{5E3E8EDC-5CA1-4195-BFC2-2D37333CA0EC}"
 EndProject
