@@ -1,8 +1,10 @@
 RapidGame
 ========
-@edg3
+Original Creator of RapidXNA: @edg3
+https://github.com/TRex22/random/tree/master/C%23/RapidXNA
 
-https://rapidxna.codeplex.com for original SVN
+For original SVN:
+https://rapidxna.codeplex.com 
 
 About RapidGame
 ==============
