@@ -14,7 +14,7 @@ was functional.
 Releases
 ========
 They are found at:
-http://TRex22.github.io/Releases
+http://TRex22.github.io/RapidGame/Releases
 
 There are preliminary releases which are perhaps kind of useless, they are
 untested but released so that if they are needed they may be used.
