@@ -49,6 +49,9 @@ Milestone 1
 The first milestone of the project is to setup a function project outline,
 complete the RapidXNA 2 Alpha and complete the migration from the SVN repo.
 
+Some of the RapidGame code projects may not work since Xamarin requires a paid
+subscription to work with OUYA and Android. Windows Phone 8 is also giving trouble.
+
 Requirements
 ============
 
