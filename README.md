@@ -11,6 +11,14 @@ Upgrading it to work with MonoGame, and also getting it to work
 in its 2.0 Alpha version with XNA, since I dont think that version
 was functional.
 
+Releases
+========
+They are found at:
+http://TRex22.github.io/Releases
+
+There are preliminary releases which are perhaps kind of useless, they are
+untested but released so that if they are needed they may be used.
+
 Project Specifications
 ======================
 Releases will be stored on the gh-pages.
