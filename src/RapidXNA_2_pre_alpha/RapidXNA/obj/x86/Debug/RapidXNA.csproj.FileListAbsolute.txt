@@ -1,6 +1,0 @@
-C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA_2_pre_alpha\RapidXNA\bin\x86\Debug\RapidXNA.dll
-C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA_2_pre_alpha\RapidXNA\bin\x86\Debug\RapidXNA.pdb
-C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA_2_pre_alpha\RapidXNA\obj\x86\Debug\RapidXNA.csprojResolveAssemblyReference.cache
-C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA_2_pre_alpha\RapidXNA\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA_2_pre_alpha\RapidXNA\obj\x86\Debug\RapidXNA.dll
-C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA_2_pre_alpha\RapidXNA\obj\x86\Debug\RapidXNA.pdb
