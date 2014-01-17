@@ -1,5 +1,0 @@
-C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA_2.0_alpha\RapidXNA 2.0\RapidXNA 2.0\bin\Xbox 360\Debug\RapidXNA 2.0.dll
-C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA_2.0_alpha\RapidXNA 2.0\RapidXNA 2.0\bin\Xbox 360\Debug\RapidXNA 2.0.pdb
-C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA_2.0_alpha\RapidXNA 2.0\RapidXNA 2.0\obj\Xbox 360\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA_2.0_alpha\RapidXNA 2.0\RapidXNA 2.0\obj\Xbox 360\Debug\RapidXNA 2.0.dll
-C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA_2.0_alpha\RapidXNA 2.0\RapidXNA 2.0\obj\Xbox 360\Debug\RapidXNA 2.0.pdb

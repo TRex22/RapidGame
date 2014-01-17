@@ -41,6 +41,9 @@ Contributions are welcome, but first I would like prospective contributers
 to either create their own branch (after sending me a message) or fork the
 project and then contribute. Afterwards send pull/merge requests to develop.
 
+RapidXNA 3 is on its own branch where it will be developed.
+The old RapidXNA code can be found on the Old SVN code branch.
+
 Milestones
 ==========
 
