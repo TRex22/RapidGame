@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 
-namespace RapidXNA.Interfaces
+namespace RapidXNA_3._0.Interfaces
 {
-    public abstract class IGameService
+    public abstract class GameService
     {
         /// <summary>
         /// Engine instance for the Service to use

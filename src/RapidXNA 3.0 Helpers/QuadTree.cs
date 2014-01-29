@@ -1,74 +1,63 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Microsoft.Xna.Framework;
 
 namespace RapidXNA.Helpers
 {
     public class QuadTreeRoot
     {
-        List<QuadTree> Trees = new List<QuadTree>();
-        public void UpdateItem(IQuadItem item)
+        readonly List<QuadTree> _trees = new List<QuadTree>();
+        public void UpdateItem(QuadItem item)
         {
-            for (int i = 0; i < Trees.Count; i++)
+            foreach (var t in _trees)
             {
-                Trees[i].Remove(item);
-                Trees[i].Add(item);
+                t.Remove(item);
+                t.Add(item);
             }
         }
 
-        public void Add(IQuadItem item)
+        public void Add(QuadItem item)
         {
             item.BindRoot(this);
 
-            bool found = false;
-            for (int i = 0; i < Trees.Count; i++)
+            var found = false;
+            foreach (var t in _trees.Where(t => t.Bounds.Intersects(item.Position)))
             {
-                if (Trees[i].Bounds.Intersects(item.Position))
-                {
-                    found = true;
-                    Trees[i].Add(item);
-                }
+                found = true;
+                t.Add(item);
             }
 
-            if (!found)
+            if (found) return;
+            var x = (item.X + 512) / 1024;
+            var y = (item.Y + 512) / 1024;
+
+            var newTree = new QuadTree {Bounds = new Rectangle(x*1024, y*1024, 1024, 1024)};
+
+            newTree.Add(item);
+            _trees.Add(newTree);
+        }
+
+        public void Remove(QuadItem item)
+        {
+            foreach (var t in _trees)
             {
-                int x = (int)((item.X + 512) / 1024);
-                int y = (int)((item.Y + 512) / 1024);
-
-                QuadTree newTree = new QuadTree();
-                newTree.Bounds = new Rectangle(x * 1024, y * 1024, 1024, 1024);
-
-                newTree.Add(item);
-                Trees.Add(newTree);
+                t.Remove(item);
             }
         }
 
-        public void Remove(IQuadItem item)
+        public List<QuadItem> Find(Rectangle target)
         {
-            for (int i = 0; i < Trees.Count; i++)
-            {
-                Trees[i].Remove(item);
-            }
-        }
+            List<QuadItem> results = new List<QuadItem>(),
+                            removed = new List<QuadItem>();
 
-        public List<IQuadItem> Find(Rectangle target)
-        {
-            List<IQuadItem> results = new List<IQuadItem>(),
-                            removed = new List<IQuadItem>();
-
-            for (int i = 0; i < Trees.Count; i++)
+            foreach (var t in _trees)
             {
-                results.AddRange(Trees[i].Find(target));
+                results.AddRange(t.Find(target));
             }
 
-            for (int i = 0; i < results.Count; i++)
+            foreach (var t in results.Where(t => !removed.Contains(t)))
             {
-                if (!removed.Contains(results[i]))
-                {
-                    removed.Add(results[i]);
-                }
+                removed.Add(t);
             }
 
             return removed;
@@ -80,55 +69,62 @@ namespace RapidXNA.Helpers
         public QuadTree[] Children = new QuadTree[4];
         public Rectangle Bounds = new Rectangle();
 
-        List<IQuadItem> Items = new List<IQuadItem>();
+        readonly List<QuadItem> _items = new List<QuadItem>();
 
-        public bool Contains(IQuadItem item)
+        public bool Contains(QuadItem item)
         {
-            for (int i = 0; i < Items.Count; i++)
-                if (Items[i] == item)
-                    return true;
-
-            return false;
+            return _items.Any(t => t == item);
         }
 
-        public void Add(IQuadItem item)
+        public void Add(QuadItem item)
         {
             if (Children[0] == null)
             {
-                if (Items.Count > 1000)
+                if (_items.Count > 1000)
                 {
                     if (Bounds.Width > 256)
                     {
-                        Children[0] = new QuadTree();
-                        Children[0].Bounds = new Rectangle(Bounds.X, Bounds.Y, Bounds.Width / 2, Bounds.Height / 2);
-                        Children[1] = new QuadTree();
-                        Children[1].Bounds = new Rectangle(Bounds.X + Bounds.Width / 2, Bounds.Y, Bounds.Width / 2, Bounds.Height / 2);
-                        Children[2] = new QuadTree();
-                        Children[2].Bounds = new Rectangle(Bounds.X, Bounds.Y + Bounds.Height / 2, Bounds.Width / 2, Bounds.Height / 2);
-                        Children[3] = new QuadTree();
-                        Children[3].Bounds = new Rectangle(Bounds.X + Bounds.Width / 2, Bounds.Y + Bounds.Height / 2, Bounds.Width / 2, Bounds.Height / 2);
-
-                        for (int i = 0; i < Items.Count; i++)
+                        Children[0] = new QuadTree
                         {
-                            Children[0].Add(Items[i]);
-                            Children[1].Add(Items[i]);
-                            Children[2].Add(Items[i]);
-                            Children[3].Add(Items[i]);
+                            Bounds = new Rectangle(Bounds.X, Bounds.Y, Bounds.Width/2, Bounds.Height/2)
+                        };
+                        Children[1] = new QuadTree
+                        {
+                            Bounds = new Rectangle(Bounds.X + Bounds.Width/2, Bounds.Y, Bounds.Width/2, Bounds.Height/2)
+                        };
+                        Children[2] = new QuadTree
+                        {
+                            Bounds =
+                                new Rectangle(Bounds.X, Bounds.Y + Bounds.Height/2, Bounds.Width/2, Bounds.Height/2)
+                        };
+                        Children[3] = new QuadTree
+                        {
+                            Bounds =
+                                new Rectangle(Bounds.X + Bounds.Width/2, Bounds.Y + Bounds.Height/2, Bounds.Width/2,
+                                    Bounds.Height/2)
+                        };
+
+                        foreach (var t in _items)
+                        {
+                            Children[0].Add(t);
+                            Children[1].Add(t);
+                            Children[2].Add(t);
+                            Children[3].Add(t);
                         }
 
-                        Items.Clear();
+                        _items.Clear();
 
                     }
                     else
                     {
                         if (Bounds.Intersects(item.Position))
-                            Items.Add(item);
+                            _items.Add(item);
                     }
                 }
                 else
                 {
                     if (Bounds.Intersects(item.Position))
-                        Items.Add(item);
+                        _items.Add(item);
                 }
                 
             }
@@ -141,12 +137,12 @@ namespace RapidXNA.Helpers
             }
         }
 
-        public void Remove(IQuadItem item)
+        public void Remove(QuadItem item)
         {
             if (Children[0] == null)
             {
-                if (Items.Contains(item))
-                    Items.Remove(item);
+                if (_items.Contains(item))
+                    _items.Remove(item);
             }
             else
             {
@@ -157,16 +153,16 @@ namespace RapidXNA.Helpers
             }
         }
 
-        public List<IQuadItem> Find(Rectangle target)
+        public List<QuadItem> Find(Rectangle target)
         {
-            List<IQuadItem> results = new List<IQuadItem>();
+            var results = new List<QuadItem>();
 
             if (!Bounds.Intersects(target))
                 return results;
 
             if (Children[0] == null)
             {
-                results.AddRange(from item in Items where item.Position.Intersects(target) select item);
+                results.AddRange(from item in _items where item.Position.Intersects(target) select item);
             }
             else
             {
@@ -180,7 +176,7 @@ namespace RapidXNA.Helpers
         }
     }
 
-    public class IQuadItem
+    public class QuadItem
     {
         private Rectangle _position;
         public int X { get { return _position.X; } set { _position.X = value; PositionChanged(); } }
@@ -190,17 +186,17 @@ namespace RapidXNA.Helpers
 
         public Rectangle Position { get { return _position; } }
 
-        private QuadTreeRoot Root;
+        private QuadTreeRoot _root;
 
         private void PositionChanged()
         {
-            if (Root != null)
-                Root.UpdateItem(this);
+            if (_root != null)
+                _root.UpdateItem(this);
         }
 
         public void BindRoot(QuadTreeRoot root)
         {
-            Root = root;
+            _root = root;
         }
     }
 

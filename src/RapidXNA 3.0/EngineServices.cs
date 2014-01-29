@@ -1,27 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using RapidXNA.Interfaces;
 using Microsoft.Xna.Framework;
+using RapidXNA_3._0.Interfaces;
 
-namespace RapidXNA
+namespace RapidXNA_3._0
 {
     public class EngineServices
     {
-        private RapidEngine _engine;
-        public EngineServices(RapidEngine engine)
+        private readonly RapidEngine _rapidEngine;
+        public EngineServices(RapidEngine rapidEngine)
         {
-            _engine = engine;
+            _rapidEngine = rapidEngine;
         }
 
 
-        private Dictionary<int, IGameService> _Services = new Dictionary<int, IGameService>();
+        private readonly Dictionary<int, GameService> _services = new Dictionary<int, GameService>();
 
         /// <summary>
         /// Seeding value for Service IDs
         /// </summary>
-        private int _ServiceSeed = 0;
+        private int _serviceSeed;
 
         /// <summary>
         /// Gives the first instance found of a Service type
@@ -30,11 +28,11 @@ namespace RapidXNA
         /// <returns>The first instance of type T in services</returns>
         public T First<T>()
         {
-            for (int i = 0; i < _ServiceSeed; i++)
+            for (var i = 0; i < _serviceSeed; i++)
             {
-                if (_Services[i].GetType() == typeof(T))
+                if (_services[i].GetType() == typeof(T))
                 {
-                    return (T)Convert.ChangeType(_Services[i], typeof(T), null);
+                    return (T)Convert.ChangeType(_services[i], typeof(T), null);
                 }
             }
 
@@ -46,14 +44,14 @@ namespace RapidXNA
         /// </summary>
         /// <param name="i">The Service ID to retrieve</param>
         /// <returns>The service of ID</returns>
-        public IGameService this[int i]
+        public GameService this[int i]
         {
             get
             {
-                if (_Services.ContainsKey(i))
-                    return _Services[i];
+                if (_services.ContainsKey(i))
+                    return _services[i];
 
-                throw new Exception("Service instance (" + i.ToString() + ") does not exist.");
+                throw new Exception("Service instance (" + i + ") does not exist.");
             }
         }
 
@@ -62,14 +60,14 @@ namespace RapidXNA
         /// </summary>
         /// <param name="service">The Service instance to add</param>
         /// <returns>The ID of the added service</returns>
-        public int Add(IGameService service)
+        public int Add(GameService service)
         {
-            _Services.Add(_ServiceSeed, service);
-            service.Engine = _engine;
+            _services.Add(_serviceSeed, service);
+            service.Engine = _rapidEngine;
             service.Init();
 
-            _ServiceSeed++;
-            return _ServiceSeed - 1;
+            _serviceSeed++;
+            return _serviceSeed - 1;
         }
 
         /// <summary>
@@ -78,12 +76,12 @@ namespace RapidXNA
         /// </summary>
         public void Update(GameTime gameTime)
         {
-            for (int i = 1; i < _Services.Count; i++)
+            for (int i = 1; i < _services.Count; i++)
             {
-                _Services[i].Update(gameTime);
+                _services[i].Update(gameTime);
             }
             //Update the ScreenService last
-            _Services[0].Update(gameTime);
+            _services[0].Update(gameTime);
         }
 
         /// <summary>
@@ -92,7 +90,7 @@ namespace RapidXNA
         /// </summary>
         public void Draw(GameTime gameTime)
         {
-            foreach (IGameService service in _Services.Values)
+            foreach (GameService service in _services.Values)
             {
                 if (service.DrawEnabled)
                 {

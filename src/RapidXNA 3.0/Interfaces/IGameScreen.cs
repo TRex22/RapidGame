@@ -1,26 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
+﻿using System.Threading;
 using Microsoft.Xna.Framework;
 
-namespace RapidXNA.Interfaces
+namespace RapidXNA_3._0.Interfaces
 {
-    public abstract class IGameScreen
+    public abstract class GameScreen
     {
         /// <summary>
         /// Engine instance for the game screen to leverage
         /// </summary>
-        public RapidXNA.RapidEngine Engine;
+        public RapidEngine Engine;
 
-        /// <summary>
-        /// Helpers for asynchronous loading and managing when the threaded load is busy
-        /// </summary>
-        #region LOADING_HELPERS
-
-        private bool isLoaded = false;
-        public bool IsLoaded { get { return isLoaded; } }
+        public bool IsLoaded { get; private set; }
 
         /// <summary>
         /// Lets ScreenService know if this screen has a LoadScreen section
@@ -30,18 +20,16 @@ namespace RapidXNA.Interfaces
 
         public void BeginLoad()
         {
-            ThreadStart ts = new ThreadStart(LoadGameScreenAsync);
-            Thread loadThread = new Thread(ts);
+            var ts = new ThreadStart(LoadGameScreenAsync);
+            var loadThread = new Thread(ts);
             loadThread.Start();
         }
 
         private void LoadGameScreenAsync()
         {
-            this.Load();
-            isLoaded = true;
+            Load();
+            IsLoaded = true;
         }
-
-        #endregion
 
         /// <summary>
         /// Overridable functions of IGameScreen, all are abstract (implying all need to be overidden)

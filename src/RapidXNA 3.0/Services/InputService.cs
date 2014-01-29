@@ -1,27 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using RapidXNA.Interfaces;
-using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
+using RapidXNA_3._0.Interfaces;
+
+
 #if WINDOWS_PHONE
 using Microsoft.Xna.Framework.Input.Touch;
 #endif
 
-namespace RapidXNA.Services
+
+namespace RapidXNA_3._0.Services
 {
-    public class InputService : IGameService
+    public class InputService : GameService
     {
         /// <summary>
         /// Contains reference to all the input types supported (nicely wrapped for convenience and ease of use)
         /// </summary>
 
-        private KeyboardHandler _keyboard = new KeyboardHandler();
-        private MouseHandler _mouse = new MouseHandler();
-        private PhoneInputHandler _phoneInput = new PhoneInputHandler();
+        private readonly KeyboardHandler _keyboard = new KeyboardHandler();
+        private readonly MouseHandler _mouse = new MouseHandler();
+        private readonly PhoneInputHandler _phoneInput = new PhoneInputHandler();
         //private PhoneMultitouchHandler _phoneMultitouch = new
-        private GamePadHandler _gamePad = new GamePadHandler();
+        private readonly GamePadHandler _gamePad = new GamePadHandler();
 
         public KeyboardHandler Keyboard { get { return _keyboard; } }
         public MouseHandler Mouse { get { return _mouse; } }
@@ -50,43 +51,46 @@ namespace RapidXNA.Services
         public class KeyboardHandler
         {
 #if WINDOWS
-            private KeyboardState CurrentState, PreviousState;
-            private Dictionary<Keys, float>
-                PressLengths = new Dictionary<Keys, float>(),
-                ReleasedLength = new Dictionary<Keys, float>();
+            private KeyboardState _currentState, _previousState;
+            private readonly Dictionary<Keys, float>
+                _pressLengths = new Dictionary<Keys, float>();
+
+            private readonly Dictionary<Keys, float>
+                _releasedLength = new Dictionary<Keys, float>();
+
             //keyboardHandler.add(Keys.A);
-            private List<Keys> LengthCheckedKeys = new List<Keys>();
+            private readonly List<Keys> _lengthCheckedKeys = new List<Keys>();
 #endif
 
 
             public KeyboardHandler()
             {
 #if WINDOWS
-                CurrentState = Microsoft.Xna.Framework.Input.Keyboard.GetState();
-                PreviousState = Microsoft.Xna.Framework.Input.Keyboard.GetState();
+                _currentState = Microsoft.Xna.Framework.Input.Keyboard.GetState();
+                _previousState = Microsoft.Xna.Framework.Input.Keyboard.GetState();
 #endif
             }
 
             public void Update(GameTime gameTime)
             {
 #if WINDOWS
-                PreviousState = CurrentState;
-                CurrentState = Microsoft.Xna.Framework.Input.Keyboard.GetState();
+                _previousState = _currentState;
+                _currentState = Microsoft.Xna.Framework.Input.Keyboard.GetState();
 
-                for (int i = 0; i < LengthCheckedKeys.Count; i++)
+                foreach (var t in _lengthCheckedKeys)
                 {
-                    if (this.KeyHeld(LengthCheckedKeys[i]))
+                    if (KeyHeld(t))
                     {
-                        PressLengths[LengthCheckedKeys[i]] += gameTime.ElapsedGameTime.Milliseconds;
+                        _pressLengths[t] += gameTime.ElapsedGameTime.Milliseconds;
                     }
-                    else if (this.KeyLeft(LengthCheckedKeys[i]))
+                    else if (KeyLeft(t))
                     {
-                        PressLengths[LengthCheckedKeys[i]] += gameTime.ElapsedGameTime.Milliseconds;
-                        ReleasedLength[LengthCheckedKeys[i]] = PressLengths[LengthCheckedKeys[i]];
+                        _pressLengths[t] += gameTime.ElapsedGameTime.Milliseconds;
+                        _releasedLength[t] = _pressLengths[t];
                     }
                     else
                     {
-                        PressLengths[LengthCheckedKeys[i]] = 0.0f;
+                        _pressLengths[t] = 0.0f;
                     }
                 }
 #endif
@@ -100,7 +104,7 @@ namespace RapidXNA.Services
             public bool KeyPress(Keys k)
             {
 #if WINDOWS
-                return ((CurrentState.IsKeyDown(k)) && (!PreviousState.IsKeyDown(k)));
+                return ((_currentState.IsKeyDown(k)) && (!_previousState.IsKeyDown(k)));
 #else
             return false;
 #endif
@@ -114,7 +118,7 @@ namespace RapidXNA.Services
             public bool KeyHeld(Keys k)
             {
 #if WINDOWS
-                return ((CurrentState.IsKeyDown(k)) && (PreviousState.IsKeyDown(k)));
+                return ((_currentState.IsKeyDown(k)) && (_previousState.IsKeyDown(k)));
 #else
             return false;
 #endif
@@ -128,7 +132,7 @@ namespace RapidXNA.Services
             public bool KeyLeft(Keys k)
             {
 #if WINDOWS
-                return ((!CurrentState.IsKeyDown(k)) && (PreviousState.IsKeyDown(k)));
+                return ((!_currentState.IsKeyDown(k)) && (_previousState.IsKeyDown(k)));
 #else
             return false;
 #endif
@@ -141,11 +145,11 @@ namespace RapidXNA.Services
             public void AddKey(Keys k)
             {
 #if WINDOWS
-                if (!LengthCheckedKeys.Contains(k))
+                if (!_lengthCheckedKeys.Contains(k))
                 {
-                    PressLengths.Add(k, 0.0f);
-                    ReleasedLength.Add(k, 0.0f);
-                    LengthCheckedKeys.Add(k);
+                    _pressLengths.Add(k, 0.0f);
+                    _releasedLength.Add(k, 0.0f);
+                    _lengthCheckedKeys.Add(k);
                 }
 #endif
             }
@@ -158,13 +162,10 @@ namespace RapidXNA.Services
             public float HeldFor(Keys k)
             {
 #if WINDOWS
-                if (PressLengths.ContainsKey(k))
-                {
-                    return PressLengths[k];
-                }
-                else
+                return _pressLengths.ContainsKey(k) ? _pressLengths[k] : 0f;
+#else
+                return 0f;
 #endif
-                    return 0f;
             }
 
             /// <summary>
@@ -175,15 +176,11 @@ namespace RapidXNA.Services
             public float ReleasedTime(Keys k)
             {
 #if WINDOWS
-                if (ReleasedLength.ContainsKey(k))
-                {
-                    return ReleasedLength[k];
-                }
-                else
+                return _releasedLength.ContainsKey(k) ? _releasedLength[k] : 0f;
+#else
+                return 0f;
 #endif
-                    return 0f;
             }
-
         }
         #endregion
 
@@ -192,16 +189,16 @@ namespace RapidXNA.Services
         {
 #if XBOX
 #else
-            MouseState previousState;
-            MouseState currentState;
+            MouseState _previousState;
+            MouseState _currentState;
 #endif
 
             public MouseHandler()
             {
 #if XBOX
 #else
-                currentState = Microsoft.Xna.Framework.Input.Mouse.GetState();
-                previousState = Microsoft.Xna.Framework.Input.Mouse.GetState();
+                _currentState = Microsoft.Xna.Framework.Input.Mouse.GetState();
+                _previousState = Microsoft.Xna.Framework.Input.Mouse.GetState();
 #endif
             }
 
@@ -209,8 +206,8 @@ namespace RapidXNA.Services
             {
 #if XBOX
 #else
-                previousState = currentState;
-                currentState = Microsoft.Xna.Framework.Input.Mouse.GetState();
+                _previousState = _currentState;
+                _currentState = Microsoft.Xna.Framework.Input.Mouse.GetState();
 #endif
             }
 
@@ -219,7 +216,7 @@ namespace RapidXNA.Services
 #if XBOX
             return Vector2.Zero;
 #else
-                return new Vector2(currentState.X, currentState.Y);
+                return new Vector2(_currentState.X, _currentState.Y);
 #endif
             }
 
@@ -228,7 +225,7 @@ namespace RapidXNA.Services
 #if XBOX
             return false;
 #else
-                return ((currentState.LeftButton == ButtonState.Pressed) && (previousState.LeftButton == ButtonState.Released));
+                return ((_currentState.LeftButton == ButtonState.Pressed) && (_previousState.LeftButton == ButtonState.Released));
 #endif
             }
             public bool LeftReleased()
@@ -236,7 +233,7 @@ namespace RapidXNA.Services
 #if XBOX
             return false;
 #else
-                return ((previousState.LeftButton == ButtonState.Pressed) && (currentState.LeftButton == ButtonState.Released));
+                return ((_previousState.LeftButton == ButtonState.Pressed) && (_currentState.LeftButton == ButtonState.Released));
 #endif
             }
             public bool LeftHeld()
@@ -244,7 +241,7 @@ namespace RapidXNA.Services
 #if XBOX
             return false;
 #else
-                return ((previousState.LeftButton == ButtonState.Pressed) && (currentState.LeftButton == ButtonState.Pressed));
+                return ((_previousState.LeftButton == ButtonState.Pressed) && (_currentState.LeftButton == ButtonState.Pressed));
 #endif
             }
 
@@ -253,7 +250,7 @@ namespace RapidXNA.Services
 #if XBOX
             return false;
 #else
-                return ((currentState.MiddleButton == ButtonState.Pressed) && (previousState.MiddleButton == ButtonState.Released));
+                return ((_currentState.MiddleButton == ButtonState.Pressed) && (_previousState.MiddleButton == ButtonState.Released));
 #endif
             }
             public bool MiddleReleased()
@@ -261,7 +258,7 @@ namespace RapidXNA.Services
 #if XBOX
             return false;
 #else
-                return ((previousState.MiddleButton == ButtonState.Pressed) && (currentState.MiddleButton == ButtonState.Released));
+                return ((_previousState.MiddleButton == ButtonState.Pressed) && (_currentState.MiddleButton == ButtonState.Released));
 #endif
             }
             public bool MiddleHeld()
@@ -269,7 +266,7 @@ namespace RapidXNA.Services
 #if XBOX
             return false;
 #else
-                return ((previousState.MiddleButton == ButtonState.Pressed) && (currentState.MiddleButton == ButtonState.Pressed));
+                return ((_previousState.MiddleButton == ButtonState.Pressed) && (_currentState.MiddleButton == ButtonState.Pressed));
 #endif
             }
 
@@ -278,7 +275,7 @@ namespace RapidXNA.Services
 #if XBOX
             return false;
 #else
-                return ((currentState.RightButton == ButtonState.Pressed) && (previousState.RightButton == ButtonState.Released));
+                return ((_currentState.RightButton == ButtonState.Pressed) && (_previousState.RightButton == ButtonState.Released));
 #endif
             }
             public bool RightReleased()
@@ -286,7 +283,7 @@ namespace RapidXNA.Services
 #if XBOX
             return false;
 #else
-                return ((previousState.RightButton == ButtonState.Pressed) && (currentState.RightButton == ButtonState.Released));
+                return ((_previousState.RightButton == ButtonState.Pressed) && (_currentState.RightButton == ButtonState.Released));
 #endif
             }
             public bool RightHeld()
@@ -294,7 +291,7 @@ namespace RapidXNA.Services
 #if XBOX
             return false;
 #else
-                return ((previousState.RightButton == ButtonState.Pressed) && (currentState.RightButton == ButtonState.Pressed));
+                return ((_previousState.RightButton == ButtonState.Pressed) && (_currentState.RightButton == ButtonState.Pressed));
 #endif
             }
 
@@ -303,7 +300,7 @@ namespace RapidXNA.Services
 #if XBOX
             get { return 0; }
 #else
-                get { return currentState.ScrollWheelValue; }
+                get { return _currentState.ScrollWheelValue; }
 #endif
             }
 
@@ -345,11 +342,11 @@ namespace RapidXNA.Services
         public class GestureSample
         {
             //Used for when there is no gesturesample class available (it isnt available on windows/xbox?)
-            public Vector2 Delta { get { return new Vector2(); } set { } }
-            public Vector2 Delta2 { get { return new Vector2(); } set { } }
+            public Vector2 Delta { get { return new Vector2(); } }
+            public Vector2 Delta2 { get { return new Vector2(); } }
             public TimeSpan Timestamp { get { return new TimeSpan(); } }
-            public Vector2 Position { get { return new Vector2(); } set { } }
-            public Vector2 Position2 { get { return new Vector2(); } set { } }
+            public Vector2 Position { get { return new Vector2(); } }
+            public Vector2 Position2 { get { return new Vector2(); } }
             public GestureType GestureType { get { return GestureType.CustomNone; } }
         }
 
@@ -378,42 +375,42 @@ namespace RapidXNA.Services
         #region GAMEPAD
         public class GamePadHandler
         {
-            GamePadState[] PreviousState = new GamePadState[4];
-            GamePadState[] CurrentState = new GamePadState[4];
+            readonly GamePadState[] _previousState = new GamePadState[4];
+            readonly GamePadState[] _currentState = new GamePadState[4];
             public GamePadHandler()
             {
 #if WINDOWS_PHONE
-            PreviousState[0] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.One);
-            CurrentState[0] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.One);
+            _previousState[0] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.One);
+            _currentState[0] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.One);
 #else
-                PreviousState[0] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.One);
-                PreviousState[1] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.Two);
-                PreviousState[2] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.Three);
-                PreviousState[3] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.Four);
+                _previousState[0] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.One);
+                _previousState[1] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.Two);
+                _previousState[2] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.Three);
+                _previousState[3] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.Four);
 
-                CurrentState[0] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.One);
-                CurrentState[1] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.Two);
-                CurrentState[2] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.Three);
-                CurrentState[3] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.Four);
+                _currentState[0] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.One);
+                _currentState[1] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.Two);
+                _currentState[2] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.Three);
+                _currentState[3] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.Four);
 #endif
             }
 
             public void Update(GameTime gameTime)
             {
 #if WINDOWS_PHONE
-            PreviousState[0] = CurrentState[0];
+            _previousState[0] = _currentState[0];
 
-            CurrentState[0] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.One);
+            _currentState[0] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.One);
 #else
-                PreviousState[0] = CurrentState[0];
-                PreviousState[1] = CurrentState[1];
-                PreviousState[2] = CurrentState[2];
-                PreviousState[3] = CurrentState[3];
+                _previousState[0] = _currentState[0];
+                _previousState[1] = _currentState[1];
+                _previousState[2] = _currentState[2];
+                _previousState[3] = _currentState[3];
 
-                CurrentState[0] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.One);
-                CurrentState[1] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.Two);
-                CurrentState[2] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.Three);
-                CurrentState[3] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.Four);
+                _currentState[0] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.One);
+                _currentState[1] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.Two);
+                _currentState[2] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.Three);
+                _currentState[3] = Microsoft.Xna.Framework.Input.GamePad.GetState(PlayerIndex.Four);
 #endif
             }
 
@@ -421,52 +418,54 @@ namespace RapidXNA.Services
             /// Triggers functions
             /// </summary>
 
-            public float LeftTriggerValue(int ControllerNum)
+            public float LeftTriggerValue(int controllerNum)
             {
 #if WINDOWS_PHONE
             return 0f;
 #else
-                return CurrentState[ControllerNum - 1].Triggers.Left;
+                return _currentState[controllerNum - 1].Triggers.Left;
 #endif
             }
-            public float RightTrigerValue(int ControllerNum)
+            public float RightTrigerValue(int controllerNum)
             {
 #if WINDOWS_PHONE
             return 0f;
 #else
-                return CurrentState[ControllerNum - 1].Triggers.Right;
+                return _currentState[controllerNum - 1].Triggers.Right;
 #endif
             }
-            public bool LeftTriggerPressed(int ControllerNum)
+            public bool LeftTriggerPressed(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].Triggers.Left == 0.0f) && (CurrentState[ControllerNum - 1].Triggers.Left > 0.0f));
+                /*TODO JMC Check if more precise and working*/
+                return ((Math.Abs(_previousState[controllerNum - 1].Triggers.Left) < 0.0f) && (_currentState[controllerNum - 1].Triggers.Left > 0.0f));
 #endif
             }
-            public bool RightTriggerPressed(int ControllerNum)
+            public bool RightTriggerPressed(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].Triggers.Right == 0.0f) && (CurrentState[ControllerNum - 1].Triggers.Right > 0.0f));
+                /*TODO _previousState[ControllerNum - 1].Triggers.Right == 0.0f*/
+                return ((Math.Abs(_previousState[controllerNum - 1].Triggers.Right) < 0.0f) && (_currentState[controllerNum - 1].Triggers.Right > 0.0f));
 #endif
             }
-            public bool LeftTriggerReleased(int ControllerNum)
+            public bool LeftTriggerReleased(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].Triggers.Left > 0.0f) && (CurrentState[ControllerNum - 1].Triggers.Left == 0.0f));
+                return ((_previousState[controllerNum - 1].Triggers.Left > 0.0f) && (Math.Abs(_currentState[controllerNum - 1].Triggers.Left) < 0.0f));
 #endif
             }
-            public bool RightTriggerReleased(int ControllerNum)
+            public bool RightTriggerReleased(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].Triggers.Right > 0.0f) && (CurrentState[ControllerNum - 1].Triggers.Right == 0.0f));
+                return ((_previousState[controllerNum - 1].Triggers.Right > 0.0f) && (Math.Abs(_currentState[controllerNum - 1].Triggers.Right) < 0.0f));
 #endif
             }
 
@@ -474,52 +473,52 @@ namespace RapidXNA.Services
             /// Bumpers
             /// </summary>
 
-            public bool LeftBumberPressed(int ControllerNum)
+            public bool LeftBumberPressed(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].Buttons.LeftShoulder == ButtonState.Released) && (CurrentState[ControllerNum - 1].Buttons.LeftShoulder == ButtonState.Pressed));
+                return ((_previousState[controllerNum - 1].Buttons.LeftShoulder == ButtonState.Released) && (_currentState[controllerNum - 1].Buttons.LeftShoulder == ButtonState.Pressed));
 #endif
             }
-            public bool RightBumberPressed(int ControllerNum)
+            public bool RightBumberPressed(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].Buttons.RightShoulder == ButtonState.Released) && (CurrentState[ControllerNum - 1].Buttons.RightShoulder == ButtonState.Pressed));
+                return ((_previousState[controllerNum - 1].Buttons.RightShoulder == ButtonState.Released) && (_currentState[controllerNum - 1].Buttons.RightShoulder == ButtonState.Pressed));
 #endif
             }
-            public bool LeftBumberReleased(int ControllerNum)
+            public bool LeftBumberReleased(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].Buttons.LeftShoulder == ButtonState.Pressed) && (CurrentState[ControllerNum - 1].Buttons.LeftShoulder == ButtonState.Released));
+                return ((_previousState[controllerNum - 1].Buttons.LeftShoulder == ButtonState.Pressed) && (_currentState[controllerNum - 1].Buttons.LeftShoulder == ButtonState.Released));
 #endif
             }
-            public bool RightBumberReleased(int ControllerNum)
+            public bool RightBumberReleased(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].Buttons.RightShoulder == ButtonState.Pressed) && (CurrentState[ControllerNum - 1].Buttons.RightShoulder == ButtonState.Released));
+                return ((_previousState[controllerNum - 1].Buttons.RightShoulder == ButtonState.Pressed) && (_currentState[controllerNum - 1].Buttons.RightShoulder == ButtonState.Released));
 #endif
             }
-            public bool LeftBumberHeld(int ControllerNum)
+            public bool LeftBumberHeld(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return (CurrentState[ControllerNum - 1].Buttons.LeftShoulder == ButtonState.Pressed);
+                return (_currentState[controllerNum - 1].Buttons.LeftShoulder == ButtonState.Pressed);
 #endif
             }
-            public bool RightBumberHeld(int ControllerNum)
+            public bool RightBumberHeld(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return (CurrentState[ControllerNum - 1].Buttons.RightShoulder == ButtonState.Pressed);
+                return (_currentState[controllerNum - 1].Buttons.RightShoulder == ButtonState.Pressed);
 #endif
             }
 
@@ -527,86 +526,86 @@ namespace RapidXNA.Services
             /// Sticks
             /// </summary>
 
-            public Vector2 LeftStick(int ControllerNum)
+            public Vector2 LeftStick(int controllerNum)
             {
 #if WINDOWS_PHONE
             return Vector2.Zero;
 #else
-                return CurrentState[ControllerNum - 1].ThumbSticks.Left;
+                return _currentState[controllerNum - 1].ThumbSticks.Left;
 #endif
             }
-            public Vector2 RightStick(int ControllerNum)
+            public Vector2 RightStick(int controllerNum)
             {
 #if WINDOWS_PHONE
             return Vector2.Zero;
 #else
-                return CurrentState[ControllerNum - 1].ThumbSticks.Right;
+                return _currentState[controllerNum - 1].ThumbSticks.Right;
 #endif
             }
-            public float LeftStickDirection(int ControllerNum)
+            public float LeftStickDirection(int controllerNum)
             {
 #if WINDOWS_PHONE
             return 0f;
 #else
-                float _x = CurrentState[ControllerNum - 1].ThumbSticks.Left.X, _y = CurrentState[ControllerNum - 1].ThumbSticks.Left.Y;
-                return (float)Math.Atan2(_y, _x);
+                float x = _currentState[controllerNum - 1].ThumbSticks.Left.X, y = _currentState[controllerNum - 1].ThumbSticks.Left.Y;
+                return (float)Math.Atan2(y, x);
 #endif
             }
-            public float RightStickDirection(int ControllerNum)
+            public float RightStickDirection(int controllerNum)
             {
 #if WINDOWS_PHONE
             return 0f;
 #else
-                float _x = CurrentState[ControllerNum - 1].ThumbSticks.Right.X, _y = CurrentState[ControllerNum - 1].ThumbSticks.Right.Y;
-                return (float)Math.Atan2(_y, _x);
+                float x = _currentState[controllerNum - 1].ThumbSticks.Right.X, y = _currentState[controllerNum - 1].ThumbSticks.Right.Y;
+                return (float)Math.Atan2(y, x);
 #endif
             }
-            public bool LeftStickPressed(int ControllerNum)
+            public bool LeftStickPressed(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].Buttons.LeftStick == ButtonState.Released) && (CurrentState[ControllerNum - 1].Buttons.LeftStick == ButtonState.Pressed));
+                return ((_previousState[controllerNum - 1].Buttons.LeftStick == ButtonState.Released) && (_currentState[controllerNum - 1].Buttons.LeftStick == ButtonState.Pressed));
 #endif
             }
-            public bool RightStickPressed(int ControllerNum)
+            public bool RightStickPressed(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].Buttons.RightStick == ButtonState.Released) && (CurrentState[ControllerNum - 1].Buttons.RightStick == ButtonState.Pressed));
+                return ((_previousState[controllerNum - 1].Buttons.RightStick == ButtonState.Released) && (_currentState[controllerNum - 1].Buttons.RightStick == ButtonState.Pressed));
 #endif
             }
-            public bool LeftStickReleased(int ControllerNum)
+            public bool LeftStickReleased(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].Buttons.LeftStick == ButtonState.Pressed) && (CurrentState[ControllerNum - 1].Buttons.LeftStick == ButtonState.Released));
+                return ((_previousState[controllerNum - 1].Buttons.LeftStick == ButtonState.Pressed) && (_currentState[controllerNum - 1].Buttons.LeftStick == ButtonState.Released));
 #endif
             }
-            public bool RightStickReleased(int ControllerNum)
+            public bool RightStickReleased(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].Buttons.RightStick == ButtonState.Pressed) && (CurrentState[ControllerNum - 1].Buttons.RightStick == ButtonState.Released));
+                return ((_previousState[controllerNum - 1].Buttons.RightStick == ButtonState.Pressed) && (_currentState[controllerNum - 1].Buttons.RightStick == ButtonState.Released));
 #endif
             }
-            public bool LeftStickHeld(int ControllerNum)
+            public bool LeftStickHeld(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return (CurrentState[ControllerNum - 1].Buttons.LeftStick == ButtonState.Pressed);
+                return (_currentState[controllerNum - 1].Buttons.LeftStick == ButtonState.Pressed);
 #endif
             }
-            public bool RightStickHeld(int ControllerNum)
+            public bool RightStickHeld(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return (CurrentState[ControllerNum - 1].Buttons.RightStick == ButtonState.Pressed);
+                return (_currentState[controllerNum - 1].Buttons.RightStick == ButtonState.Pressed);
 #endif
             }
 
@@ -615,246 +614,246 @@ namespace RapidXNA.Services
             /// </summary>
 
 
-            public bool LeftPressed(int ControllerNum)
+            public bool LeftPressed(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].DPad.Left == ButtonState.Released) && (CurrentState[ControllerNum - 1].DPad.Left == ButtonState.Pressed));
+                return ((_previousState[controllerNum - 1].DPad.Left == ButtonState.Released) && (_currentState[controllerNum - 1].DPad.Left == ButtonState.Pressed));
 #endif
             }
-            public bool LeftReleased(int ControllerNum)
+            public bool LeftReleased(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].DPad.Left == ButtonState.Pressed) && (CurrentState[ControllerNum - 1].DPad.Left == ButtonState.Released));
+                return ((_previousState[controllerNum - 1].DPad.Left == ButtonState.Pressed) && (_currentState[controllerNum - 1].DPad.Left == ButtonState.Released));
 #endif
             }
-            public bool LeftHeld(int ControllerNum)
+            public bool LeftHeld(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return (CurrentState[ControllerNum - 1].DPad.Left == ButtonState.Pressed);
+                return (_currentState[controllerNum - 1].DPad.Left == ButtonState.Pressed);
 #endif
             }
-            public bool RightPressed(int ControllerNum)
+            public bool RightPressed(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].DPad.Right == ButtonState.Released) && (CurrentState[ControllerNum - 1].DPad.Right == ButtonState.Pressed));
+                return ((_previousState[controllerNum - 1].DPad.Right == ButtonState.Released) && (_currentState[controllerNum - 1].DPad.Right == ButtonState.Pressed));
 #endif
             }
-            public bool RightReleased(int ControllerNum)
+            public bool RightReleased(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].DPad.Right == ButtonState.Pressed) && (CurrentState[ControllerNum - 1].DPad.Right == ButtonState.Released));
+                return ((_previousState[controllerNum - 1].DPad.Right == ButtonState.Pressed) && (_currentState[controllerNum - 1].DPad.Right == ButtonState.Released));
 #endif
             }
-            public bool RightHeld(int ControllerNum)
+            public bool RightHeld(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return (CurrentState[ControllerNum - 1].DPad.Right == ButtonState.Pressed);
+                return (_currentState[controllerNum - 1].DPad.Right == ButtonState.Pressed);
 #endif
             }
-            public bool UpPressed(int ControllerNum)
+            public bool UpPressed(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].DPad.Up == ButtonState.Released) && (CurrentState[ControllerNum - 1].DPad.Up == ButtonState.Pressed));
+                return ((_previousState[controllerNum - 1].DPad.Up == ButtonState.Released) && (_currentState[controllerNum - 1].DPad.Up == ButtonState.Pressed));
 #endif
             }
-            public bool UpReleased(int ControllerNum)
+            public bool UpReleased(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].DPad.Up == ButtonState.Pressed) && (CurrentState[ControllerNum - 1].DPad.Up == ButtonState.Released));
+                return ((_previousState[controllerNum - 1].DPad.Up == ButtonState.Pressed) && (_currentState[controllerNum - 1].DPad.Up == ButtonState.Released));
 #endif
             }
-            public bool UpHeld(int ControllerNum)
+            public bool UpHeld(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return (CurrentState[ControllerNum - 1].DPad.Up == ButtonState.Pressed);
+                return (_currentState[controllerNum - 1].DPad.Up == ButtonState.Pressed);
 #endif
             }
-            public bool DownPressed(int ControllerNum)
+            public bool DownPressed(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].DPad.Down == ButtonState.Released) && (CurrentState[ControllerNum - 1].DPad.Down == ButtonState.Pressed));
+                return ((_previousState[controllerNum - 1].DPad.Down == ButtonState.Released) && (_currentState[controllerNum - 1].DPad.Down == ButtonState.Pressed));
 #endif
             }
-            public bool DownReleased(int ControllerNum)
+            public bool DownReleased(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].DPad.Down == ButtonState.Pressed) && (CurrentState[ControllerNum - 1].DPad.Down == ButtonState.Released));
+                return ((_previousState[controllerNum - 1].DPad.Down == ButtonState.Pressed) && (_currentState[controllerNum - 1].DPad.Down == ButtonState.Released));
 #endif
             }
-            public bool DownHeld(int ControllerNum)
+            public bool DownHeld(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return (CurrentState[ControllerNum - 1].DPad.Down == ButtonState.Pressed);
+                return (_currentState[controllerNum - 1].DPad.Down == ButtonState.Pressed);
 #endif
             }
 
-            public bool XPressed(int ControllerNum)
+            public bool XPressed(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].Buttons.X == ButtonState.Released) && (CurrentState[ControllerNum - 1].Buttons.X == ButtonState.Pressed));
+                return ((_previousState[controllerNum - 1].Buttons.X == ButtonState.Released) && (_currentState[controllerNum - 1].Buttons.X == ButtonState.Pressed));
 #endif
             }
-            public bool XReleased(int ControllerNum)
+            public bool XReleased(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].Buttons.X == ButtonState.Pressed) && (CurrentState[ControllerNum - 1].Buttons.X == ButtonState.Released));
+                return ((_previousState[controllerNum - 1].Buttons.X == ButtonState.Pressed) && (_currentState[controllerNum - 1].Buttons.X == ButtonState.Released));
 #endif
             }
-            public bool XHeld(int ControllerNum)
+            public bool XHeld(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return (CurrentState[ControllerNum - 1].Buttons.X == ButtonState.Pressed);
+                return (_currentState[controllerNum - 1].Buttons.X == ButtonState.Pressed);
 #endif
             }
-            public bool YPressed(int ControllerNum)
+            public bool YPressed(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].Buttons.Y == ButtonState.Released) && (CurrentState[ControllerNum - 1].Buttons.Y == ButtonState.Pressed));
+                return ((_previousState[controllerNum - 1].Buttons.Y == ButtonState.Released) && (_currentState[controllerNum - 1].Buttons.Y == ButtonState.Pressed));
 #endif
             }
-            public bool YReleased(int ControllerNum)
+            public bool YReleased(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].Buttons.Y == ButtonState.Pressed) && (CurrentState[ControllerNum - 1].Buttons.Y == ButtonState.Released));
+                return ((_previousState[controllerNum - 1].Buttons.Y == ButtonState.Pressed) && (_currentState[controllerNum - 1].Buttons.Y == ButtonState.Released));
 #endif
             }
-            public bool YHeld(int ControllerNum)
+            public bool YHeld(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return (CurrentState[ControllerNum - 1].Buttons.Y == ButtonState.Pressed);
+                return (_currentState[controllerNum - 1].Buttons.Y == ButtonState.Pressed);
 #endif
             }
-            public bool APressed(int ControllerNum)
+            public bool APressed(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].Buttons.A == ButtonState.Released) && (CurrentState[ControllerNum - 1].Buttons.A == ButtonState.Pressed));
+                return ((_previousState[controllerNum - 1].Buttons.A == ButtonState.Released) && (_currentState[controllerNum - 1].Buttons.A == ButtonState.Pressed));
 #endif
             }
-            public bool AReleased(int ControllerNum)
+            public bool AReleased(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].Buttons.A == ButtonState.Pressed) && (CurrentState[ControllerNum - 1].Buttons.A == ButtonState.Released));
+                return ((_previousState[controllerNum - 1].Buttons.A == ButtonState.Pressed) && (_currentState[controllerNum - 1].Buttons.A == ButtonState.Released));
 #endif
             }
-            public bool AHeld(int ControllerNum)
+            public bool AHeld(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return (CurrentState[ControllerNum - 1].Buttons.A == ButtonState.Pressed);
+                return (_currentState[controllerNum - 1].Buttons.A == ButtonState.Pressed);
 #endif
             }
-            public bool BPressed(int ControllerNum)
+            public bool BPressed(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].Buttons.B == ButtonState.Released) && (CurrentState[ControllerNum - 1].Buttons.B == ButtonState.Pressed));
+                return ((_previousState[controllerNum - 1].Buttons.B == ButtonState.Released) && (_currentState[controllerNum - 1].Buttons.B == ButtonState.Pressed));
 #endif
             }
-            public bool BReleased(int ControllerNum)
+            public bool BReleased(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].Buttons.B == ButtonState.Pressed) && (CurrentState[ControllerNum - 1].Buttons.B == ButtonState.Released));
+                return ((_previousState[controllerNum - 1].Buttons.B == ButtonState.Pressed) && (_currentState[controllerNum - 1].Buttons.B == ButtonState.Released));
 #endif
             }
-            public bool BHeld(int ControllerNum)
+            public bool BHeld(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return (CurrentState[ControllerNum - 1].Buttons.B == ButtonState.Pressed);
+                return (_currentState[controllerNum - 1].Buttons.B == ButtonState.Pressed);
 #endif
             }
 
-            public bool StartPressed(int ControllerNum)
+            public bool StartPressed(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].Buttons.Start == ButtonState.Released) && (CurrentState[ControllerNum - 1].Buttons.Start == ButtonState.Pressed));
+                return ((_previousState[controllerNum - 1].Buttons.Start == ButtonState.Released) && (_currentState[controllerNum - 1].Buttons.Start == ButtonState.Pressed));
 #endif
             }
-            public bool StartReleased(int ControllerNum)
+            public bool StartReleased(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return ((PreviousState[ControllerNum - 1].Buttons.Start == ButtonState.Pressed) && (CurrentState[ControllerNum - 1].Buttons.Start == ButtonState.Released));
+                return ((_previousState[controllerNum - 1].Buttons.Start == ButtonState.Pressed) && (_currentState[controllerNum - 1].Buttons.Start == ButtonState.Released));
 #endif
             }
-            public bool StartHeld(int ControllerNum)
+            public bool StartHeld(int controllerNum)
             {
 #if WINDOWS_PHONE
             return false;
 #else
-                return (CurrentState[ControllerNum - 1].Buttons.Start == ButtonState.Pressed);
+                return (_currentState[controllerNum - 1].Buttons.Start == ButtonState.Pressed);
 #endif
             }
-            public bool BackPressed(int ControllerNum)
+            public bool BackPressed(int controllerNum)
             {
 #if WINDOWS_PHONE
-            return ((PreviousState[0].Buttons.Back == ButtonState.Released) && (CurrentState[0].Buttons.Back == ButtonState.Pressed));
+            return ((_previousState[0].Buttons.Back == ButtonState.Released) && (_currentState[0].Buttons.Back == ButtonState.Pressed));
 #else
-                return ((PreviousState[ControllerNum - 1].Buttons.Back == ButtonState.Released) && (CurrentState[ControllerNum - 1].Buttons.Back == ButtonState.Pressed));
+                return ((_previousState[controllerNum - 1].Buttons.Back == ButtonState.Released) && (_currentState[controllerNum - 1].Buttons.Back == ButtonState.Pressed));
 #endif
             }
-            public bool BackReleased(int ControllerNum)
+            public bool BackReleased(int controllerNum)
             {
 #if WINDOWS_PHONE
-            return ((PreviousState[0].Buttons.Back == ButtonState.Pressed) && (CurrentState[0].Buttons.Back == ButtonState.Released));
+            return ((_previousState[0].Buttons.Back == ButtonState.Pressed) && (_currentState[0].Buttons.Back == ButtonState.Released));
 #else
-                return ((PreviousState[ControllerNum - 1].Buttons.Back == ButtonState.Pressed) && (CurrentState[ControllerNum - 1].Buttons.Back == ButtonState.Released));
+                return ((_previousState[controllerNum - 1].Buttons.Back == ButtonState.Pressed) && (_currentState[controllerNum - 1].Buttons.Back == ButtonState.Released));
 #endif
             }
-            public bool BackHeld(int ControllerNum)
+            public bool BackHeld(int controllerNum)
             {
 #if WINDOWS_PHONE
-            return (CurrentState[0].Buttons.Back == ButtonState.Pressed);
+            return (_currentState[0].Buttons.Back == ButtonState.Pressed);
 #else
-                return (CurrentState[ControllerNum - 1].Buttons.Back == ButtonState.Pressed);
+                return (_currentState[controllerNum - 1].Buttons.Back == ButtonState.Pressed);
 #endif
             }
         }

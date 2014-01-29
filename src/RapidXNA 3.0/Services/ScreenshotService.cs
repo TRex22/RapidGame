@@ -1,38 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using RapidXNA.Interfaces;
-using Microsoft.Xna.Framework.Graphics;
-using System.Threading;
-using System.IO;
-#if WINDOWS_PHONE
+﻿#if WINDOWS_PHONE
 using System.IO.IsolatedStorage;
 using Microsoft.Xna.Framework.Media;
 #endif
+using System;
+using System.IO;
+using System.Threading;
+using Microsoft.Xna.Framework.Graphics;
+using RapidXNA_3._0.Interfaces;
 
-namespace RapidXNA.Services
+namespace RapidXNA_3._0.Services
 {
-    public class ScreenshotService : IGameService
+    public class ScreenshotService : GameService
     {
         /// <summary>
         /// Hook onto the RapidEngine FinalDraw event
         /// </summary>
         public ScreenshotService()
         {
-            Engine.OnFinalDraw += new OnFinalDrawEventHandler(Engine_OnFinalDraw);
-            _RenderTarget = new RenderTarget2D(Engine.GraphicsDevice, 1, 1);
+            Engine.OnFinalDraw += Engine_OnFinalDraw;
+            _renderTarget = new RenderTarget2D(Engine.GraphicsDevice, 1, 1);
         }
 
         /// <summary>
         /// Gets a copy of the rendertarget
         /// </summary>
-        private RenderTarget2D _RenderTarget;
-        void Engine_OnFinalDraw(Microsoft.Xna.Framework.Graphics.RenderTarget2D renderTarget)
+        private RenderTarget2D _renderTarget;
+        void Engine_OnFinalDraw(RenderTarget2D renderTarget)
         {
-            lock (_RenderTarget)
+            lock (_renderTarget)
             {
-                _RenderTarget = renderTarget;
+                _renderTarget = renderTarget;
             }
         }
 
@@ -41,8 +38,8 @@ namespace RapidXNA.Services
         /// </summary>
         public void TakeScreenshot()
         {
-            ThreadStart ts = new ThreadStart(AsyncSaveScreenshot);
-            Thread saveThread = new Thread(ts);
+            var ts = new ThreadStart(AsyncSaveScreenshot);
+            var saveThread = new Thread(ts);
             saveThread.Start();
         }
 
@@ -51,7 +48,7 @@ namespace RapidXNA.Services
         /// </summary>
         private void AsyncSaveScreenshot()
         {
-            lock (_RenderTarget)
+            lock (_renderTarget)
             {
 #if WINDOWS
                 try
@@ -61,15 +58,16 @@ namespace RapidXNA.Services
                     {
                         Directory.CreateDirectory(targetDirectory);
                     }
-                    Texture2D tex = (Texture2D)_RenderTarget;
-                    using (FileStream fs = new FileStream(targetDirectory + "screenshot_" + DateTime.Now.ToString("yyyy_MM_dd_mm_ss") + "_" + DateTime.Now.Millisecond.ToString() + ".jpg", FileMode.CreateNew))
+                    var tex = (Texture2D)_renderTarget;
+                    using (var fs = new FileStream(targetDirectory + "screenshot_" + DateTime.Now.ToString("yyyy_MM_dd_mm_ss") + "_" + DateTime.Now.Millisecond + ".jpg", FileMode.CreateNew))
                     {
                         tex.SaveAsJpeg(fs, tex.Width, tex.Height);
                     }
                 }
                 catch
                 {
-
+                    /*TODO JMC*/
+                    throw new NotImplementedException();
                 }
 #endif
 #if WINDOWS_PHONE
@@ -83,7 +81,7 @@ namespace RapidXNA.Services
                     }
 
                     var fs = myStore.CreateFile(tempJPG);
-                    Texture2D tex = (Texture2D)_RenderTarget;
+                    Texture2D tex = (Texture2D)_renderTarget;
                     tex.SaveAsPng(fs, tex.Width, tex.Height);
                     fs.Close();
                     fs = myStore.OpenFile(tempJPG, FileMode.Open, FileAccess.Read);
@@ -107,17 +105,17 @@ namespace RapidXNA.Services
 
         public override void Init()
         {
-            
+            throw new NotImplementedException();
         }
 
         public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
         {
-            
+            throw new NotImplementedException();
         }
 
         public override void Draw(Microsoft.Xna.Framework.GameTime gameTime)
         {
-            
+            throw new NotImplementedException();
         }
     }
 }
