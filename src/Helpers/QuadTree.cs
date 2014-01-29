@@ -2,6 +2,8 @@
 using System.Linq;
 using Microsoft.Xna.Framework;
 
+/*TODO JMC http://www.xnawiki.com/index.php/QuadTree*/
+/*Note this is only for XNA*/
 namespace RapidXNA.Helpers
 {
     public class QuadTreeRoot
