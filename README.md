@@ -63,6 +63,10 @@ To Effectively Load and Build the Source or a Project
 RapidXNA requires XNA Game Studio, Visual Studio (c#) 2010 and Windows Phone 
 sdk 7.
 
+See: https://msxna.codeplex.com/releases
+http://ryan-lange.com/xna-game-studio-4-0-visual-studio-2012/
+To get XNA 4 Refresh for VS 2012 and 2013
+
 RapidGame and Mono Related projects will require MonoGame 3 for VS 2012, 
 although MonoDevelop could also be used if desired. Also the Mono SDK is needed.
 
