@@ -7,14 +7,14 @@ using RapidXNA_3._0.Services;
 namespace RapidXNA_3._0
 {
     /*TODO JMC
-       Implement Audio framework
+     * Implement Audio framework
      * Implement input framework
      * Implement Media framework
      * Implement Gamer Services
      * Implement data structures
      * Merge helpers
      * Start screen issue
-     * implement error capillary rise ie catches bobblue to an error service
+     * implement error capillary rise ie catches bubble to an error service
      * Resharper Parameters rules evaluate
      * Past TODO's close
      */
