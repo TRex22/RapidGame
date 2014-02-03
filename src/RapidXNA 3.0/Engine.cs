@@ -1,8 +1,12 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Audio;
+using RapidGame.Helpers;
+using RapidGame.Helpers.Properties;
 using RapidXNA_3._0.Interfaces;
 using RapidXNA_3._0.Services;
+//using RapidGame.Helpers;
 
 namespace RapidXNA_3._0
 {
@@ -20,34 +24,6 @@ namespace RapidXNA_3._0
      */
     public class RapidEngine
     {
-        readonly Game _game;
-        readonly RenderTarget2D _renderTarget;
-
-        public RapidEngine(Game game, GraphicsDevice graphicsDevice, ContentManager contentManager, GameScreen initialGameScreen)
-        {
-            _game = game;
-
-            _graphicsDevice = graphicsDevice;
-            _contentManager = contentManager;
-            _spriteBatch = new SpriteBatch(_graphicsDevice);
-
-            _renderTarget = new RenderTarget2D(graphicsDevice, graphicsDevice.Viewport.Width, graphicsDevice.Viewport.Height);
-
-            _engineServices = new EngineServices(this);
-            _engineServices.Add(new ScreenService());
-            _engineServices.Add(new InputService());
-
-            Screen.Show(initialGameScreen);
-        }
-
-        /// <summary>
-        /// Allow exiting of the game
-        /// </summary>
-        public void Exit()
-        {
-            _game.Exit();
-        }
-
         /// <summary>
         /// Instances of the major XNA libraries we will need
         /// </summary>
@@ -66,6 +42,50 @@ namespace RapidXNA_3._0
         public ScreenService Screen { get { return (ScreenService)_engineServices[0]; } }
         public InputService Input { get { return (InputService)_engineServices[1]; } }
 
+
+        /// <summary>
+        /// Event handler for Final Draw
+        /// </summary>
+        public event OnFinalDrawEventHandler OnFinalDraw;
+
+        readonly Game _game;
+        readonly RenderTarget2D _renderTarget;
+        private readonly Color _defaultClearColour;
+        
+        public RapidEngine(Game game, GraphicsDevice graphicsDevice, ContentManager contentManager, GameScreen initialGameScreen, GlobalSettings globalSettings, Convert convertHelper, Color defaultClearColour)
+        {
+            //var directoryInfo = Directory.GetParent(Directory.GetCurrentDirectory()).Parent;
+            //_config = directoryInfo != null ? new Config(directoryInfo.FullName) : null;
+            var config = globalSettings.Config();
+
+            _game = game;
+            
+            _graphicsDevice = graphicsDevice;
+            _contentManager = contentManager;
+            _defaultClearColour = convertHelper.ColourNameReflection<Color>(config.DefaultClearColour);
+
+            _spriteBatch = new SpriteBatch(_graphicsDevice);
+            
+            _renderTarget = new RenderTarget2D(graphicsDevice, graphicsDevice.Viewport.Width, graphicsDevice.Viewport.Height);
+
+            _engineServices = new EngineServices(this);
+            _engineServices.Add(new ScreenService());
+            _engineServices.Add(new InputService());
+            //_engineServices.Add(new AudioEngine());
+
+            Screen.Show(initialGameScreen);
+        }
+
+        /// <summary>
+        /// Allow exiting of the game
+        /// </summary>
+        public void Exit()
+        {
+            _game.Exit();
+        }
+
+        
+
         /// <summary>
         /// Normal XNA Update
         /// </summary>
@@ -80,8 +100,8 @@ namespace RapidXNA_3._0
         public void Draw(GameTime gameTime)
         {
             _graphicsDevice.SetRenderTarget(_renderTarget);
-            //Default clear color: Black
-            _graphicsDevice.Clear(Color.Black);
+            
+            _graphicsDevice.Clear(_defaultClearColour);
 
             _engineServices.Draw(gameTime);
 
@@ -97,11 +117,6 @@ namespace RapidXNA_3._0
             _spriteBatch.Draw(_renderTarget, _renderTarget.Bounds, Color.White);
             _spriteBatch.End();
         }
-
-        /// <summary>
-        /// Event handler for Final Draw
-        /// </summary>
-        public event OnFinalDrawEventHandler OnFinalDraw;
     }
 
     /// <summary>

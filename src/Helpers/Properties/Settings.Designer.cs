@@ -13,7 +13,7 @@ namespace RapidGame.Helpers.Properties {
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "12.0.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+    public sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
         
@@ -26,12 +26,12 @@ namespace RapidGame.Helpers.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Black")]
-        public global::System.Drawing.Color SettingDefaultClearColour {
+        public string DefaultClearColour {
             get {
-                return ((global::System.Drawing.Color)(this["SettingDefaultClearColour"]));
+                return ((string)(this["DefaultClearColour"]));
             }
             set {
-                this["SettingDefaultClearColour"] = value;
+                this["DefaultClearColour"] = value;
             }
         }
     }

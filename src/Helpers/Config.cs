@@ -1,10 +1,13 @@
-﻿using System.Collections.Specialized;
-using System.Configuration;
+﻿using RapidGame.Helpers.Properties;
 
 namespace RapidGame.Helpers
 {
-    public static class GlobalConfig
+    public class GlobalSettings
     {
-        public static readonly NameValueCollection GlobalSettings = ConfigurationManager.AppSettings;
-    }
+        public Settings Config()
+        {
+            /*TODO JMC Find a better solution*/
+            return Settings.Default;
+        }
+    } 
 }

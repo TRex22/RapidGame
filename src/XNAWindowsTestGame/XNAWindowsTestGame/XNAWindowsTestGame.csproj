@@ -83,6 +83,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\RapidXNA 3.0\RapidXNA 3.0.csproj">
+      <Project>{f8b798f9-4679-45b0-8dc9-fe49d54e8c54}</Project>
+      <Name>RapidXNA 3.0</Name>
+    </ProjectReference>
     <ProjectReference Include="..\XNAWindowsTestGameContent\XNAWindowsTestGameContent.contentproj">
       <Name>XNAWindowsTestGameContent</Name>
       <XnaReferenceType>Content</XnaReferenceType>

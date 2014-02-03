@@ -312,12 +312,12 @@ namespace RapidXNA_3._0.Services
         {
 
 #if WINDOWS_PHONE
-        List<GestureSample> _GestureSamples = new List<GestureSample>();
+            readonly List<GestureSample> _gestureSamples = new List<GestureSample>();
 #endif
             public List<GestureSample> GestureSamples
             {
 #if WINDOWS_PHONE
-            get { return _GestureSamples; }
+            get { return _gestureSamples; }
 #else
                 get { return new List<GestureSample>(); } //Should rethink this
 #endif
@@ -326,11 +326,11 @@ namespace RapidXNA_3._0.Services
             public void Update(GameTime gameTime)
             {
 #if WINDOWS_PHONE
-            _GestureSamples.Clear();
+            _gestureSamples.Clear();
             while (Microsoft.Xna.Framework.Input.Touch.TouchPanel.IsGestureAvailable)
             {
                 var gs = Microsoft.Xna.Framework.Input.Touch.TouchPanel.ReadGesture();
-                _GestureSamples.Add(gs);
+                _gestureSamples.Add(gs);
             }
 #endif
             }

@@ -23,12 +23,12 @@ namespace RapidXNA_3._0.Services
         /// <summary>
         /// Helpers to allow functionality to pause the game
         /// </summary>
-        private bool _Pause = false;
-        public bool Paused { get { return _Pause; } }
+        private bool _pause = false;
+        public bool Paused { get { return _pause; } }
         public bool Pause()
         {
-            _Pause = !_Pause;
-            return _Pause;
+            _pause = !_pause;
+            return _pause;
         }
 
         public override void Init()
