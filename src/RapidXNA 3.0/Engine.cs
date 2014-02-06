@@ -1,12 +1,13 @@
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Audio;
-using RapidGame.Helpers;
-using RapidGame.Helpers.Properties;
 using RapidXNA_3._0.Interfaces;
 using RapidXNA_3._0.Services;
-//using RapidGame.Helpers;
+
+#if WINDOWS
+    using RapidGame.Helpers;
+#endif
 
 namespace RapidXNA_3._0
 {
@@ -51,19 +52,34 @@ namespace RapidXNA_3._0
         readonly Game _game;
         readonly RenderTarget2D _renderTarget;
         private readonly Color _defaultClearColour;
+        private readonly Color _defaultDrawColour;
         
-        public RapidEngine(Game game, GraphicsDevice graphicsDevice, ContentManager contentManager, GameScreen initialGameScreen, GlobalSettings globalSettings, Convert convertHelper, Color defaultClearColour)
-        {
-            //var directoryInfo = Directory.GetParent(Directory.GetCurrentDirectory()).Parent;
-            //_config = directoryInfo != null ? new Config(directoryInfo.FullName) : null;
-            var config = globalSettings.Config();
+#if WINDOWS
+            private GlobalSettings globalSettings; 
+            private ConvertHelper convertHelper;
+#endif
 
+        public RapidEngine(
+            Game game, 
+            GraphicsDevice graphicsDevice, 
+            ContentManager contentManager, 
+            GameScreen initialGameScreen)
+        {
+
+/*TODO JMC Find a better fix*/
+#if WINDOWS
+            var config = globalSettings.Config();
+            _defaultClearColour = convertHelper.ColourNameReflection<Color>(config.DefaultClearColour);
+            _defaultDrawColour = convertHelper.ColourNameReflection<Color>(config.DefaultDrawColour);
+#else
+            _defaultClearColour = Color.Black;
+            _defaultDrawColour = Color.White;
+#endif
             _game = game;
             
             _graphicsDevice = graphicsDevice;
             _contentManager = contentManager;
-            _defaultClearColour = convertHelper.ColourNameReflection<Color>(config.DefaultClearColour);
-
+            
             _spriteBatch = new SpriteBatch(_graphicsDevice);
             
             _renderTarget = new RenderTarget2D(graphicsDevice, graphicsDevice.Viewport.Width, graphicsDevice.Viewport.Height);
@@ -100,11 +116,8 @@ namespace RapidXNA_3._0
         public void Draw(GameTime gameTime)
         {
             _graphicsDevice.SetRenderTarget(_renderTarget);
-            
             _graphicsDevice.Clear(_defaultClearColour);
-
             _engineServices.Draw(gameTime);
-
             _graphicsDevice.SetRenderTarget(null);
 
             if (OnFinalDraw != null)
@@ -114,7 +127,8 @@ namespace RapidXNA_3._0
             }
 
             _spriteBatch.Begin();
-            _spriteBatch.Draw(_renderTarget, _renderTarget.Bounds, Color.White);
+            /*TODO JMC allow for different draw colours*/
+            _spriteBatch.Draw(_renderTarget, _renderTarget.Bounds, _defaultDrawColour);
             _spriteBatch.End();
         }
     }

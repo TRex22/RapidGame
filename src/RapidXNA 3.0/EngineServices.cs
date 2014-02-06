@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.Xna.Framework;
 using RapidXNA_3._0.Interfaces;
 
@@ -76,7 +77,7 @@ namespace RapidXNA_3._0
         /// </summary>
         public void Update(GameTime gameTime)
         {
-            for (int i = 1; i < _services.Count; i++)
+            for (var i = 1; i < _services.Count; i++)
             {
                 _services[i].Update(gameTime);
             }
@@ -90,12 +91,9 @@ namespace RapidXNA_3._0
         /// </summary>
         public void Draw(GameTime gameTime)
         {
-            foreach (GameService service in _services.Values)
+            foreach (var service in _services.Values.Where(service => service.DrawEnabled))
             {
-                if (service.DrawEnabled)
-                {
-                    service.Draw(gameTime);
-                }
+                service.Draw(gameTime);
             }
         }
     }

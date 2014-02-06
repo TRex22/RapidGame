@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Drawing;
-using System.Globalization;
 using System.Linq;
 using System.Reflection;
 
 namespace RapidGame.Helpers
 {
-    public class Convert
+    public class ConvertHelper
     {
         public string SystemColourToName(Color colour)
         {

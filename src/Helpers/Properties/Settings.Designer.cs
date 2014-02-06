@@ -34,5 +34,17 @@ namespace RapidGame.Helpers.Properties {
                 this["DefaultClearColour"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("White")]
+        public string DefaultDrawColour {
+            get {
+                return ((string)(this["DefaultDrawColour"]));
+            }
+            set {
+                this["DefaultDrawColour"] = value;
+            }
+        }
     }
 }

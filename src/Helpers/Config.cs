@@ -1,13 +1,13 @@
-﻿using RapidGame.Helpers.Properties;
-
-namespace RapidGame.Helpers
+﻿namespace RapidGame.Helpers
 {
     public class GlobalSettings
     {
-        public Settings Config()
+        public Properties.Settings Config()
         {
             /*TODO JMC Find a better solution*/
-            return Settings.Default;
+            //var directoryInfo = Directory.GetParent(Directory.GetCurrentDirectory()).Parent;
+            //_config = directoryInfo != null ? new Config(directoryInfo.FullName) : null;
+            return Properties.Settings.Default;
         }
     } 
 }
