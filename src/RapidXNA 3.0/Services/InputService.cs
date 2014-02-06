@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
-using RapidXNA_3._0.Interfaces;
-
 
 #if WINDOWS_PHONE
 using Microsoft.Xna.Framework.Input.Touch;
 #endif
 
 
-namespace RapidXNA_3._0.Services
+namespace RapidXNA.Services
 {
     public class InputService : GameService
     {

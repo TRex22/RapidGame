@@ -1,9 +1,6 @@
 ﻿//using System.Drawing;
-using System;
-using System.Linq;
-using System.Reflection;
 
-namespace RapidXNA_3._0.Services
+namespace RapidXNA.Services
 {
     /// <summary>
     /// 

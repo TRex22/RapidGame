@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using RapidXNA;
 
 namespace XNAWindowsTestGame
 {
@@ -17,7 +18,8 @@ namespace XNAWindowsTestGame
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager _graphics;
-        SpriteBatch _spriteBatch;
+        private RapidEngine _rapidEngine;
+        //SpriteBatch _spriteBatch;
 
         public Game1()
         {
@@ -45,9 +47,12 @@ namespace XNAWindowsTestGame
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
-            _spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            //_spriteBatch = new SpriteBatch(GraphicsDevice);
+            
             // TODO: use this.Content to load your game content here
+            Game game1 = new Game1();
+            var gameScreen = new InitialGameScreen();
+            _rapidEngine = new RapidEngine(game1, GraphicsDevice, Content, gameScreen);
         }
 
         /// <summary>
@@ -71,8 +76,7 @@ namespace XNAWindowsTestGame
                 Exit();
 
             // TODO: Add your update logic here
-
-            base.Update(gameTime);
+            _rapidEngine.Update(gameTime);
         }
 
         /// <summary>
@@ -81,11 +85,11 @@ namespace XNAWindowsTestGame
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            //GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
 
-            base.Draw(gameTime);
+            _rapidEngine.Draw(gameTime);
         }
     }
 }

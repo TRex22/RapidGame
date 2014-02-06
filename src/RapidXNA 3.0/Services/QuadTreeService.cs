@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework;
 
 /*TODO JMC http://www.xnawiki.com/index.php/QuadTree*/
 /*Note this is only for XNA*/
-namespace RapidXNA_3._0.Services
+namespace RapidXNA.Services
 {
     public class QuadTreeRoot
     {

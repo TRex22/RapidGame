@@ -1,11 +1,10 @@
-using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using RapidXNA_3._0.Interfaces;
-using RapidXNA_3._0.Services;
+using RapidXNA.Interfaces;
+using RapidXNA.Services;
 
-namespace RapidXNA_3._0
+namespace RapidXNA
 {
     /*TODO JMC
      * Implement Audio framework
@@ -20,6 +19,10 @@ namespace RapidXNA_3._0
      * Past TODO's close
      * Perhaps have local configs for WP7 and XBOX to solve problem
      */
+
+    /// <summary>
+    /// The Main Part of RapidXNA. This is the engine method.
+    /// </summary>
     public class RapidEngine
     {
         /// <summary>
@@ -55,7 +58,7 @@ namespace RapidXNA_3._0
             Game game, 
             GraphicsDevice graphicsDevice, 
             ContentManager contentManager, 
-            GameScreen initialGameScreen)
+            IGameScreen initialGameScreen)
         {
 
             /*TODO JMC Find a better fix*/

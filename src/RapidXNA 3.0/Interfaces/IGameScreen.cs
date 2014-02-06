@@ -1,9 +1,9 @@
 ﻿using System.Threading;
 using Microsoft.Xna.Framework;
 
-namespace RapidXNA_3._0.Interfaces
+namespace RapidXNA.Interfaces
 {
-    public abstract class GameScreen
+    public abstract class IGameScreen
     {
         /// <summary>
         /// Engine instance for the game screen to leverage

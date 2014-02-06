@@ -3,9 +3,9 @@ using System.IO;
 using System.IO.IsolatedStorage;
 using System.Xml.Serialization;
 
-namespace RapidXNA_3._0.Services
+namespace RapidXNA.Services
 {
-
+    /*http://wellroundedgeek.com/post/2011/01/25/Simple-XNA-Cross-Platform-Settings-Manager.aspx*/
     #region application settings
     /*TODO JMC properly implement There should no be two classes in same cs*/
     /// <summary>

@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using Microsoft.Xna.Framework;
-using RapidXNA_3._0.Interfaces;
+using RapidXNA.Interfaces;
 
-namespace RapidXNA_3._0.Services
+namespace RapidXNA.Services
 {
     public class ScreenService : GameService
     {
@@ -17,8 +17,8 @@ namespace RapidXNA_3._0.Services
         /// <summary>
         /// List (faking stack functionality) containing the game screens and popup screens
         /// </summary>
-        List<GameScreen> _gameScreens = new List<GameScreen>(),
-                          _popupScreens = new List<GameScreen>();
+        List<IGameScreen> _gameScreens = new List<IGameScreen>(),
+                          _popupScreens = new List<IGameScreen>();
 
         /// <summary>
         /// Helpers to allow functionality to pause the game
@@ -110,7 +110,7 @@ namespace RapidXNA_3._0.Services
         /// - You cannot add a game screen multiple times
         /// </summary>
         /// <param name="gs">The IGameScreen to show.</param>
-        public void Show(GameScreen gs)
+        public void Show(IGameScreen gs)
         {
             if (_gameScreens.Contains(gs))
                 return;
@@ -126,7 +126,7 @@ namespace RapidXNA_3._0.Services
         /// - You cannot add a popup screen multiple times
         /// </summary>
         /// <param name="gs">The IGameScreen to popup.</param>
-        public void ShowPopup(GameScreen gs)
+        public void ShowPopup(IGameScreen gs)
         {
             if (_popupScreens.Contains(gs))
                 return;

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
-using RapidXNA_3._0.Interfaces;
+using RapidXNA.Services;
 
-namespace RapidXNA_3._0
+namespace RapidXNA
 {
     /// <summary>
     /// 

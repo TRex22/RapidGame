@@ -6,9 +6,8 @@ using System;
 using System.IO;
 using System.Threading;
 using Microsoft.Xna.Framework.Graphics;
-using RapidXNA_3._0.Interfaces;
 
-namespace RapidXNA_3._0.Services
+namespace RapidXNA.Services
 {
     public class ScreenshotService : GameService
     {

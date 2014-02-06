@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace RapidXNA_3._0.Interfaces
+namespace RapidXNA.Services
 {
     public abstract class GameService
     {
