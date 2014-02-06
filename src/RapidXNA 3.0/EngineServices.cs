@@ -6,12 +6,19 @@ using RapidXNA_3._0.Interfaces;
 
 namespace RapidXNA_3._0
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class EngineServices
     {
         private readonly RapidEngine _rapidEngine;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="rapidEngine"></param>
         public EngineServices(RapidEngine rapidEngine)
         {
-            _rapidEngine = rapidEngine;
+            _rapidEngine = rapidEngine; 
         }
 
 

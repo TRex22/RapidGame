@@ -68,12 +68,6 @@
   <ItemGroup>
     <Folder Include="Content\" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Helpers\Helpers.csproj">
-      <Project>{5e3e8edc-5ca1-4195-bfc2-2d37333ca0ec}</Project>
-      <Name>Helpers</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

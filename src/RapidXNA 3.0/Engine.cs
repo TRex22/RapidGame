@@ -5,10 +5,6 @@ using Microsoft.Xna.Framework.Graphics;
 using RapidXNA_3._0.Interfaces;
 using RapidXNA_3._0.Services;
 
-#if WINDOWS
-    using RapidGame.Helpers;
-#endif
-
 namespace RapidXNA_3._0
 {
     /*TODO JMC
@@ -22,6 +18,7 @@ namespace RapidXNA_3._0
      * implement error capillary rise ie catches bubble to an error service
      * Resharper Parameters rules evaluate
      * Past TODO's close
+     * Perhaps have local configs for WP7 and XBOX to solve problem
      */
     public class RapidEngine
     {
@@ -54,11 +51,6 @@ namespace RapidXNA_3._0
         private readonly Color _defaultClearColour;
         private readonly Color _defaultDrawColour;
         
-#if WINDOWS
-            private GlobalSettings globalSettings; 
-            private ConvertHelper convertHelper;
-#endif
-
         public RapidEngine(
             Game game, 
             GraphicsDevice graphicsDevice, 
@@ -66,15 +58,10 @@ namespace RapidXNA_3._0
             GameScreen initialGameScreen)
         {
 
-/*TODO JMC Find a better fix*/
-#if WINDOWS
-            var config = globalSettings.Config();
-            _defaultClearColour = convertHelper.ColourNameReflection<Color>(config.DefaultClearColour);
-            _defaultDrawColour = convertHelper.ColourNameReflection<Color>(config.DefaultDrawColour);
-#else
+            /*TODO JMC Find a better fix*/
             _defaultClearColour = Color.Black;
             _defaultDrawColour = Color.White;
-#endif
+
             _game = game;
             
             _graphicsDevice = graphicsDevice;
