@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="d6820564-aaa8-4abc-bdbc-7a0edef82cc8" Title="RapidXNA Namespace" Url="html/0ed8f065-7b13-f370-150d-2f7f436d9b4d.htm">
+    <HelpTOCNode Id="131faca4-a2fc-409f-9cf5-b5bb2e1e4aa7" Title="EngineServices Class" Url="html/40a9889c-00f7-a7d0-c561-22fc45c3f8cb.htm">
+      <HelpTOCNode Title="EngineServices Members" Url="html/75cadb83-fc84-e340-1223-0095c9763ba6.htm" />
+      <HelpTOCNode Title="EngineServices Constructor " Url="html/4cbaafe0-f1eb-499f-e458-e097526a2243.htm" />
+      <HelpTOCNode Id="445e28a2-a7e0-461f-b359-5904ee96db9e" Title="EngineServices Methods" Url="html/1ed59384-bdeb-1ff6-82fb-91af824e0c0e.htm">
+        <HelpTOCNode Title="Add Method " Url="html/a57cb7df-3f67-00cf-bbdf-2995afd7a654.htm" />
+        <HelpTOCNode Title="Draw Method " Url="html/00343c08-dc81-01be-2086-d465e581588d.htm" />
+        <HelpTOCNode Title="First(T) Method " Url="html/71edd1a7-2f2c-8b9b-b781-76c47511e48d.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/b6a7aa1c-63a2-5c66-7ce0-9140c7c32798.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="b07ced23-add0-44bb-943b-8bd143b12983" Title="EngineServices Properties" Url="html/a2d010bb-e8b4-1eab-917d-af09db2fba91.htm">
+        <HelpTOCNode Title="Item Property " Url="html/a535595f-9b16-bdd7-7f7d-4d6471926b51.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Title="OnFinalDrawEventHandler Delegate" Url="html/d20f7bbb-9d4f-8731-886d-ef8ecc54cd08.htm" />
+    <HelpTOCNode Id="9d504284-1243-4d09-92ba-8ffccb44918a" Title="RapidEngine Class" Url="html/3cb3f75f-5e44-6fdf-ac12-d7da3f094364.htm">
+      <HelpTOCNode Title="RapidEngine Members" Url="html/ac8f53d7-c82e-384a-9dfa-36cd8fba0f38.htm" />
+      <HelpTOCNode Title="RapidEngine Constructor " Url="html/056b4b43-b7b0-5186-7ba8-36343c6bf0c7.htm" />
+      <HelpTOCNode Id="6dbee2a3-ee31-45a7-897e-375dc82edb57" Title="RapidEngine Methods" Url="html/31922e83-b276-76ca-20c9-640a5ad7a006.htm">
+        <HelpTOCNode Title="Draw Method " Url="html/ff61ea9e-29f5-e937-982f-ee464e8650f6.htm" />
+        <HelpTOCNode Title="Exit Method " Url="html/fe7cbd71-3ae3-da20-fe86-4803444872ab.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/9c79c080-69d1-8672-9a6d-affe6374cc5a.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="c90d094a-419f-45e0-9030-8a65be400026" Title="RapidEngine Properties" Url="html/6504c8f2-25e3-9645-ba84-de653d4b2ef0.htm">
+        <HelpTOCNode Title="ContentManager Property " Url="html/02f6b5eb-cf7e-1811-96fd-d5b5daff23e3.htm" />
+        <HelpTOCNode Title="EngineServices Property " Url="html/987b0e5d-91a9-798e-5516-682e561ed8fc.htm" />
+        <HelpTOCNode Title="GraphicsDevice Property " Url="html/c601f0c0-b590-ab21-975e-0d80497b7f83.htm" />
+        <HelpTOCNode Title="InputService Property " Url="html/fc3eb133-fcb4-fc5b-e2a4-cae657e195c9.htm" />
+        <HelpTOCNode Title="ScreenService Property " Url="html/ce1f9568-f64a-2420-d88e-599e2caa1cda.htm" />
+        <HelpTOCNode Title="SpriteBatch Property " Url="html/d278d6eb-442f-e6b2-a8e1-1c89f21157ca.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="49291706-d7be-4089-ae66-90e2fd1d8d08" Title="RapidEngine Events" Url="html/79a69a53-d1ff-3dfd-5819-8754b99b9d0c.htm">
+        <HelpTOCNode Title="OnFinalDraw Event" Url="html/2410932a-bb23-1b9c-3f24-8cdc59988736.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="d4a5389f-c0af-4803-8d8b-dc35559fb168" Title="RapidXNA.Interfaces Namespace" Url="html/c3827ac5-850c-52a3-d002-68e6efecac15.htm">
+    <HelpTOCNode Id="ec3dfd92-2e45-4a43-920e-6eaf3a1903fd" Title="IGameScreen Class" Url="html/41cb462d-52f7-5648-dc26-67204801c080.htm">
+      <HelpTOCNode Title="IGameScreen Members" Url="html/0e72a041-0009-3a78-389c-18ad1c0cc01d.htm" />
+      <HelpTOCNode Title="IGameScreen Constructor " Url="html/b4c0ee27-7976-8bb9-fe4d-3e3361882e9f.htm" />
+      <HelpTOCNode Id="71cd3369-ad01-4833-b62e-414df07575e2" Title="IGameScreen Fields" Url="html/beb94836-d340-3d4a-6607-ae3dd1a961d8.htm">
+        <HelpTOCNode Title="Engine Field" Url="html/77b61d7a-4142-5bae-1a66-e6b2ad4cdf13.htm" />
+        <HelpTOCNode Title="LoadScreen Field" Url="html/eb3b0906-d91a-a73c-a9e0-2236810ab8fa.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="7e22cdaa-a7db-4e65-80f6-bf648b6bcd89" Title="IGameScreen Methods" Url="html/49412980-464c-a862-fb6d-d901c7835d05.htm">
+        <HelpTOCNode Title="BeginLoad Method " Url="html/ef58e983-9526-7b33-5838-ad9ee79a4070.htm" />
+        <HelpTOCNode Title="Draw Method " Url="html/8aa3c76e-f320-0499-ce19-361f82be2870.htm" />
+        <HelpTOCNode Title="Load Method " Url="html/189aea10-f287-5168-739b-9af5f66bb192.htm" />
+        <HelpTOCNode Title="LoadDraw Method " Url="html/41c186cb-536a-4b71-7cc7-555686a5ed90.htm" />
+        <HelpTOCNode Title="LoadUpdate Method " Url="html/1dee4429-192f-f2a8-4aff-7168678250e0.htm" />
+        <HelpTOCNode Title="OnPop Method " Url="html/8012234e-b544-0ed8-3227-1dbf4e6da1f6.htm" />
+        <HelpTOCNode Title="PreLoad Method " Url="html/04161f11-40a0-69de-db68-990a02dd3b2a.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/a71c6efe-70db-c558-7c97-3fce1bf657a2.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="20c66b5e-466c-493a-b52d-27d922ddb4a1" Title="IGameScreen Properties" Url="html/dc828f00-2f96-6ec7-e169-ae8c4b6e4f19.htm">
+        <HelpTOCNode Title="HasLoadScreen Property " Url="html/1dc649fa-4644-a826-e1a2-0546e3fb30f0.htm" />
+        <HelpTOCNode Title="IsLoaded Property " Url="html/70aa1ec7-2448-a10d-76ec-a50ba1483d85.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="dc261429-bb92-46b8-9bbb-5ca3c6471ca7" Title="RapidXNA.Services Namespace" Url="html/80d3cc84-aa49-fe3d-d6a9-ac7c02a7c78b.htm">
+    <HelpTOCNode Id="3c31f7ae-03b3-40ea-9d6c-50c744d03e3a" Title="AppSettings Class" Url="html/6e520d34-6a4b-eb18-a73e-e24d4793942c.htm">
+      <HelpTOCNode Title="AppSettings Members" Url="html/0b746471-6d50-3984-64bc-7f2368efeb81.htm" />
+      <HelpTOCNode Title="AppSettings Constructor " Url="html/76f7cb8e-17a2-50e0-f361-5462a3b80bcd.htm" />
+      <HelpTOCNode Title="AppSettings Methods" Url="html/f79225ec-dcab-6fb5-c52f-1b1e80768494.htm" />
+      <HelpTOCNode Id="4b8c3450-d277-42c1-b7ef-9d56db41bcba" Title="AppSettings Properties" Url="html/42b7e09a-42a2-3663-9c6e-60bbe6880339.htm">
+        <HelpTOCNode Title="EnableMusic Property " Url="html/2a65c67e-4949-5920-5d82-8cc14315dc9d.htm" />
+        <HelpTOCNode Title="EnableSfx Property " Url="html/c822c1c6-eb44-f0b3-0ded-35a33279cd51.htm" />
+        <HelpTOCNode Title="HasRunOnce Property " Url="html/72edbbbd-07d0-774e-eac6-1f51fd550e68.htm" />
+        <HelpTOCNode Title="IsFullScreen Property " Url="html/96ec62f5-1b48-e9bd-be48-07eb4ba0bcdf.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="b20dac21-cbd7-4497-9dc9-54e33757f29e" Title="ConvertHelper Class" Url="html/b2e73425-98a2-2b76-4ef3-05a0d217817a.htm">
+      <HelpTOCNode Title="ConvertHelper Members" Url="html/66fb51a3-1559-6994-82ec-08c6668a7e70.htm" />
+      <HelpTOCNode Title="ConvertHelper Constructor " Url="html/0b8084f2-269c-b02b-18c5-3986438ce0f8.htm" />
+      <HelpTOCNode Title="ConvertHelper Methods" Url="html/d7f37c23-02ad-0316-cb41-8606f7690aaf.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="249fccc2-fb19-436e-9a19-88093becf899" Title="GameService Class" Url="html/c4f03bc3-3878-3371-f1e3-50cc307ee5f5.htm">
+      <HelpTOCNode Title="GameService Members" Url="html/f7d86192-b917-6f74-6153-7ab4169ba1dc.htm" />
+      <HelpTOCNode Title="GameService Constructor " Url="html/46880528-df63-df68-e3c7-e380c08c2c4f.htm" />
+      <HelpTOCNode Id="72aff444-e325-49d8-90e6-8c51d20d8d1a" Title="GameService Fields" Url="html/2b1d9a9d-4cd8-252f-d91f-62181e119d60.htm">
+        <HelpTOCNode Title="DrawEnabled Field" Url="html/15bbb12e-6e01-9e8a-c195-688ae773079f.htm" />
+        <HelpTOCNode Title="Engine Field" Url="html/75585364-54ee-0f22-f911-457c743d7767.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="f89f5289-69a7-4105-974e-680f044a91da" Title="GameService Methods" Url="html/770dd3dd-3de3-7c9a-2d48-3109555a2a92.htm">
+        <HelpTOCNode Title="Draw Method " Url="html/1f8a5a90-6ba0-9bd7-35ed-106297acd074.htm" />
+        <HelpTOCNode Title="Init Method " Url="html/b8647447-294d-e98c-54bc-52e0282d5301.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/f1172207-da35-4ece-ccbf-2d6e66f4acce.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="f7d0a587-132d-488f-bbb9-75eeebef31b7" Title="InputService Class" Url="html/4ad58eb6-ab55-963b-728a-b088d0093fd7.htm">
+      <HelpTOCNode Title="InputService Members" Url="html/0cf47515-f45d-5d9a-8bcc-412cf0e6752d.htm" />
+      <HelpTOCNode Title="InputService Constructor " Url="html/60628af4-c804-3b39-da97-15d5e57177c5.htm" />
+      <HelpTOCNode Title="InputService Fields" Url="html/1442b9d3-246f-5217-c018-26880c69cc69.htm" />
+      <HelpTOCNode Id="c6956a7d-36be-44c2-ae29-ea099bd91971" Title="InputService Methods" Url="html/8d8334b9-6246-b954-ebb2-fef2bd8f4b35.htm">
+        <HelpTOCNode Title="Draw Method " Url="html/2940f210-6dc9-f89c-75b9-8fda611d421f.htm" />
+        <HelpTOCNode Title="Init Method " Url="html/664883da-74b9-0414-2953-7869a103076f.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/2901743d-f53c-fab7-e311-4ce94c59ca0d.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="aae465d6-ce51-4bc3-b9cb-6a6198f7c597" Title="InputService Properties" Url="html/17403118-b944-a4ad-dfee-42954172906b.htm">
+        <HelpTOCNode Title="GamePad Property " Url="html/4f276fb3-9a68-4432-977e-dcb4b04c21dd.htm" />
+        <HelpTOCNode Title="Keyboard Property " Url="html/6820df9c-fea6-e4f6-4744-f428d6a8a6a8.htm" />
+        <HelpTOCNode Title="Mouse Property " Url="html/25921c5d-7004-fa17-044a-6f5f086606d9.htm" />
+        <HelpTOCNode Title="PhoneGestures Property " Url="html/6040ad1b-a040-eca4-9d90-8adeab331baf.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="6d9d2272-0379-4684-abaf-a697e83314a0" Title="InputService.GamePadHandler Class" Url="html/6b4b065a-837d-cb91-9521-3b36c251b3f2.htm">
+      <HelpTOCNode Title="InputService.GamePadHandler Members" Url="html/389ed24e-b509-aa5e-7609-2bb574123dd9.htm" />
+      <HelpTOCNode Title="InputService.GamePadHandler Constructor " Url="html/40270416-9a2a-6e28-293d-a3baea701e91.htm" />
+      <HelpTOCNode Id="ab6233d8-f3d4-43e7-901a-19157d96432c" Title="InputService.GamePadHandler Methods" Url="html/143a7bbd-e7ea-d48a-2d93-fe299a9b93fc.htm">
+        <HelpTOCNode Title="AHeld Method " Url="html/45a2c0fb-52f2-1eef-9edf-ddc1432b0605.htm" />
+        <HelpTOCNode Title="APressed Method " Url="html/d91e61cb-2c7d-b459-0557-b274e0e9a474.htm" />
+        <HelpTOCNode Title="AReleased Method " Url="html/85dd3b82-f929-1e85-a229-37889302f557.htm" />
+        <HelpTOCNode Title="BackHeld Method " Url="html/44a8316d-1ace-aaec-23b3-aab7300f0f88.htm" />
+        <HelpTOCNode Title="BackPressed Method " Url="html/62df3591-ad41-fa9c-1099-1a115f11df34.htm" />
+        <HelpTOCNode Title="BackReleased Method " Url="html/8c585f4c-6c03-a961-5c81-f14ac792b091.htm" />
+        <HelpTOCNode Title="BHeld Method " Url="html/aacdc94f-7e2f-7c9b-8bfe-8326a7c71687.htm" />
+        <HelpTOCNode Title="BPressed Method " Url="html/1f947a8b-4885-7d16-1e6b-f4b9ef8592cc.htm" />
+        <HelpTOCNode Title="BReleased Method " Url="html/8c311a11-b65b-d0c8-5a49-7997eef2dd9b.htm" />
+        <HelpTOCNode Title="DownHeld Method " Url="html/e99c4bc1-eda6-5938-c8f2-9f97d8a51aed.htm" />
+        <HelpTOCNode Title="DownPressed Method " Url="html/4bfd402d-392d-0177-9a5f-a34b05ae7056.htm" />
+        <HelpTOCNode Title="DownReleased Method " Url="html/2cc1729a-746a-b579-1ff7-572aff85ab99.htm" />
+        <HelpTOCNode Title="LeftBumberHeld Method " Url="html/2afce835-9d92-e2ad-a13b-4a8ddb09ccd8.htm" />
+        <HelpTOCNode Title="LeftBumberPressed Method " Url="html/37da423f-65a9-bab5-70f4-4f13d20b9d9b.htm" />
+        <HelpTOCNode Title="LeftBumberReleased Method " Url="html/5c0d09d2-3dc6-2277-3fdf-5f7010a465dc.htm" />
+        <HelpTOCNode Title="LeftHeld Method " Url="html/60c7dc92-fbf5-85ef-86ac-2152c0a30bce.htm" />
+        <HelpTOCNode Title="LeftPressed Method " Url="html/11673ffb-7f98-1483-5bf1-5df159dee095.htm" />
+        <HelpTOCNode Title="LeftReleased Method " Url="html/a1971003-326b-88ab-0f53-c2567f7ebae0.htm" />
+        <HelpTOCNode Title="LeftStick Method " Url="html/601fa46c-de94-a511-3fa4-6e348851426d.htm" />
+        <HelpTOCNode Title="LeftStickDirection Method " Url="html/38683ad7-4826-7d32-5e15-e3423f7b1c99.htm" />
+        <HelpTOCNode Title="LeftStickHeld Method " Url="html/f92936fa-677b-bbcf-a66d-e66ff318002c.htm" />
+        <HelpTOCNode Title="LeftStickPressed Method " Url="html/1f80062a-063d-f287-1626-ad55048b9557.htm" />
+        <HelpTOCNode Title="LeftStickReleased Method " Url="html/055f8df0-4b7c-30c6-440c-1fbbb36eb26d.htm" />
+        <HelpTOCNode Title="LeftTriggerPressed Method " Url="html/8295d669-bd09-cc68-595c-e23b1acb4136.htm" />
+        <HelpTOCNode Title="LeftTriggerReleased Method " Url="html/616e69b6-9d4d-1b11-0e45-bdb83343b298.htm" />
+        <HelpTOCNode Title="LeftTriggerValue Method " Url="html/5cae2778-61cd-a641-648e-b9d8d954aae6.htm" />
+        <HelpTOCNode Title="RightBumberHeld Method " Url="html/a6f809f3-c10c-8e6d-d4e7-6f2d33f9f9cf.htm" />
+        <HelpTOCNode Title="RightBumberPressed Method " Url="html/688fe23f-cb39-f32a-4191-f703b653ea5e.htm" />
+        <HelpTOCNode Title="RightBumberReleased Method " Url="html/8e59d125-3433-7b60-5abc-b9965afcb67f.htm" />
+        <HelpTOCNode Title="RightHeld Method " Url="html/2a51460c-b4cc-9c13-fc33-e1d53ca6c355.htm" />
+        <HelpTOCNode Title="RightPressed Method " Url="html/ea0fd403-ee47-e012-9867-f4c089647074.htm" />
+        <HelpTOCNode Title="RightReleased Method " Url="html/f78bb250-4914-fe43-9d52-309fcf4d74d3.htm" />
+        <HelpTOCNode Title="RightStick Method " Url="html/17cfbe7f-e1fd-8348-dedf-42e839c82abb.htm" />
+        <HelpTOCNode Title="RightStickDirection Method " Url="html/88eb2eb4-3e90-d11c-2e2e-a486a5e53fe9.htm" />
+        <HelpTOCNode Title="RightStickHeld Method " Url="html/ec9f9224-1f64-3a8a-970e-ecf1626d2b87.htm" />
+        <HelpTOCNode Title="RightStickPressed Method " Url="html/8afa8d0f-0ebb-4c21-5d40-ec46b7ef38e2.htm" />
+        <HelpTOCNode Title="RightStickReleased Method " Url="html/e3b1ce64-5e3a-6454-e52b-8ce7fce0fd33.htm" />
+        <HelpTOCNode Title="RightTrigerValue Method " Url="html/a9798ba4-3400-ed2e-f0ee-afe503fda7b9.htm" />
+        <HelpTOCNode Title="RightTriggerPressed Method " Url="html/869556a6-80ce-f7f9-5907-16236e45bff9.htm" />
+        <HelpTOCNode Title="RightTriggerReleased Method " Url="html/f2371837-eed0-ce60-820b-366d04d99f61.htm" />
+        <HelpTOCNode Title="StartHeld Method " Url="html/eb6bc949-f138-dbd2-0860-c906bac6fa77.htm" />
+        <HelpTOCNode Title="StartPressed Method " Url="html/488e5891-073f-6d5a-a42c-c2f852b8d3cd.htm" />
+        <HelpTOCNode Title="StartReleased Method " Url="html/eec9373b-67b2-5127-fb6f-bab2e6d73fc6.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/9bc50e7c-861f-e1ea-72c0-1cc5d3b68b43.htm" />
+        <HelpTOCNode Title="UpHeld Method " Url="html/a59be580-2c2a-2d2a-4548-bdd7a7ed79e0.htm" />
+        <HelpTOCNode Title="UpPressed Method " Url="html/d3b0ee70-b790-18ba-3701-48873fa63fad.htm" />
+        <HelpTOCNode Title="UpReleased Method " Url="html/a6473461-0902-9b0f-ad92-8eec063aa3c3.htm" />
+        <HelpTOCNode Title="XHeld Method " Url="html/a3f17ba9-802b-26f3-1229-4cea0d018bc2.htm" />
+        <HelpTOCNode Title="XPressed Method " Url="html/b3367718-5f63-438d-c0ab-2e4ac35b1b05.htm" />
+        <HelpTOCNode Title="XReleased Method " Url="html/cec85167-8c45-36e9-55f2-4f498732562b.htm" />
+        <HelpTOCNode Title="YHeld Method " Url="html/f0790b48-ca32-f544-00fc-5ab13aae8583.htm" />
+        <HelpTOCNode Title="YPressed Method " Url="html/112c5661-868c-5ef5-636d-c7564360ea07.htm" />
+        <HelpTOCNode Title="YReleased Method " Url="html/d8b51642-fca2-3506-8ef2-2445fb48ec85.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="40fb2703-8ee3-4773-9c68-422ba70921a4" Title="InputService.GestureSample Class" Url="html/dd49456b-d62f-3839-c7d1-16bebd01b06a.htm">
+      <HelpTOCNode Title="InputService.GestureSample Members" Url="html/71678a45-74af-f793-72fd-1fefd1a3c1ab.htm" />
+      <HelpTOCNode Title="InputService.GestureSample Constructor " Url="html/1f335e20-b26d-d386-5173-dab20316a48a.htm" />
+      <HelpTOCNode Title="InputService.GestureSample Methods" Url="html/1a22fb2d-fa36-ecb0-04e9-d3c3cace185e.htm" />
+      <HelpTOCNode Id="ea661e14-22aa-4198-ad42-bdbe8f49db6e" Title="InputService.GestureSample Properties" Url="html/2d8af510-4560-9b89-5753-dd13656268a1.htm">
+        <HelpTOCNode Title="Delta Property " Url="html/e6f193bb-7603-9243-46d0-8e5f93949f9e.htm" />
+        <HelpTOCNode Title="Delta2 Property " Url="html/f61a8c95-5017-61d7-7419-469e98d4f3a3.htm" />
+        <HelpTOCNode Title="GestureType Property " Url="html/36b27e96-898e-16f7-be09-e18df4d5e444.htm" />
+        <HelpTOCNode Title="Position Property " Url="html/379a95de-3027-76b6-dee9-ab2a8edba977.htm" />
+        <HelpTOCNode Title="Position2 Property " Url="html/fec8c550-3543-8279-933c-af593ade3c66.htm" />
+        <HelpTOCNode Title="Timestamp Property " Url="html/6b39f37d-433c-6e4b-976e-5ba8ae55cd89.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Title="InputService.GestureType Enumeration" Url="html/aa2b542f-7b04-4a3f-79be-2ac06d674e96.htm" />
+    <HelpTOCNode Id="d371dd55-898c-40f0-a12b-8968b0c6d778" Title="InputService.KeyboardHandler Class" Url="html/759628fe-4f29-304c-59f5-5af46e250d8a.htm">
+      <HelpTOCNode Title="InputService.KeyboardHandler Members" Url="html/03570595-7543-0cd1-ee6c-dc673c9051fa.htm" />
+      <HelpTOCNode Title="InputService.KeyboardHandler Constructor " Url="html/66c61755-b3d4-aacf-ee91-c557aa9bbc21.htm" />
+      <HelpTOCNode Id="a5f4d314-4a0f-4a2f-8598-7e95ce60a466" Title="InputService.KeyboardHandler Methods" Url="html/01ad62ff-b930-da73-fefc-eafa82fe4db4.htm">
+        <HelpTOCNode Title="AddKey Method " Url="html/070d6735-79af-1ce0-be89-32952a864b6f.htm" />
+        <HelpTOCNode Title="HeldFor Method " Url="html/43df15f6-e4fd-d5e7-6073-2c67d1559001.htm" />
+        <HelpTOCNode Title="KeyHeld Method " Url="html/b4963ec8-dda9-c5b6-35b2-4c011510c041.htm" />
+        <HelpTOCNode Title="KeyLeft Method " Url="html/4e2ff06c-0977-f9c2-6b3c-ad26506a2687.htm" />
+        <HelpTOCNode Title="KeyPress Method " Url="html/0cb52239-6ef8-218e-832b-06711415daa3.htm" />
+        <HelpTOCNode Title="ReleasedTime Method " Url="html/192e6f64-50d9-2d16-ea72-f351c926ac1b.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/81b8d3d1-31d4-b70b-5d51-6fb45e51014f.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="026a3b7c-32d2-4beb-9c63-b8fe642ac509" Title="InputService.MouseHandler Class" Url="html/c11933d8-ddda-d37a-f7dc-ebb868c66889.htm">
+      <HelpTOCNode Title="InputService.MouseHandler Members" Url="html/7d6bdb64-dac1-d0af-b32f-afa4a7595764.htm" />
+      <HelpTOCNode Title="InputService.MouseHandler Constructor " Url="html/df2381dc-4ef7-3205-5bdf-bb29a59626a9.htm" />
+      <HelpTOCNode Id="acab5a34-4011-4852-b4ce-9bf611883e58" Title="InputService.MouseHandler Methods" Url="html/99273661-343e-2fec-ff78-999685658fb2.htm">
+        <HelpTOCNode Title="LeftHeld Method " Url="html/9e82fcbc-31d2-9bc1-a024-f60d03965b0f.htm" />
+        <HelpTOCNode Title="LeftPressed Method " Url="html/39f97867-5abd-1092-4765-72427705b9cc.htm" />
+        <HelpTOCNode Title="LeftReleased Method " Url="html/6b99de14-b3db-c9cb-e888-47e04eb029db.htm" />
+        <HelpTOCNode Title="MiddleHeld Method " Url="html/bc190a60-dc61-d103-911e-96dc59dc41b8.htm" />
+        <HelpTOCNode Title="MiddlePressed Method " Url="html/1ba5f358-a047-9892-9fe9-655b1e7b7958.htm" />
+        <HelpTOCNode Title="MiddleReleased Method " Url="html/0cb6654f-ba03-07f3-54d4-db994d46c3cb.htm" />
+        <HelpTOCNode Title="Position Method " Url="html/171a3eb9-81ed-8db5-a816-b4bed6250754.htm" />
+        <HelpTOCNode Title="RightHeld Method " Url="html/09c6b9b1-c108-94c6-8f98-7452d71727da.htm" />
+        <HelpTOCNode Title="RightPressed Method " Url="html/a04d5838-e665-a21a-5ed8-83a2bc7e1433.htm" />
+        <HelpTOCNode Title="RightReleased Method " Url="html/1078c822-13db-851a-bae2-3f1a81b32d8e.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/201a9170-75af-df47-45e3-5f404bb6cd70.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="b9f24a0c-7f25-491b-9a84-704c30ac4ab7" Title="InputService.MouseHandler Properties" Url="html/8f85a8d6-813f-7606-3900-0746481b4d86.htm">
+        <HelpTOCNode Title="ScrollWheel Property " Url="html/c0c5e4f9-d28e-38c0-7fcd-866c90e2496b.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="0d5a7337-fa27-458c-9dc2-eeb3e4db581b" Title="InputService.PhoneInputHandler Class" Url="html/ca458b34-810d-fec5-6aed-3c8531972a84.htm">
+      <HelpTOCNode Title="InputService.PhoneInputHandler Members" Url="html/fd4ecbbd-56de-e60f-67e2-f3c38182a0da.htm" />
+      <HelpTOCNode Title="InputService.PhoneInputHandler Constructor " Url="html/b71ea05d-c118-1795-2adf-3c5a6584fa20.htm" />
+      <HelpTOCNode Id="e2e893ea-b2dc-461d-aac5-ac835c53ed79" Title="InputService.PhoneInputHandler Methods" Url="html/892850ce-4a28-f256-bd38-d74f3c1005a7.htm">
+        <HelpTOCNode Title="Update Method " Url="html/7f64fdb5-36f4-4b2d-3a3f-23ad0f6ee624.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="8ec5c1d8-1b8b-461e-a3df-defb10fa9e00" Title="InputService.PhoneInputHandler Properties" Url="html/d1cb2483-94b2-3b14-961d-bc6769ffafcf.htm">
+        <HelpTOCNode Title="GestureSamples Property " Url="html/57979219-e211-8e4e-a0b8-1e3d1b7fb9c2.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="6990f670-6742-4880-9c4b-7a5cc3bfe0c5" Title="QuadItem Class" Url="html/fcfd8b7b-dcb2-d05b-1b96-8c5fd62ec6f5.htm">
+      <HelpTOCNode Title="QuadItem Members" Url="html/3a877d0e-f2da-26b3-4e77-929e87260ef6.htm" />
+      <HelpTOCNode Title="QuadItem Constructor " Url="html/03ccaec0-481e-90f1-483f-5bc7cf32a637.htm" />
+      <HelpTOCNode Id="0594db60-2d5f-404d-a4f8-244e3d0b5d76" Title="QuadItem Methods" Url="html/580569da-5ca6-92ae-3453-ef786328af3c.htm">
+        <HelpTOCNode Title="BindRoot Method " Url="html/01420f31-4e79-9c0b-1c08-f43a8e3ab493.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="9693056c-0639-4979-ab1c-7b586081fe36" Title="QuadItem Properties" Url="html/96cbc65e-0496-89e7-286c-7684cfacbc5c.htm">
+        <HelpTOCNode Title="Height Property " Url="html/aa892045-62c8-aadc-c6dd-8513bf46e95b.htm" />
+        <HelpTOCNode Title="Position Property " Url="html/16ad3c5d-81ba-8424-8b85-cfd194ff6b1e.htm" />
+        <HelpTOCNode Title="Width Property " Url="html/899dffec-bd32-acc0-45c1-6e90228d1ac0.htm" />
+        <HelpTOCNode Title="X Property " Url="html/e127af14-af07-df47-960f-b27479a14402.htm" />
+        <HelpTOCNode Title="Y Property " Url="html/9f9757fc-1277-b95b-40e7-7b071479b387.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d9f35c02-1109-4b7f-8e61-ed6f84e64f60" Title="QuadTree Class" Url="html/e6405917-b78e-f9f0-9fb0-c673f8ccbbff.htm">
+      <HelpTOCNode Title="QuadTree Members" Url="html/9218ded4-e534-ef7d-89de-b2170caee54b.htm" />
+      <HelpTOCNode Title="QuadTree Constructor " Url="html/ccc47c07-dbd1-0288-5302-47124b7ec2fc.htm" />
+      <HelpTOCNode Id="b5c76d7a-fb45-4703-a132-752151a7a53c" Title="QuadTree Fields" Url="html/fcb1884c-b1df-d5cf-f195-07e9a2aac260.htm">
+        <HelpTOCNode Title="Bounds Field" Url="html/32183788-82a5-d8c4-2e0a-78bc4b6308d8.htm" />
+        <HelpTOCNode Title="Children Field" Url="html/5795ba01-c1c5-26fb-aaff-08bcca4a831c.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="77a9cc9e-2fb0-4f1a-86f9-b620ebb25678" Title="QuadTree Methods" Url="html/4fd1b034-2bf9-f730-60e1-290a58aed443.htm">
+        <HelpTOCNode Title="Add Method " Url="html/c01ff6c2-1865-99d9-755d-a2f8c9f4c1e7.htm" />
+        <HelpTOCNode Title="Contains Method " Url="html/f3ff8b31-80f0-173e-68a2-068915db1a8a.htm" />
+        <HelpTOCNode Title="Find Method " Url="html/2182f472-6a73-7a8b-e6d5-cb860c865cf8.htm" />
+        <HelpTOCNode Title="Remove Method " Url="html/9fda02b1-a25e-2907-066e-d1da59db73a8.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="542976bc-c627-4d5f-92cd-384aec0b6a36" Title="QuadTreeRoot Class" Url="html/20a69d32-1210-be80-4175-6af204f1cfee.htm">
+      <HelpTOCNode Title="QuadTreeRoot Members" Url="html/ba69e2e1-3632-2e70-d3fc-a16583c4be03.htm" />
+      <HelpTOCNode Title="QuadTreeRoot Constructor " Url="html/8795ea08-045d-0d16-a035-f8c1f111d2d1.htm" />
+      <HelpTOCNode Id="79d2db98-5a09-439f-adc8-0779e252704d" Title="QuadTreeRoot Methods" Url="html/397e38a0-23e4-a7f9-5a6d-046040115055.htm">
+        <HelpTOCNode Title="Add Method " Url="html/d707a612-cdc8-758b-c296-a510da992fcd.htm" />
+        <HelpTOCNode Title="Find Method " Url="html/39ba8a44-38d3-975b-c82b-1e30604af3c7.htm" />
+        <HelpTOCNode Title="Remove Method " Url="html/89318a87-4251-ec06-3878-6524889a2eb6.htm" />
+        <HelpTOCNode Title="UpdateItem Method " Url="html/c0c8cb6b-2238-ea00-7fd0-ed4b917d0c7b.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="90d1081b-203b-4493-9291-db9ca16440f6" Title="ScreenService Class" Url="html/1063a44d-8fe4-484e-48ef-f3d04c1319f2.htm">
+      <HelpTOCNode Title="ScreenService Members" Url="html/b0e4f149-fc2d-05fb-ee99-dd27db2f92e6.htm" />
+      <HelpTOCNode Title="ScreenService Constructor " Url="html/adefe244-6e72-b8fd-4a51-279d4115beab.htm" />
+      <HelpTOCNode Title="ScreenService Fields" Url="html/6573d944-fbfa-f46a-b392-be469d3dfe95.htm" />
+      <HelpTOCNode Id="fd96018d-d1b2-45a8-982d-71d14505e1aa" Title="ScreenService Methods" Url="html/16939200-e578-c79b-b5f1-0865eea1119f.htm">
+        <HelpTOCNode Title="Draw Method " Url="html/4d6193c9-4343-0554-1789-e34f077aebd4.htm" />
+        <HelpTOCNode Title="Init Method " Url="html/85d680da-7c95-eb91-735d-d80da5ec40e8.htm" />
+        <HelpTOCNode Title="Pause Method " Url="html/b391e4d6-46f4-b843-6adb-4b5c76c03501.htm" />
+        <HelpTOCNode Title="Remove Method " Url="html/841e1f08-d7ec-5351-304f-a39da9948b38.htm" />
+        <HelpTOCNode Title="RemovePopup Method " Url="html/61c02fe7-f579-2c15-2733-71ebf1f831bd.htm" />
+        <HelpTOCNode Title="Show Method " Url="html/150b44c1-6b2c-a9ae-23d3-27464eebab73.htm" />
+        <HelpTOCNode Title="ShowPopup Method " Url="html/b6b4ddc4-ce16-e1d6-f935-df6bb103f046.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/231634df-fdad-6b58-fd5e-7111379da7f7.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="49cbfbb0-7992-4062-ad7c-33396be07f48" Title="ScreenService Properties" Url="html/2d755827-1986-27f4-5a44-2c9c6a51ac39.htm">
+        <HelpTOCNode Title="Paused Property " Url="html/981bbbe6-903a-0aa9-67ac-0e1e7e0bed92.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="f1955dd8-32bc-4241-a59a-8cd883ff1ea1" Title="ScreenshotService Class" Url="html/639de96b-f525-01a0-a9f9-31df7d5c781a.htm">
+      <HelpTOCNode Title="ScreenshotService Members" Url="html/a39f0780-0222-41aa-9540-1d8943b6c4b1.htm" />
+      <HelpTOCNode Title="ScreenshotService Constructor " Url="html/0e06733a-45b7-e02c-af83-3eb950b9ca69.htm" />
+      <HelpTOCNode Title="ScreenshotService Fields" Url="html/86d164c7-e5df-48f9-b025-e20797b6963e.htm" />
+      <HelpTOCNode Id="3f2d4161-5157-45b4-8752-00ffba72f38a" Title="ScreenshotService Methods" Url="html/21a3c27c-7528-4b45-3378-952c33847e60.htm">
+        <HelpTOCNode Title="Draw Method " Url="html/26d09033-1a25-e705-7f67-023c94325fe4.htm" />
+        <HelpTOCNode Title="Init Method " Url="html/2d0cd40a-99dd-d14b-c1af-693e99a1aa55.htm" />
+        <HelpTOCNode Title="TakeScreenshot Method " Url="html/b97a23aa-b9df-a77c-d22d-9738ca7c7eab.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/82e4ec52-f38b-d61d-8191-005466883fd3.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

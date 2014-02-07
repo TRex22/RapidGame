@@ -29,19 +29,34 @@ namespace RapidXNA
         /// Instances of the major XNA libraries we will need
         /// </summary>
         private readonly GraphicsDevice _graphicsDevice;
+        /// <summary>
+        /// The Graphics Device Object
+        /// </summary>
         public GraphicsDevice GraphicsDevice { get { return _graphicsDevice; } }
-        private readonly ContentManager _contentManager;
-        public ContentManager Content { get { return _contentManager; } }
+        private readonly ContentManager _contentManagerManager;
+        /// <summary>
+        /// The Conetent Manager Object
+        /// </summary>
+        public ContentManager ContentManager { get { return _contentManagerManager; } }
         private readonly SpriteBatch _spriteBatch;
+        /// <summary>
+        /// The Sprite Batch Object
+        /// </summary>
         public SpriteBatch SpriteBatch { get { return _spriteBatch;  } }
         private readonly EngineServices _engineServices;
+        /// <summary>
+        /// An object of the Egine Services
+        /// </summary>
         public EngineServices EngineServices { get { return _engineServices; } }
         
         /// <summary>
-        /// Helpers for quick access to the standard services
+        /// Quick Access Screen Service
         /// </summary>
-        public ScreenService Screen { get { return (ScreenService)_engineServices[0]; } }
-        public InputService Input { get { return (InputService)_engineServices[1]; } }
+        public ScreenService ScreenService { get { return (ScreenService)_engineServices[0]; } }
+        /// <summary>
+        /// Quick Access Input Service
+        /// </summary>
+        public InputService InputService { get { return (InputService)_engineServices[1]; } }
 
 
         /// <summary>
@@ -54,10 +69,17 @@ namespace RapidXNA
         private readonly Color _defaultClearColour;
         private readonly Color _defaultDrawColour;
         
+        /// <summary>
+        /// Rapid Engine Default Constructor Without Audio Framework.
+        /// </summary>
+        /// <param name="game"></param>
+        /// <param name="graphicsDevice"></param>
+        /// <param name="contentManagerManager"></param>
+        /// <param name="initialGameScreen"></param>
         public RapidEngine(
             Game game, 
             GraphicsDevice graphicsDevice, 
-            ContentManager contentManager, 
+            ContentManager contentManagerManager, 
             IGameScreen initialGameScreen)
         {
 
@@ -68,7 +90,7 @@ namespace RapidXNA
             _game = game;
             
             _graphicsDevice = graphicsDevice;
-            _contentManager = contentManager;
+            _contentManagerManager = contentManagerManager;
             
             _spriteBatch = new SpriteBatch(_graphicsDevice);
             
@@ -79,7 +101,7 @@ namespace RapidXNA
             _engineServices.Add(new InputService());
             //_engineServices.Add(new AudioEngine());
 
-            Screen.Show(initialGameScreen);
+            ScreenService.Show(initialGameScreen);
         }
 
         /// <summary>

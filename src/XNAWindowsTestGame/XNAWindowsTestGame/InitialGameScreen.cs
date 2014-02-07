@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
@@ -12,12 +9,12 @@ namespace XNAWindowsTestGame
     {
         public override void Load()
         {
-            Engine.Screen.Pause();
+            Engine.ScreenService.Pause();
         }
 
         public override void Update(GameTime gameTime)
         {
-            if (Engine.Input.Keyboard.KeyPress(Keys.Escape))
+            if (Engine.InputService.Keyboard.KeyPress(Keys.Escape))
                 Engine.Exit();
         }
 
@@ -28,7 +25,7 @@ namespace XNAWindowsTestGame
 
         public override void PreLoad()
         {
-            Engine.Screen.Init();
+            Engine.ScreenService.Init();
         }
 
         public override void LoadUpdate(GameTime gameTime)

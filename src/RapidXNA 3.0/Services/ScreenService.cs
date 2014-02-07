@@ -17,8 +17,12 @@ namespace RapidXNA.Services
         /// <summary>
         /// List (faking stack functionality) containing the game screens and popup screens
         /// </summary>
-        List<IGameScreen> _gameScreens = new List<IGameScreen>(),
-                          _popupScreens = new List<IGameScreen>();
+        readonly List<IGameScreen> _gameScreens = new List<IGameScreen>();
+
+        /// <summary>
+        /// List (faking stack functionality) containing the game screens and popup screens
+        /// </summary>
+        readonly List<IGameScreen> _popupScreens = new List<IGameScreen>();
 
         /// <summary>
         /// Helpers to allow functionality to pause the game
@@ -43,31 +47,29 @@ namespace RapidXNA.Services
         /// </summary>
         public override void Update(GameTime gameTime)
         {
-            if (!Paused)
+            if (Paused) return;
+            if (_popupScreens.Count > 0)
             {
-                if (_popupScreens.Count > 0)
+                var popup = _popupScreens[_popupScreens.Count - 1];
+                if (popup.IsLoaded)
                 {
-                    var popup = _popupScreens[_popupScreens.Count - 1];
-                    if (popup.IsLoaded)
-                    {
-                        popup.Update(gameTime);
-                    }
-                    else if (popup.HasLoadScreen)
-                    {
-                        popup.LoadUpdate(gameTime);
-                    }
+                    popup.Update(gameTime);
                 }
-                else if (_gameScreens.Count > 0)
+                else if (popup.HasLoadScreen)
                 {
-                    var screen = _gameScreens[_gameScreens.Count - 1];
-                    if (screen.IsLoaded)
-                    {
-                        screen.Update(gameTime);
-                    }
-                    else if (screen.HasLoadScreen)
-                    {
-                        screen.LoadUpdate(gameTime);
-                    }
+                    popup.LoadUpdate(gameTime);
+                }
+            }
+            else if (_gameScreens.Count > 0)
+            {
+                var screen = _gameScreens[_gameScreens.Count - 1];
+                if (screen.IsLoaded)
+                {
+                    screen.Update(gameTime);
+                }
+                else if (screen.HasLoadScreen)
+                {
+                    screen.LoadUpdate(gameTime);
                 }
             }
         }
@@ -91,17 +93,15 @@ namespace RapidXNA.Services
                 }
             }
             //Draw the latest popup screen over the game screen
-            if (_popupScreens.Count > 0)
+            if (_popupScreens.Count <= 0) return;
+            var popup = _popupScreens[_popupScreens.Count - 1];
+            if (popup.IsLoaded)
             {
-                var popup = _popupScreens[_popupScreens.Count - 1];
-                if (popup.IsLoaded)
-                {
-                    popup.Draw(gameTime);
-                }
-                else if (popup.HasLoadScreen)
-                {
-                    popup.LoadDraw(gameTime);
-                }
+                popup.Draw(gameTime);
+            }
+            else if (popup.HasLoadScreen)
+            {
+                popup.LoadDraw(gameTime);
             }
         }
 
@@ -143,13 +143,11 @@ namespace RapidXNA.Services
         /// </summary>
         public void Remove()
         {
-            if (_gameScreens.Count > 0)
-            {
-                var gs = _gameScreens[_gameScreens.Count - 1];
-                gs.OnPop();
-                gs.Engine = null;
-                _gameScreens.Remove(gs);
-            }
+            if (_gameScreens.Count <= 0) return;
+            var gs = _gameScreens[_gameScreens.Count - 1];
+            gs.OnPop();
+            gs.Engine = null;
+            _gameScreens.Remove(gs);
         }
 
         /// <summary>
@@ -157,13 +155,11 @@ namespace RapidXNA.Services
         /// </summary>
         public void RemovePopup()
         {
-            if (_popupScreens.Count > 0)
-            {
-                var gs = _popupScreens[_popupScreens.Count - 1];
-                gs.OnPop();
-                gs.Engine = null;
-                _gameScreens.Remove(gs);
-            }
+            if (_popupScreens.Count <= 0) return;
+            var gs = _popupScreens[_popupScreens.Count - 1];
+            gs.OnPop();
+            gs.Engine = null;
+            _gameScreens.Remove(gs);
         }
     }
 }
