@@ -1,0 +1,599 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="Add method">
+    <HelpKINode Title="EngineServices.Add Method " Url="html/a57cb7df-3f67-00cf-bbdf-2995afd7a654.htm" />
+    <HelpKINode Title="QuadTree.Add Method " Url="html/c01ff6c2-1865-99d9-755d-a2f8c9f4c1e7.htm" />
+    <HelpKINode Title="QuadTreeRoot.Add Method " Url="html/d707a612-cdc8-758b-c296-a510da992fcd.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AddKey method" Url="html/070d6735-79af-1ce0-be89-32952a864b6f.htm" />
+  <HelpKINode Title="AHeld method" Url="html/45a2c0fb-52f2-1eef-9edf-ddc1432b0605.htm" />
+  <HelpKINode Title="AppSettings class">
+    <HelpKINode Title="AppSettings Class" Url="html/6e520d34-6a4b-eb18-a73e-e24d4793942c.htm" />
+    <HelpKINode Title="AppSettings Members" Url="html/0b746471-6d50-3984-64bc-7f2368efeb81.htm" />
+    <HelpKINode Title="about AppSettings class" Url="html/6e520d34-6a4b-eb18-a73e-e24d4793942c.htm" />
+    <HelpKINode Title="all members" Url="html/0b746471-6d50-3984-64bc-7f2368efeb81.htm" />
+    <HelpKINode Title="constructor" Url="html/76f7cb8e-17a2-50e0-f361-5462a3b80bcd.htm" />
+    <HelpKINode Title="methods" Url="html/f79225ec-dcab-6fb5-c52f-1b1e80768494.htm" />
+    <HelpKINode Title="properties" Url="html/42b7e09a-42a2-3663-9c6e-60bbe6880339.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AppSettings.AppSettings constructor" Url="html/76f7cb8e-17a2-50e0-f361-5462a3b80bcd.htm" />
+  <HelpKINode Title="AppSettings.EnableMusic property" Url="html/2a65c67e-4949-5920-5d82-8cc14315dc9d.htm" />
+  <HelpKINode Title="AppSettings.EnableSfx property" Url="html/c822c1c6-eb44-f0b3-0ded-35a33279cd51.htm" />
+  <HelpKINode Title="AppSettings.HasRunOnce property" Url="html/72edbbbd-07d0-774e-eac6-1f51fd550e68.htm" />
+  <HelpKINode Title="AppSettings.IsFullScreen property" Url="html/96ec62f5-1b48-e9bd-be48-07eb4ba0bcdf.htm" />
+  <HelpKINode Title="APressed method" Url="html/d91e61cb-2c7d-b459-0557-b274e0e9a474.htm" />
+  <HelpKINode Title="AReleased method" Url="html/85dd3b82-f929-1e85-a229-37889302f557.htm" />
+  <HelpKINode Title="BackHeld method" Url="html/44a8316d-1ace-aaec-23b3-aab7300f0f88.htm" />
+  <HelpKINode Title="BackPressed method" Url="html/62df3591-ad41-fa9c-1099-1a115f11df34.htm" />
+  <HelpKINode Title="BackReleased method" Url="html/8c585f4c-6c03-a961-5c81-f14ac792b091.htm" />
+  <HelpKINode Title="BeginLoad method" Url="html/ef58e983-9526-7b33-5838-ad9ee79a4070.htm" />
+  <HelpKINode Title="BHeld method" Url="html/aacdc94f-7e2f-7c9b-8bfe-8326a7c71687.htm" />
+  <HelpKINode Title="BindRoot method" Url="html/01420f31-4e79-9c0b-1c08-f43a8e3ab493.htm" />
+  <HelpKINode Title="Bounds field" Url="html/32183788-82a5-d8c4-2e0a-78bc4b6308d8.htm" />
+  <HelpKINode Title="BPressed method" Url="html/1f947a8b-4885-7d16-1e6b-f4b9ef8592cc.htm" />
+  <HelpKINode Title="BReleased method" Url="html/8c311a11-b65b-d0c8-5a49-7997eef2dd9b.htm" />
+  <HelpKINode Title="Children field" Url="html/5795ba01-c1c5-26fb-aaff-08bcca4a831c.htm" />
+  <HelpKINode Title="Contains method" Url="html/f3ff8b31-80f0-173e-68a2-068915db1a8a.htm" />
+  <HelpKINode Title="ContentManager property" Url="html/02f6b5eb-cf7e-1811-96fd-d5b5daff23e3.htm" />
+  <HelpKINode Title="ConvertHelper class">
+    <HelpKINode Title="ConvertHelper Class" Url="html/b2e73425-98a2-2b76-4ef3-05a0d217817a.htm" />
+    <HelpKINode Title="ConvertHelper Members" Url="html/66fb51a3-1559-6994-82ec-08c6668a7e70.htm" />
+    <HelpKINode Title="about ConvertHelper class" Url="html/b2e73425-98a2-2b76-4ef3-05a0d217817a.htm" />
+    <HelpKINode Title="all members" Url="html/66fb51a3-1559-6994-82ec-08c6668a7e70.htm" />
+    <HelpKINode Title="constructor" Url="html/0b8084f2-269c-b02b-18c5-3986438ce0f8.htm" />
+    <HelpKINode Title="methods" Url="html/d7f37c23-02ad-0316-cb41-8606f7690aaf.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ConvertHelper.ConvertHelper constructor" Url="html/0b8084f2-269c-b02b-18c5-3986438ce0f8.htm" />
+  <HelpKINode Title="CustomNone enumeration member" Url="html/aa2b542f-7b04-4a3f-79be-2ac06d674e96.htm" />
+  <HelpKINode Title="Delta property" Url="html/e6f193bb-7603-9243-46d0-8e5f93949f9e.htm" />
+  <HelpKINode Title="Delta2 property" Url="html/f61a8c95-5017-61d7-7419-469e98d4f3a3.htm" />
+  <HelpKINode Title="DoubleTap enumeration member" Url="html/aa2b542f-7b04-4a3f-79be-2ac06d674e96.htm" />
+  <HelpKINode Title="DownHeld method" Url="html/e99c4bc1-eda6-5938-c8f2-9f97d8a51aed.htm" />
+  <HelpKINode Title="DownPressed method" Url="html/4bfd402d-392d-0177-9a5f-a34b05ae7056.htm" />
+  <HelpKINode Title="DownReleased method" Url="html/2cc1729a-746a-b579-1ff7-572aff85ab99.htm" />
+  <HelpKINode Title="DragComplete enumeration member" Url="html/aa2b542f-7b04-4a3f-79be-2ac06d674e96.htm" />
+  <HelpKINode Title="Draw method">
+    <HelpKINode Title="EngineServices.Draw Method " Url="html/00343c08-dc81-01be-2086-d465e581588d.htm" />
+    <HelpKINode Title="GameService.Draw Method " Url="html/1f8a5a90-6ba0-9bd7-35ed-106297acd074.htm" />
+    <HelpKINode Title="IGameScreen.Draw Method " Url="html/8aa3c76e-f320-0499-ce19-361f82be2870.htm" />
+    <HelpKINode Title="InputService.Draw Method " Url="html/2940f210-6dc9-f89c-75b9-8fda611d421f.htm" />
+    <HelpKINode Title="RapidEngine.Draw Method " Url="html/ff61ea9e-29f5-e937-982f-ee464e8650f6.htm" />
+    <HelpKINode Title="ScreenService.Draw Method " Url="html/4d6193c9-4343-0554-1789-e34f077aebd4.htm" />
+    <HelpKINode Title="ScreenshotService.Draw Method " Url="html/26d09033-1a25-e705-7f67-023c94325fe4.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DrawEnabled field" Url="html/15bbb12e-6e01-9e8a-c195-688ae773079f.htm" />
+  <HelpKINode Title="EnableMusic property" Url="html/2a65c67e-4949-5920-5d82-8cc14315dc9d.htm" />
+  <HelpKINode Title="EnableSfx property" Url="html/c822c1c6-eb44-f0b3-0ded-35a33279cd51.htm" />
+  <HelpKINode Title="Engine field">
+    <HelpKINode Title="GameService.Engine Field" Url="html/75585364-54ee-0f22-f911-457c743d7767.htm" />
+    <HelpKINode Title="IGameScreen.Engine Field" Url="html/77b61d7a-4142-5bae-1a66-e6b2ad4cdf13.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EngineServices class">
+    <HelpKINode Title="EngineServices Class" Url="html/40a9889c-00f7-a7d0-c561-22fc45c3f8cb.htm" />
+    <HelpKINode Title="EngineServices Members" Url="html/75cadb83-fc84-e340-1223-0095c9763ba6.htm" />
+    <HelpKINode Title="about EngineServices class" Url="html/40a9889c-00f7-a7d0-c561-22fc45c3f8cb.htm" />
+    <HelpKINode Title="all members" Url="html/75cadb83-fc84-e340-1223-0095c9763ba6.htm" />
+    <HelpKINode Title="constructor" Url="html/4cbaafe0-f1eb-499f-e458-e097526a2243.htm" />
+    <HelpKINode Title="methods" Url="html/1ed59384-bdeb-1ff6-82fb-91af824e0c0e.htm" />
+    <HelpKINode Title="properties" Url="html/a2d010bb-e8b4-1eab-917d-af09db2fba91.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EngineServices property" Url="html/987b0e5d-91a9-798e-5516-682e561ed8fc.htm" />
+  <HelpKINode Title="EngineServices.Add method" Url="html/a57cb7df-3f67-00cf-bbdf-2995afd7a654.htm" />
+  <HelpKINode Title="EngineServices.Draw method" Url="html/00343c08-dc81-01be-2086-d465e581588d.htm" />
+  <HelpKINode Title="EngineServices.EngineServices constructor" Url="html/4cbaafe0-f1eb-499f-e458-e097526a2243.htm" />
+  <HelpKINode Title="EngineServices.First(Of T) method" Url="html/71edd1a7-2f2c-8b9b-b781-76c47511e48d.htm" />
+  <HelpKINode Title="EngineServices.First&lt;T&gt; method" Url="html/71edd1a7-2f2c-8b9b-b781-76c47511e48d.htm" />
+  <HelpKINode Title="EngineServices.Item property" Url="html/a535595f-9b16-bdd7-7f7d-4d6471926b51.htm" />
+  <HelpKINode Title="EngineServices.Update method" Url="html/b6a7aa1c-63a2-5c66-7ce0-9140c7c32798.htm" />
+  <HelpKINode Title="Exit method" Url="html/fe7cbd71-3ae3-da20-fe86-4803444872ab.htm" />
+  <HelpKINode Title="Find method">
+    <HelpKINode Title="QuadTree.Find Method " Url="html/2182f472-6a73-7a8b-e6d5-cb860c865cf8.htm" />
+    <HelpKINode Title="QuadTreeRoot.Find Method " Url="html/39ba8a44-38d3-975b-c82b-1e30604af3c7.htm" />
+  </HelpKINode>
+  <HelpKINode Title="First(Of T) method" Url="html/71edd1a7-2f2c-8b9b-b781-76c47511e48d.htm" />
+  <HelpKINode Title="First&lt;T&gt; method" Url="html/71edd1a7-2f2c-8b9b-b781-76c47511e48d.htm" />
+  <HelpKINode Title="Flick enumeration member" Url="html/aa2b542f-7b04-4a3f-79be-2ac06d674e96.htm" />
+  <HelpKINode Title="FreeDrag enumeration member" Url="html/aa2b542f-7b04-4a3f-79be-2ac06d674e96.htm" />
+  <HelpKINode Title="GamePad property" Url="html/4f276fb3-9a68-4432-977e-dcb4b04c21dd.htm" />
+  <HelpKINode Title="GameService class">
+    <HelpKINode Title="GameService Class" Url="html/c4f03bc3-3878-3371-f1e3-50cc307ee5f5.htm" />
+    <HelpKINode Title="GameService Members" Url="html/f7d86192-b917-6f74-6153-7ab4169ba1dc.htm" />
+    <HelpKINode Title="about GameService class" Url="html/c4f03bc3-3878-3371-f1e3-50cc307ee5f5.htm" />
+    <HelpKINode Title="all members" Url="html/f7d86192-b917-6f74-6153-7ab4169ba1dc.htm" />
+    <HelpKINode Title="constructor" Url="html/46880528-df63-df68-e3c7-e380c08c2c4f.htm" />
+    <HelpKINode Title="fields" Url="html/2b1d9a9d-4cd8-252f-d91f-62181e119d60.htm" />
+    <HelpKINode Title="methods" Url="html/770dd3dd-3de3-7c9a-2d48-3109555a2a92.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GameService.Draw method" Url="html/1f8a5a90-6ba0-9bd7-35ed-106297acd074.htm" />
+  <HelpKINode Title="GameService.DrawEnabled field" Url="html/15bbb12e-6e01-9e8a-c195-688ae773079f.htm" />
+  <HelpKINode Title="GameService.Engine field" Url="html/75585364-54ee-0f22-f911-457c743d7767.htm" />
+  <HelpKINode Title="GameService.GameService constructor" Url="html/46880528-df63-df68-e3c7-e380c08c2c4f.htm" />
+  <HelpKINode Title="GameService.Init method" Url="html/b8647447-294d-e98c-54bc-52e0282d5301.htm" />
+  <HelpKINode Title="GameService.Update method" Url="html/f1172207-da35-4ece-ccbf-2d6e66f4acce.htm" />
+  <HelpKINode Title="GestureSamples property" Url="html/57979219-e211-8e4e-a0b8-1e3d1b7fb9c2.htm" />
+  <HelpKINode Title="GestureType property" Url="html/36b27e96-898e-16f7-be09-e18df4d5e444.htm" />
+  <HelpKINode Title="GraphicsDevice property" Url="html/c601f0c0-b590-ab21-975e-0d80497b7f83.htm" />
+  <HelpKINode Title="HasLoadScreen property" Url="html/1dc649fa-4644-a826-e1a2-0546e3fb30f0.htm" />
+  <HelpKINode Title="HasRunOnce property" Url="html/72edbbbd-07d0-774e-eac6-1f51fd550e68.htm" />
+  <HelpKINode Title="Height property" Url="html/aa892045-62c8-aadc-c6dd-8513bf46e95b.htm" />
+  <HelpKINode Title="HeldFor method" Url="html/43df15f6-e4fd-d5e7-6073-2c67d1559001.htm" />
+  <HelpKINode Title="Hold enumeration member" Url="html/aa2b542f-7b04-4a3f-79be-2ac06d674e96.htm" />
+  <HelpKINode Title="HorrizontalDrag enumeration member" Url="html/aa2b542f-7b04-4a3f-79be-2ac06d674e96.htm" />
+  <HelpKINode Title="IGameScreen class">
+    <HelpKINode Title="IGameScreen Class" Url="html/41cb462d-52f7-5648-dc26-67204801c080.htm" />
+    <HelpKINode Title="IGameScreen Members" Url="html/0e72a041-0009-3a78-389c-18ad1c0cc01d.htm" />
+    <HelpKINode Title="about IGameScreen class" Url="html/41cb462d-52f7-5648-dc26-67204801c080.htm" />
+    <HelpKINode Title="all members" Url="html/0e72a041-0009-3a78-389c-18ad1c0cc01d.htm" />
+    <HelpKINode Title="constructor" Url="html/b4c0ee27-7976-8bb9-fe4d-3e3361882e9f.htm" />
+    <HelpKINode Title="fields" Url="html/beb94836-d340-3d4a-6607-ae3dd1a961d8.htm" />
+    <HelpKINode Title="methods" Url="html/49412980-464c-a862-fb6d-d901c7835d05.htm" />
+    <HelpKINode Title="properties" Url="html/dc828f00-2f96-6ec7-e169-ae8c4b6e4f19.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IGameScreen.BeginLoad method" Url="html/ef58e983-9526-7b33-5838-ad9ee79a4070.htm" />
+  <HelpKINode Title="IGameScreen.Draw method" Url="html/8aa3c76e-f320-0499-ce19-361f82be2870.htm" />
+  <HelpKINode Title="IGameScreen.Engine field" Url="html/77b61d7a-4142-5bae-1a66-e6b2ad4cdf13.htm" />
+  <HelpKINode Title="IGameScreen.HasLoadScreen property" Url="html/1dc649fa-4644-a826-e1a2-0546e3fb30f0.htm" />
+  <HelpKINode Title="IGameScreen.IGameScreen constructor" Url="html/b4c0ee27-7976-8bb9-fe4d-3e3361882e9f.htm" />
+  <HelpKINode Title="IGameScreen.IsLoaded property" Url="html/70aa1ec7-2448-a10d-76ec-a50ba1483d85.htm" />
+  <HelpKINode Title="IGameScreen.Load method" Url="html/189aea10-f287-5168-739b-9af5f66bb192.htm" />
+  <HelpKINode Title="IGameScreen.LoadDraw method" Url="html/41c186cb-536a-4b71-7cc7-555686a5ed90.htm" />
+  <HelpKINode Title="IGameScreen.LoadScreen field" Url="html/eb3b0906-d91a-a73c-a9e0-2236810ab8fa.htm" />
+  <HelpKINode Title="IGameScreen.LoadUpdate method" Url="html/1dee4429-192f-f2a8-4aff-7168678250e0.htm" />
+  <HelpKINode Title="IGameScreen.OnPop method" Url="html/8012234e-b544-0ed8-3227-1dbf4e6da1f6.htm" />
+  <HelpKINode Title="IGameScreen.PreLoad method" Url="html/04161f11-40a0-69de-db68-990a02dd3b2a.htm" />
+  <HelpKINode Title="IGameScreen.Update method" Url="html/a71c6efe-70db-c558-7c97-3fce1bf657a2.htm" />
+  <HelpKINode Title="Init method">
+    <HelpKINode Title="GameService.Init Method " Url="html/b8647447-294d-e98c-54bc-52e0282d5301.htm" />
+    <HelpKINode Title="InputService.Init Method " Url="html/664883da-74b9-0414-2953-7869a103076f.htm" />
+    <HelpKINode Title="ScreenService.Init Method " Url="html/85d680da-7c95-eb91-735d-d80da5ec40e8.htm" />
+    <HelpKINode Title="ScreenshotService.Init Method " Url="html/2d0cd40a-99dd-d14b-c1af-693e99a1aa55.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InputService class">
+    <HelpKINode Title="InputService Class" Url="html/4ad58eb6-ab55-963b-728a-b088d0093fd7.htm" />
+    <HelpKINode Title="InputService Members" Url="html/0cf47515-f45d-5d9a-8bcc-412cf0e6752d.htm" />
+    <HelpKINode Title="about InputService class" Url="html/4ad58eb6-ab55-963b-728a-b088d0093fd7.htm" />
+    <HelpKINode Title="all members" Url="html/0cf47515-f45d-5d9a-8bcc-412cf0e6752d.htm" />
+    <HelpKINode Title="constructor" Url="html/60628af4-c804-3b39-da97-15d5e57177c5.htm" />
+    <HelpKINode Title="fields" Url="html/1442b9d3-246f-5217-c018-26880c69cc69.htm" />
+    <HelpKINode Title="methods" Url="html/8d8334b9-6246-b954-ebb2-fef2bd8f4b35.htm" />
+    <HelpKINode Title="properties" Url="html/17403118-b944-a4ad-dfee-42954172906b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InputService property" Url="html/fc3eb133-fcb4-fc5b-e2a4-cae657e195c9.htm" />
+  <HelpKINode Title="InputService.Draw method" Url="html/2940f210-6dc9-f89c-75b9-8fda611d421f.htm" />
+  <HelpKINode Title="InputService.GamePad property" Url="html/4f276fb3-9a68-4432-977e-dcb4b04c21dd.htm" />
+  <HelpKINode Title="InputService.GamePadHandler class">
+    <HelpKINode Title="InputService.GamePadHandler Class" Url="html/6b4b065a-837d-cb91-9521-3b36c251b3f2.htm" />
+    <HelpKINode Title="InputService.GamePadHandler Members" Url="html/389ed24e-b509-aa5e-7609-2bb574123dd9.htm" />
+    <HelpKINode Title="about InputService.GamePadHandler class" Url="html/6b4b065a-837d-cb91-9521-3b36c251b3f2.htm" />
+    <HelpKINode Title="all members" Url="html/389ed24e-b509-aa5e-7609-2bb574123dd9.htm" />
+    <HelpKINode Title="constructor" Url="html/40270416-9a2a-6e28-293d-a3baea701e91.htm" />
+    <HelpKINode Title="methods" Url="html/143a7bbd-e7ea-d48a-2d93-fe299a9b93fc.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InputService.GamePadHandler.AHeld method" Url="html/45a2c0fb-52f2-1eef-9edf-ddc1432b0605.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.APressed method" Url="html/d91e61cb-2c7d-b459-0557-b274e0e9a474.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.AReleased method" Url="html/85dd3b82-f929-1e85-a229-37889302f557.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.BackHeld method" Url="html/44a8316d-1ace-aaec-23b3-aab7300f0f88.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.BackPressed method" Url="html/62df3591-ad41-fa9c-1099-1a115f11df34.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.BackReleased method" Url="html/8c585f4c-6c03-a961-5c81-f14ac792b091.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.BHeld method" Url="html/aacdc94f-7e2f-7c9b-8bfe-8326a7c71687.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.BPressed method" Url="html/1f947a8b-4885-7d16-1e6b-f4b9ef8592cc.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.BReleased method" Url="html/8c311a11-b65b-d0c8-5a49-7997eef2dd9b.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.DownHeld method" Url="html/e99c4bc1-eda6-5938-c8f2-9f97d8a51aed.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.DownPressed method" Url="html/4bfd402d-392d-0177-9a5f-a34b05ae7056.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.DownReleased method" Url="html/2cc1729a-746a-b579-1ff7-572aff85ab99.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.GamePadHandler constructor" Url="html/40270416-9a2a-6e28-293d-a3baea701e91.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.LeftBumberHeld method" Url="html/2afce835-9d92-e2ad-a13b-4a8ddb09ccd8.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.LeftBumberPressed method" Url="html/37da423f-65a9-bab5-70f4-4f13d20b9d9b.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.LeftBumberReleased method" Url="html/5c0d09d2-3dc6-2277-3fdf-5f7010a465dc.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.LeftHeld method" Url="html/60c7dc92-fbf5-85ef-86ac-2152c0a30bce.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.LeftPressed method" Url="html/11673ffb-7f98-1483-5bf1-5df159dee095.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.LeftReleased method" Url="html/a1971003-326b-88ab-0f53-c2567f7ebae0.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.LeftStick method" Url="html/601fa46c-de94-a511-3fa4-6e348851426d.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.LeftStickDirection method" Url="html/38683ad7-4826-7d32-5e15-e3423f7b1c99.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.LeftStickHeld method" Url="html/f92936fa-677b-bbcf-a66d-e66ff318002c.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.LeftStickPressed method" Url="html/1f80062a-063d-f287-1626-ad55048b9557.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.LeftStickReleased method" Url="html/055f8df0-4b7c-30c6-440c-1fbbb36eb26d.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.LeftTriggerPressed method" Url="html/8295d669-bd09-cc68-595c-e23b1acb4136.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.LeftTriggerReleased method" Url="html/616e69b6-9d4d-1b11-0e45-bdb83343b298.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.LeftTriggerValue method" Url="html/5cae2778-61cd-a641-648e-b9d8d954aae6.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.RightBumberHeld method" Url="html/a6f809f3-c10c-8e6d-d4e7-6f2d33f9f9cf.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.RightBumberPressed method" Url="html/688fe23f-cb39-f32a-4191-f703b653ea5e.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.RightBumberReleased method" Url="html/8e59d125-3433-7b60-5abc-b9965afcb67f.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.RightHeld method" Url="html/2a51460c-b4cc-9c13-fc33-e1d53ca6c355.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.RightPressed method" Url="html/ea0fd403-ee47-e012-9867-f4c089647074.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.RightReleased method" Url="html/f78bb250-4914-fe43-9d52-309fcf4d74d3.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.RightStick method" Url="html/17cfbe7f-e1fd-8348-dedf-42e839c82abb.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.RightStickDirection method" Url="html/88eb2eb4-3e90-d11c-2e2e-a486a5e53fe9.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.RightStickHeld method" Url="html/ec9f9224-1f64-3a8a-970e-ecf1626d2b87.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.RightStickPressed method" Url="html/8afa8d0f-0ebb-4c21-5d40-ec46b7ef38e2.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.RightStickReleased method" Url="html/e3b1ce64-5e3a-6454-e52b-8ce7fce0fd33.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.RightTrigerValue method" Url="html/a9798ba4-3400-ed2e-f0ee-afe503fda7b9.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.RightTriggerPressed method" Url="html/869556a6-80ce-f7f9-5907-16236e45bff9.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.RightTriggerReleased method" Url="html/f2371837-eed0-ce60-820b-366d04d99f61.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.StartHeld method" Url="html/eb6bc949-f138-dbd2-0860-c906bac6fa77.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.StartPressed method" Url="html/488e5891-073f-6d5a-a42c-c2f852b8d3cd.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.StartReleased method" Url="html/eec9373b-67b2-5127-fb6f-bab2e6d73fc6.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.Update method" Url="html/9bc50e7c-861f-e1ea-72c0-1cc5d3b68b43.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.UpHeld method" Url="html/a59be580-2c2a-2d2a-4548-bdd7a7ed79e0.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.UpPressed method" Url="html/d3b0ee70-b790-18ba-3701-48873fa63fad.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.UpReleased method" Url="html/a6473461-0902-9b0f-ad92-8eec063aa3c3.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.XHeld method" Url="html/a3f17ba9-802b-26f3-1229-4cea0d018bc2.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.XPressed method" Url="html/b3367718-5f63-438d-c0ab-2e4ac35b1b05.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.XReleased method" Url="html/cec85167-8c45-36e9-55f2-4f498732562b.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.YHeld method" Url="html/f0790b48-ca32-f544-00fc-5ab13aae8583.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.YPressed method" Url="html/112c5661-868c-5ef5-636d-c7564360ea07.htm" />
+  <HelpKINode Title="InputService.GamePadHandler.YReleased method" Url="html/d8b51642-fca2-3506-8ef2-2445fb48ec85.htm" />
+  <HelpKINode Title="InputService.GestureSample class">
+    <HelpKINode Title="InputService.GestureSample Class" Url="html/dd49456b-d62f-3839-c7d1-16bebd01b06a.htm" />
+    <HelpKINode Title="InputService.GestureSample Members" Url="html/71678a45-74af-f793-72fd-1fefd1a3c1ab.htm" />
+    <HelpKINode Title="about InputService.GestureSample class" Url="html/dd49456b-d62f-3839-c7d1-16bebd01b06a.htm" />
+    <HelpKINode Title="all members" Url="html/71678a45-74af-f793-72fd-1fefd1a3c1ab.htm" />
+    <HelpKINode Title="constructor" Url="html/1f335e20-b26d-d386-5173-dab20316a48a.htm" />
+    <HelpKINode Title="methods" Url="html/1a22fb2d-fa36-ecb0-04e9-d3c3cace185e.htm" />
+    <HelpKINode Title="properties" Url="html/2d8af510-4560-9b89-5753-dd13656268a1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InputService.GestureSample.Delta property" Url="html/e6f193bb-7603-9243-46d0-8e5f93949f9e.htm" />
+  <HelpKINode Title="InputService.GestureSample.Delta2 property" Url="html/f61a8c95-5017-61d7-7419-469e98d4f3a3.htm" />
+  <HelpKINode Title="InputService.GestureSample.GestureSample constructor" Url="html/1f335e20-b26d-d386-5173-dab20316a48a.htm" />
+  <HelpKINode Title="InputService.GestureSample.GestureType property" Url="html/36b27e96-898e-16f7-be09-e18df4d5e444.htm" />
+  <HelpKINode Title="InputService.GestureSample.Position property" Url="html/379a95de-3027-76b6-dee9-ab2a8edba977.htm" />
+  <HelpKINode Title="InputService.GestureSample.Position2 property" Url="html/fec8c550-3543-8279-933c-af593ade3c66.htm" />
+  <HelpKINode Title="InputService.GestureSample.Timestamp property" Url="html/6b39f37d-433c-6e4b-976e-5ba8ae55cd89.htm" />
+  <HelpKINode Title="InputService.GestureType enumeration" Url="html/aa2b542f-7b04-4a3f-79be-2ac06d674e96.htm" />
+  <HelpKINode Title="InputService.Init method" Url="html/664883da-74b9-0414-2953-7869a103076f.htm" />
+  <HelpKINode Title="InputService.InputService constructor" Url="html/60628af4-c804-3b39-da97-15d5e57177c5.htm" />
+  <HelpKINode Title="InputService.Keyboard property" Url="html/6820df9c-fea6-e4f6-4744-f428d6a8a6a8.htm" />
+  <HelpKINode Title="InputService.KeyboardHandler class">
+    <HelpKINode Title="InputService.KeyboardHandler Class" Url="html/759628fe-4f29-304c-59f5-5af46e250d8a.htm" />
+    <HelpKINode Title="InputService.KeyboardHandler Members" Url="html/03570595-7543-0cd1-ee6c-dc673c9051fa.htm" />
+    <HelpKINode Title="about InputService.KeyboardHandler class" Url="html/759628fe-4f29-304c-59f5-5af46e250d8a.htm" />
+    <HelpKINode Title="all members" Url="html/03570595-7543-0cd1-ee6c-dc673c9051fa.htm" />
+    <HelpKINode Title="constructor" Url="html/66c61755-b3d4-aacf-ee91-c557aa9bbc21.htm" />
+    <HelpKINode Title="methods" Url="html/01ad62ff-b930-da73-fefc-eafa82fe4db4.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InputService.KeyboardHandler.AddKey method" Url="html/070d6735-79af-1ce0-be89-32952a864b6f.htm" />
+  <HelpKINode Title="InputService.KeyboardHandler.HeldFor method" Url="html/43df15f6-e4fd-d5e7-6073-2c67d1559001.htm" />
+  <HelpKINode Title="InputService.KeyboardHandler.KeyboardHandler constructor" Url="html/66c61755-b3d4-aacf-ee91-c557aa9bbc21.htm" />
+  <HelpKINode Title="InputService.KeyboardHandler.KeyHeld method" Url="html/b4963ec8-dda9-c5b6-35b2-4c011510c041.htm" />
+  <HelpKINode Title="InputService.KeyboardHandler.KeyLeft method" Url="html/4e2ff06c-0977-f9c2-6b3c-ad26506a2687.htm" />
+  <HelpKINode Title="InputService.KeyboardHandler.KeyPress method" Url="html/0cb52239-6ef8-218e-832b-06711415daa3.htm" />
+  <HelpKINode Title="InputService.KeyboardHandler.ReleasedTime method" Url="html/192e6f64-50d9-2d16-ea72-f351c926ac1b.htm" />
+  <HelpKINode Title="InputService.KeyboardHandler.Update method" Url="html/81b8d3d1-31d4-b70b-5d51-6fb45e51014f.htm" />
+  <HelpKINode Title="InputService.Mouse property" Url="html/25921c5d-7004-fa17-044a-6f5f086606d9.htm" />
+  <HelpKINode Title="InputService.MouseHandler class">
+    <HelpKINode Title="InputService.MouseHandler Class" Url="html/c11933d8-ddda-d37a-f7dc-ebb868c66889.htm" />
+    <HelpKINode Title="InputService.MouseHandler Members" Url="html/7d6bdb64-dac1-d0af-b32f-afa4a7595764.htm" />
+    <HelpKINode Title="about InputService.MouseHandler class" Url="html/c11933d8-ddda-d37a-f7dc-ebb868c66889.htm" />
+    <HelpKINode Title="all members" Url="html/7d6bdb64-dac1-d0af-b32f-afa4a7595764.htm" />
+    <HelpKINode Title="constructor" Url="html/df2381dc-4ef7-3205-5bdf-bb29a59626a9.htm" />
+    <HelpKINode Title="methods" Url="html/99273661-343e-2fec-ff78-999685658fb2.htm" />
+    <HelpKINode Title="properties" Url="html/8f85a8d6-813f-7606-3900-0746481b4d86.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InputService.MouseHandler.LeftHeld method" Url="html/9e82fcbc-31d2-9bc1-a024-f60d03965b0f.htm" />
+  <HelpKINode Title="InputService.MouseHandler.LeftPressed method" Url="html/39f97867-5abd-1092-4765-72427705b9cc.htm" />
+  <HelpKINode Title="InputService.MouseHandler.LeftReleased method" Url="html/6b99de14-b3db-c9cb-e888-47e04eb029db.htm" />
+  <HelpKINode Title="InputService.MouseHandler.MiddleHeld method" Url="html/bc190a60-dc61-d103-911e-96dc59dc41b8.htm" />
+  <HelpKINode Title="InputService.MouseHandler.MiddlePressed method" Url="html/1ba5f358-a047-9892-9fe9-655b1e7b7958.htm" />
+  <HelpKINode Title="InputService.MouseHandler.MiddleReleased method" Url="html/0cb6654f-ba03-07f3-54d4-db994d46c3cb.htm" />
+  <HelpKINode Title="InputService.MouseHandler.MouseHandler constructor" Url="html/df2381dc-4ef7-3205-5bdf-bb29a59626a9.htm" />
+  <HelpKINode Title="InputService.MouseHandler.Position method" Url="html/171a3eb9-81ed-8db5-a816-b4bed6250754.htm" />
+  <HelpKINode Title="InputService.MouseHandler.RightHeld method" Url="html/09c6b9b1-c108-94c6-8f98-7452d71727da.htm" />
+  <HelpKINode Title="InputService.MouseHandler.RightPressed method" Url="html/a04d5838-e665-a21a-5ed8-83a2bc7e1433.htm" />
+  <HelpKINode Title="InputService.MouseHandler.RightReleased method" Url="html/1078c822-13db-851a-bae2-3f1a81b32d8e.htm" />
+  <HelpKINode Title="InputService.MouseHandler.ScrollWheel property" Url="html/c0c5e4f9-d28e-38c0-7fcd-866c90e2496b.htm" />
+  <HelpKINode Title="InputService.MouseHandler.Update method" Url="html/201a9170-75af-df47-45e3-5f404bb6cd70.htm" />
+  <HelpKINode Title="InputService.PhoneGestures property" Url="html/6040ad1b-a040-eca4-9d90-8adeab331baf.htm" />
+  <HelpKINode Title="InputService.PhoneInputHandler class">
+    <HelpKINode Title="InputService.PhoneInputHandler Class" Url="html/ca458b34-810d-fec5-6aed-3c8531972a84.htm" />
+    <HelpKINode Title="InputService.PhoneInputHandler Members" Url="html/fd4ecbbd-56de-e60f-67e2-f3c38182a0da.htm" />
+    <HelpKINode Title="about InputService.PhoneInputHandler class" Url="html/ca458b34-810d-fec5-6aed-3c8531972a84.htm" />
+    <HelpKINode Title="all members" Url="html/fd4ecbbd-56de-e60f-67e2-f3c38182a0da.htm" />
+    <HelpKINode Title="constructor" Url="html/b71ea05d-c118-1795-2adf-3c5a6584fa20.htm" />
+    <HelpKINode Title="methods" Url="html/892850ce-4a28-f256-bd38-d74f3c1005a7.htm" />
+    <HelpKINode Title="properties" Url="html/d1cb2483-94b2-3b14-961d-bc6769ffafcf.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InputService.PhoneInputHandler.GestureSamples property" Url="html/57979219-e211-8e4e-a0b8-1e3d1b7fb9c2.htm" />
+  <HelpKINode Title="InputService.PhoneInputHandler.PhoneInputHandler constructor" Url="html/b71ea05d-c118-1795-2adf-3c5a6584fa20.htm" />
+  <HelpKINode Title="InputService.PhoneInputHandler.Update method" Url="html/7f64fdb5-36f4-4b2d-3a3f-23ad0f6ee624.htm" />
+  <HelpKINode Title="InputService.Update method" Url="html/2901743d-f53c-fab7-e311-4ce94c59ca0d.htm" />
+  <HelpKINode Title="IsFullScreen property" Url="html/96ec62f5-1b48-e9bd-be48-07eb4ba0bcdf.htm" />
+  <HelpKINode Title="IsLoaded property" Url="html/70aa1ec7-2448-a10d-76ec-a50ba1483d85.htm" />
+  <HelpKINode Title="Item property" Url="html/a535595f-9b16-bdd7-7f7d-4d6471926b51.htm" />
+  <HelpKINode Title="Keyboard property" Url="html/6820df9c-fea6-e4f6-4744-f428d6a8a6a8.htm" />
+  <HelpKINode Title="KeyHeld method" Url="html/b4963ec8-dda9-c5b6-35b2-4c011510c041.htm" />
+  <HelpKINode Title="KeyLeft method" Url="html/4e2ff06c-0977-f9c2-6b3c-ad26506a2687.htm" />
+  <HelpKINode Title="KeyPress method" Url="html/0cb52239-6ef8-218e-832b-06711415daa3.htm" />
+  <HelpKINode Title="LeftBumberHeld method" Url="html/2afce835-9d92-e2ad-a13b-4a8ddb09ccd8.htm" />
+  <HelpKINode Title="LeftBumberPressed method" Url="html/37da423f-65a9-bab5-70f4-4f13d20b9d9b.htm" />
+  <HelpKINode Title="LeftBumberReleased method" Url="html/5c0d09d2-3dc6-2277-3fdf-5f7010a465dc.htm" />
+  <HelpKINode Title="LeftHeld method">
+    <HelpKINode Title="InputService.GamePadHandler.LeftHeld Method " Url="html/60c7dc92-fbf5-85ef-86ac-2152c0a30bce.htm" />
+    <HelpKINode Title="InputService.MouseHandler.LeftHeld Method " Url="html/9e82fcbc-31d2-9bc1-a024-f60d03965b0f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LeftPressed method">
+    <HelpKINode Title="InputService.GamePadHandler.LeftPressed Method " Url="html/11673ffb-7f98-1483-5bf1-5df159dee095.htm" />
+    <HelpKINode Title="InputService.MouseHandler.LeftPressed Method " Url="html/39f97867-5abd-1092-4765-72427705b9cc.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LeftReleased method">
+    <HelpKINode Title="InputService.GamePadHandler.LeftReleased Method " Url="html/a1971003-326b-88ab-0f53-c2567f7ebae0.htm" />
+    <HelpKINode Title="InputService.MouseHandler.LeftReleased Method " Url="html/6b99de14-b3db-c9cb-e888-47e04eb029db.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LeftStick method" Url="html/601fa46c-de94-a511-3fa4-6e348851426d.htm" />
+  <HelpKINode Title="LeftStickDirection method" Url="html/38683ad7-4826-7d32-5e15-e3423f7b1c99.htm" />
+  <HelpKINode Title="LeftStickHeld method" Url="html/f92936fa-677b-bbcf-a66d-e66ff318002c.htm" />
+  <HelpKINode Title="LeftStickPressed method" Url="html/1f80062a-063d-f287-1626-ad55048b9557.htm" />
+  <HelpKINode Title="LeftStickReleased method" Url="html/055f8df0-4b7c-30c6-440c-1fbbb36eb26d.htm" />
+  <HelpKINode Title="LeftTriggerPressed method" Url="html/8295d669-bd09-cc68-595c-e23b1acb4136.htm" />
+  <HelpKINode Title="LeftTriggerReleased method" Url="html/616e69b6-9d4d-1b11-0e45-bdb83343b298.htm" />
+  <HelpKINode Title="LeftTriggerValue method" Url="html/5cae2778-61cd-a641-648e-b9d8d954aae6.htm" />
+  <HelpKINode Title="Load method" Url="html/189aea10-f287-5168-739b-9af5f66bb192.htm" />
+  <HelpKINode Title="LoadDraw method" Url="html/41c186cb-536a-4b71-7cc7-555686a5ed90.htm" />
+  <HelpKINode Title="LoadScreen field" Url="html/eb3b0906-d91a-a73c-a9e0-2236810ab8fa.htm" />
+  <HelpKINode Title="LoadUpdate method" Url="html/1dee4429-192f-f2a8-4aff-7168678250e0.htm" />
+  <HelpKINode Title="MiddleHeld method" Url="html/bc190a60-dc61-d103-911e-96dc59dc41b8.htm" />
+  <HelpKINode Title="MiddlePressed method" Url="html/1ba5f358-a047-9892-9fe9-655b1e7b7958.htm" />
+  <HelpKINode Title="MiddleReleased method" Url="html/0cb6654f-ba03-07f3-54d4-db994d46c3cb.htm" />
+  <HelpKINode Title="Mouse property" Url="html/25921c5d-7004-fa17-044a-6f5f086606d9.htm" />
+  <HelpKINode Title="None enumeration member" Url="html/aa2b542f-7b04-4a3f-79be-2ac06d674e96.htm" />
+  <HelpKINode Title="OnFinalDraw event" Url="html/2410932a-bb23-1b9c-3f24-8cdc59988736.htm" />
+  <HelpKINode Title="OnFinalDrawEventHandler delegate" Url="html/d20f7bbb-9d4f-8731-886d-ef8ecc54cd08.htm" />
+  <HelpKINode Title="OnPop method" Url="html/8012234e-b544-0ed8-3227-1dbf4e6da1f6.htm" />
+  <HelpKINode Title="Pause method" Url="html/b391e4d6-46f4-b843-6adb-4b5c76c03501.htm" />
+  <HelpKINode Title="Paused property" Url="html/981bbbe6-903a-0aa9-67ac-0e1e7e0bed92.htm" />
+  <HelpKINode Title="PhoneGestures property" Url="html/6040ad1b-a040-eca4-9d90-8adeab331baf.htm" />
+  <HelpKINode Title="Pinch enumeration member" Url="html/aa2b542f-7b04-4a3f-79be-2ac06d674e96.htm" />
+  <HelpKINode Title="PinchComplete enumeration member" Url="html/aa2b542f-7b04-4a3f-79be-2ac06d674e96.htm" />
+  <HelpKINode Title="Position method" Url="html/171a3eb9-81ed-8db5-a816-b4bed6250754.htm" />
+  <HelpKINode Title="Position property">
+    <HelpKINode Title="InputService.GestureSample.Position Property " Url="html/379a95de-3027-76b6-dee9-ab2a8edba977.htm" />
+    <HelpKINode Title="QuadItem.Position Property " Url="html/16ad3c5d-81ba-8424-8b85-cfd194ff6b1e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Position2 property" Url="html/fec8c550-3543-8279-933c-af593ade3c66.htm" />
+  <HelpKINode Title="PreLoad method" Url="html/04161f11-40a0-69de-db68-990a02dd3b2a.htm" />
+  <HelpKINode Title="QuadItem class">
+    <HelpKINode Title="QuadItem Class" Url="html/fcfd8b7b-dcb2-d05b-1b96-8c5fd62ec6f5.htm" />
+    <HelpKINode Title="QuadItem Members" Url="html/3a877d0e-f2da-26b3-4e77-929e87260ef6.htm" />
+    <HelpKINode Title="about QuadItem class" Url="html/fcfd8b7b-dcb2-d05b-1b96-8c5fd62ec6f5.htm" />
+    <HelpKINode Title="all members" Url="html/3a877d0e-f2da-26b3-4e77-929e87260ef6.htm" />
+    <HelpKINode Title="constructor" Url="html/03ccaec0-481e-90f1-483f-5bc7cf32a637.htm" />
+    <HelpKINode Title="methods" Url="html/580569da-5ca6-92ae-3453-ef786328af3c.htm" />
+    <HelpKINode Title="properties" Url="html/96cbc65e-0496-89e7-286c-7684cfacbc5c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="QuadItem.BindRoot method" Url="html/01420f31-4e79-9c0b-1c08-f43a8e3ab493.htm" />
+  <HelpKINode Title="QuadItem.Height property" Url="html/aa892045-62c8-aadc-c6dd-8513bf46e95b.htm" />
+  <HelpKINode Title="QuadItem.Position property" Url="html/16ad3c5d-81ba-8424-8b85-cfd194ff6b1e.htm" />
+  <HelpKINode Title="QuadItem.QuadItem constructor" Url="html/03ccaec0-481e-90f1-483f-5bc7cf32a637.htm" />
+  <HelpKINode Title="QuadItem.Width property" Url="html/899dffec-bd32-acc0-45c1-6e90228d1ac0.htm" />
+  <HelpKINode Title="QuadItem.X property" Url="html/e127af14-af07-df47-960f-b27479a14402.htm" />
+  <HelpKINode Title="QuadItem.Y property" Url="html/9f9757fc-1277-b95b-40e7-7b071479b387.htm" />
+  <HelpKINode Title="QuadTree class">
+    <HelpKINode Title="QuadTree Class" Url="html/e6405917-b78e-f9f0-9fb0-c673f8ccbbff.htm" />
+    <HelpKINode Title="QuadTree Members" Url="html/9218ded4-e534-ef7d-89de-b2170caee54b.htm" />
+    <HelpKINode Title="about QuadTree class" Url="html/e6405917-b78e-f9f0-9fb0-c673f8ccbbff.htm" />
+    <HelpKINode Title="all members" Url="html/9218ded4-e534-ef7d-89de-b2170caee54b.htm" />
+    <HelpKINode Title="constructor" Url="html/ccc47c07-dbd1-0288-5302-47124b7ec2fc.htm" />
+    <HelpKINode Title="fields" Url="html/fcb1884c-b1df-d5cf-f195-07e9a2aac260.htm" />
+    <HelpKINode Title="methods" Url="html/4fd1b034-2bf9-f730-60e1-290a58aed443.htm" />
+  </HelpKINode>
+  <HelpKINode Title="QuadTree.Add method" Url="html/c01ff6c2-1865-99d9-755d-a2f8c9f4c1e7.htm" />
+  <HelpKINode Title="QuadTree.Bounds field" Url="html/32183788-82a5-d8c4-2e0a-78bc4b6308d8.htm" />
+  <HelpKINode Title="QuadTree.Children field" Url="html/5795ba01-c1c5-26fb-aaff-08bcca4a831c.htm" />
+  <HelpKINode Title="QuadTree.Contains method" Url="html/f3ff8b31-80f0-173e-68a2-068915db1a8a.htm" />
+  <HelpKINode Title="QuadTree.Find method" Url="html/2182f472-6a73-7a8b-e6d5-cb860c865cf8.htm" />
+  <HelpKINode Title="QuadTree.QuadTree constructor" Url="html/ccc47c07-dbd1-0288-5302-47124b7ec2fc.htm" />
+  <HelpKINode Title="QuadTree.Remove method" Url="html/9fda02b1-a25e-2907-066e-d1da59db73a8.htm" />
+  <HelpKINode Title="QuadTreeRoot class">
+    <HelpKINode Title="QuadTreeRoot Class" Url="html/20a69d32-1210-be80-4175-6af204f1cfee.htm" />
+    <HelpKINode Title="QuadTreeRoot Members" Url="html/ba69e2e1-3632-2e70-d3fc-a16583c4be03.htm" />
+    <HelpKINode Title="about QuadTreeRoot class" Url="html/20a69d32-1210-be80-4175-6af204f1cfee.htm" />
+    <HelpKINode Title="all members" Url="html/ba69e2e1-3632-2e70-d3fc-a16583c4be03.htm" />
+    <HelpKINode Title="constructor" Url="html/8795ea08-045d-0d16-a035-f8c1f111d2d1.htm" />
+    <HelpKINode Title="methods" Url="html/397e38a0-23e4-a7f9-5a6d-046040115055.htm" />
+  </HelpKINode>
+  <HelpKINode Title="QuadTreeRoot.Add method" Url="html/d707a612-cdc8-758b-c296-a510da992fcd.htm" />
+  <HelpKINode Title="QuadTreeRoot.Find method" Url="html/39ba8a44-38d3-975b-c82b-1e30604af3c7.htm" />
+  <HelpKINode Title="QuadTreeRoot.QuadTreeRoot constructor" Url="html/8795ea08-045d-0d16-a035-f8c1f111d2d1.htm" />
+  <HelpKINode Title="QuadTreeRoot.Remove method" Url="html/89318a87-4251-ec06-3878-6524889a2eb6.htm" />
+  <HelpKINode Title="QuadTreeRoot.UpdateItem method" Url="html/c0c8cb6b-2238-ea00-7fd0-ed4b917d0c7b.htm" />
+  <HelpKINode Title="RapidEngine class">
+    <HelpKINode Title="RapidEngine Class" Url="html/3cb3f75f-5e44-6fdf-ac12-d7da3f094364.htm" />
+    <HelpKINode Title="RapidEngine Members" Url="html/ac8f53d7-c82e-384a-9dfa-36cd8fba0f38.htm" />
+    <HelpKINode Title="about RapidEngine class" Url="html/3cb3f75f-5e44-6fdf-ac12-d7da3f094364.htm" />
+    <HelpKINode Title="all members" Url="html/ac8f53d7-c82e-384a-9dfa-36cd8fba0f38.htm" />
+    <HelpKINode Title="constructor" Url="html/056b4b43-b7b0-5186-7ba8-36343c6bf0c7.htm" />
+    <HelpKINode Title="events" Url="html/79a69a53-d1ff-3dfd-5819-8754b99b9d0c.htm" />
+    <HelpKINode Title="methods" Url="html/31922e83-b276-76ca-20c9-640a5ad7a006.htm" />
+    <HelpKINode Title="properties" Url="html/6504c8f2-25e3-9645-ba84-de653d4b2ef0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RapidEngine.ContentManager property" Url="html/02f6b5eb-cf7e-1811-96fd-d5b5daff23e3.htm" />
+  <HelpKINode Title="RapidEngine.Draw method" Url="html/ff61ea9e-29f5-e937-982f-ee464e8650f6.htm" />
+  <HelpKINode Title="RapidEngine.EngineServices property" Url="html/987b0e5d-91a9-798e-5516-682e561ed8fc.htm" />
+  <HelpKINode Title="RapidEngine.Exit method" Url="html/fe7cbd71-3ae3-da20-fe86-4803444872ab.htm" />
+  <HelpKINode Title="RapidEngine.GraphicsDevice property" Url="html/c601f0c0-b590-ab21-975e-0d80497b7f83.htm" />
+  <HelpKINode Title="RapidEngine.InputService property" Url="html/fc3eb133-fcb4-fc5b-e2a4-cae657e195c9.htm" />
+  <HelpKINode Title="RapidEngine.OnFinalDraw event" Url="html/2410932a-bb23-1b9c-3f24-8cdc59988736.htm" />
+  <HelpKINode Title="RapidEngine.RapidEngine constructor" Url="html/056b4b43-b7b0-5186-7ba8-36343c6bf0c7.htm" />
+  <HelpKINode Title="RapidEngine.ScreenService property" Url="html/ce1f9568-f64a-2420-d88e-599e2caa1cda.htm" />
+  <HelpKINode Title="RapidEngine.SpriteBatch property" Url="html/d278d6eb-442f-e6b2-a8e1-1c89f21157ca.htm" />
+  <HelpKINode Title="RapidEngine.Update method" Url="html/9c79c080-69d1-8672-9a6d-affe6374cc5a.htm" />
+  <HelpKINode Title="RapidXNA namespace" Url="html/0ed8f065-7b13-f370-150d-2f7f436d9b4d.htm" />
+  <HelpKINode Title="RapidXNA.EngineServices class">
+    <HelpKINode Title="EngineServices Class" Url="html/40a9889c-00f7-a7d0-c561-22fc45c3f8cb.htm" />
+    <HelpKINode Title="EngineServices Members" Url="html/75cadb83-fc84-e340-1223-0095c9763ba6.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RapidXNA.Interfaces namespace" Url="html/c3827ac5-850c-52a3-d002-68e6efecac15.htm" />
+  <HelpKINode Title="RapidXNA.Interfaces.IGameScreen class">
+    <HelpKINode Title="IGameScreen Class" Url="html/41cb462d-52f7-5648-dc26-67204801c080.htm" />
+    <HelpKINode Title="IGameScreen Members" Url="html/0e72a041-0009-3a78-389c-18ad1c0cc01d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RapidXNA.OnFinalDrawEventHandler delegate" Url="html/d20f7bbb-9d4f-8731-886d-ef8ecc54cd08.htm" />
+  <HelpKINode Title="RapidXNA.RapidEngine class">
+    <HelpKINode Title="RapidEngine Class" Url="html/3cb3f75f-5e44-6fdf-ac12-d7da3f094364.htm" />
+    <HelpKINode Title="RapidEngine Members" Url="html/ac8f53d7-c82e-384a-9dfa-36cd8fba0f38.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RapidXNA.Services namespace" Url="html/80d3cc84-aa49-fe3d-d6a9-ac7c02a7c78b.htm" />
+  <HelpKINode Title="RapidXNA.Services.AppSettings class">
+    <HelpKINode Title="AppSettings Class" Url="html/6e520d34-6a4b-eb18-a73e-e24d4793942c.htm" />
+    <HelpKINode Title="AppSettings Members" Url="html/0b746471-6d50-3984-64bc-7f2368efeb81.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RapidXNA.Services.ConvertHelper class">
+    <HelpKINode Title="ConvertHelper Class" Url="html/b2e73425-98a2-2b76-4ef3-05a0d217817a.htm" />
+    <HelpKINode Title="ConvertHelper Members" Url="html/66fb51a3-1559-6994-82ec-08c6668a7e70.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RapidXNA.Services.GameService class">
+    <HelpKINode Title="GameService Class" Url="html/c4f03bc3-3878-3371-f1e3-50cc307ee5f5.htm" />
+    <HelpKINode Title="GameService Members" Url="html/f7d86192-b917-6f74-6153-7ab4169ba1dc.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RapidXNA.Services.InputService class">
+    <HelpKINode Title="InputService Class" Url="html/4ad58eb6-ab55-963b-728a-b088d0093fd7.htm" />
+    <HelpKINode Title="InputService Members" Url="html/0cf47515-f45d-5d9a-8bcc-412cf0e6752d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RapidXNA.Services.InputService.GamePadHandler class">
+    <HelpKINode Title="InputService.GamePadHandler Class" Url="html/6b4b065a-837d-cb91-9521-3b36c251b3f2.htm" />
+    <HelpKINode Title="InputService.GamePadHandler Members" Url="html/389ed24e-b509-aa5e-7609-2bb574123dd9.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RapidXNA.Services.InputService.GestureSample class">
+    <HelpKINode Title="InputService.GestureSample Class" Url="html/dd49456b-d62f-3839-c7d1-16bebd01b06a.htm" />
+    <HelpKINode Title="InputService.GestureSample Members" Url="html/71678a45-74af-f793-72fd-1fefd1a3c1ab.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RapidXNA.Services.InputService.GestureType enumeration" Url="html/aa2b542f-7b04-4a3f-79be-2ac06d674e96.htm" />
+  <HelpKINode Title="RapidXNA.Services.InputService.KeyboardHandler class">
+    <HelpKINode Title="InputService.KeyboardHandler Class" Url="html/759628fe-4f29-304c-59f5-5af46e250d8a.htm" />
+    <HelpKINode Title="InputService.KeyboardHandler Members" Url="html/03570595-7543-0cd1-ee6c-dc673c9051fa.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RapidXNA.Services.InputService.MouseHandler class">
+    <HelpKINode Title="InputService.MouseHandler Class" Url="html/c11933d8-ddda-d37a-f7dc-ebb868c66889.htm" />
+    <HelpKINode Title="InputService.MouseHandler Members" Url="html/7d6bdb64-dac1-d0af-b32f-afa4a7595764.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RapidXNA.Services.InputService.PhoneInputHandler class">
+    <HelpKINode Title="InputService.PhoneInputHandler Class" Url="html/ca458b34-810d-fec5-6aed-3c8531972a84.htm" />
+    <HelpKINode Title="InputService.PhoneInputHandler Members" Url="html/fd4ecbbd-56de-e60f-67e2-f3c38182a0da.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RapidXNA.Services.QuadItem class">
+    <HelpKINode Title="QuadItem Class" Url="html/fcfd8b7b-dcb2-d05b-1b96-8c5fd62ec6f5.htm" />
+    <HelpKINode Title="QuadItem Members" Url="html/3a877d0e-f2da-26b3-4e77-929e87260ef6.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RapidXNA.Services.QuadTree class">
+    <HelpKINode Title="QuadTree Class" Url="html/e6405917-b78e-f9f0-9fb0-c673f8ccbbff.htm" />
+    <HelpKINode Title="QuadTree Members" Url="html/9218ded4-e534-ef7d-89de-b2170caee54b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RapidXNA.Services.QuadTreeRoot class">
+    <HelpKINode Title="QuadTreeRoot Class" Url="html/20a69d32-1210-be80-4175-6af204f1cfee.htm" />
+    <HelpKINode Title="QuadTreeRoot Members" Url="html/ba69e2e1-3632-2e70-d3fc-a16583c4be03.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RapidXNA.Services.ScreenService class">
+    <HelpKINode Title="ScreenService Class" Url="html/1063a44d-8fe4-484e-48ef-f3d04c1319f2.htm" />
+    <HelpKINode Title="ScreenService Members" Url="html/b0e4f149-fc2d-05fb-ee99-dd27db2f92e6.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RapidXNA.Services.ScreenshotService class">
+    <HelpKINode Title="ScreenshotService Class" Url="html/639de96b-f525-01a0-a9f9-31df7d5c781a.htm" />
+    <HelpKINode Title="ScreenshotService Members" Url="html/a39f0780-0222-41aa-9540-1d8943b6c4b1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ReleasedTime method" Url="html/192e6f64-50d9-2d16-ea72-f351c926ac1b.htm" />
+  <HelpKINode Title="Remove method">
+    <HelpKINode Title="QuadTree.Remove Method " Url="html/9fda02b1-a25e-2907-066e-d1da59db73a8.htm" />
+    <HelpKINode Title="QuadTreeRoot.Remove Method " Url="html/89318a87-4251-ec06-3878-6524889a2eb6.htm" />
+    <HelpKINode Title="ScreenService.Remove Method " Url="html/841e1f08-d7ec-5351-304f-a39da9948b38.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RemovePopup method" Url="html/61c02fe7-f579-2c15-2733-71ebf1f831bd.htm" />
+  <HelpKINode Title="RightBumberHeld method" Url="html/a6f809f3-c10c-8e6d-d4e7-6f2d33f9f9cf.htm" />
+  <HelpKINode Title="RightBumberPressed method" Url="html/688fe23f-cb39-f32a-4191-f703b653ea5e.htm" />
+  <HelpKINode Title="RightBumberReleased method" Url="html/8e59d125-3433-7b60-5abc-b9965afcb67f.htm" />
+  <HelpKINode Title="RightHeld method">
+    <HelpKINode Title="InputService.GamePadHandler.RightHeld Method " Url="html/2a51460c-b4cc-9c13-fc33-e1d53ca6c355.htm" />
+    <HelpKINode Title="InputService.MouseHandler.RightHeld Method " Url="html/09c6b9b1-c108-94c6-8f98-7452d71727da.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RightPressed method">
+    <HelpKINode Title="InputService.GamePadHandler.RightPressed Method " Url="html/ea0fd403-ee47-e012-9867-f4c089647074.htm" />
+    <HelpKINode Title="InputService.MouseHandler.RightPressed Method " Url="html/a04d5838-e665-a21a-5ed8-83a2bc7e1433.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RightReleased method">
+    <HelpKINode Title="InputService.GamePadHandler.RightReleased Method " Url="html/f78bb250-4914-fe43-9d52-309fcf4d74d3.htm" />
+    <HelpKINode Title="InputService.MouseHandler.RightReleased Method " Url="html/1078c822-13db-851a-bae2-3f1a81b32d8e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RightStick method" Url="html/17cfbe7f-e1fd-8348-dedf-42e839c82abb.htm" />
+  <HelpKINode Title="RightStickDirection method" Url="html/88eb2eb4-3e90-d11c-2e2e-a486a5e53fe9.htm" />
+  <HelpKINode Title="RightStickHeld method" Url="html/ec9f9224-1f64-3a8a-970e-ecf1626d2b87.htm" />
+  <HelpKINode Title="RightStickPressed method" Url="html/8afa8d0f-0ebb-4c21-5d40-ec46b7ef38e2.htm" />
+  <HelpKINode Title="RightStickReleased method" Url="html/e3b1ce64-5e3a-6454-e52b-8ce7fce0fd33.htm" />
+  <HelpKINode Title="RightTrigerValue method" Url="html/a9798ba4-3400-ed2e-f0ee-afe503fda7b9.htm" />
+  <HelpKINode Title="RightTriggerPressed method" Url="html/869556a6-80ce-f7f9-5907-16236e45bff9.htm" />
+  <HelpKINode Title="RightTriggerReleased method" Url="html/f2371837-eed0-ce60-820b-366d04d99f61.htm" />
+  <HelpKINode Title="ScreenService class">
+    <HelpKINode Title="ScreenService Class" Url="html/1063a44d-8fe4-484e-48ef-f3d04c1319f2.htm" />
+    <HelpKINode Title="ScreenService Members" Url="html/b0e4f149-fc2d-05fb-ee99-dd27db2f92e6.htm" />
+    <HelpKINode Title="about ScreenService class" Url="html/1063a44d-8fe4-484e-48ef-f3d04c1319f2.htm" />
+    <HelpKINode Title="all members" Url="html/b0e4f149-fc2d-05fb-ee99-dd27db2f92e6.htm" />
+    <HelpKINode Title="constructor" Url="html/adefe244-6e72-b8fd-4a51-279d4115beab.htm" />
+    <HelpKINode Title="fields" Url="html/6573d944-fbfa-f46a-b392-be469d3dfe95.htm" />
+    <HelpKINode Title="methods" Url="html/16939200-e578-c79b-b5f1-0865eea1119f.htm" />
+    <HelpKINode Title="properties" Url="html/2d755827-1986-27f4-5a44-2c9c6a51ac39.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ScreenService property" Url="html/ce1f9568-f64a-2420-d88e-599e2caa1cda.htm" />
+  <HelpKINode Title="ScreenService.Draw method" Url="html/4d6193c9-4343-0554-1789-e34f077aebd4.htm" />
+  <HelpKINode Title="ScreenService.Init method" Url="html/85d680da-7c95-eb91-735d-d80da5ec40e8.htm" />
+  <HelpKINode Title="ScreenService.Pause method" Url="html/b391e4d6-46f4-b843-6adb-4b5c76c03501.htm" />
+  <HelpKINode Title="ScreenService.Paused property" Url="html/981bbbe6-903a-0aa9-67ac-0e1e7e0bed92.htm" />
+  <HelpKINode Title="ScreenService.Remove method" Url="html/841e1f08-d7ec-5351-304f-a39da9948b38.htm" />
+  <HelpKINode Title="ScreenService.RemovePopup method" Url="html/61c02fe7-f579-2c15-2733-71ebf1f831bd.htm" />
+  <HelpKINode Title="ScreenService.ScreenService constructor" Url="html/adefe244-6e72-b8fd-4a51-279d4115beab.htm" />
+  <HelpKINode Title="ScreenService.Show method" Url="html/150b44c1-6b2c-a9ae-23d3-27464eebab73.htm" />
+  <HelpKINode Title="ScreenService.ShowPopup method" Url="html/b6b4ddc4-ce16-e1d6-f935-df6bb103f046.htm" />
+  <HelpKINode Title="ScreenService.Update method" Url="html/231634df-fdad-6b58-fd5e-7111379da7f7.htm" />
+  <HelpKINode Title="ScreenshotService class">
+    <HelpKINode Title="ScreenshotService Class" Url="html/639de96b-f525-01a0-a9f9-31df7d5c781a.htm" />
+    <HelpKINode Title="ScreenshotService Members" Url="html/a39f0780-0222-41aa-9540-1d8943b6c4b1.htm" />
+    <HelpKINode Title="about ScreenshotService class" Url="html/639de96b-f525-01a0-a9f9-31df7d5c781a.htm" />
+    <HelpKINode Title="all members" Url="html/a39f0780-0222-41aa-9540-1d8943b6c4b1.htm" />
+    <HelpKINode Title="constructor" Url="html/0e06733a-45b7-e02c-af83-3eb950b9ca69.htm" />
+    <HelpKINode Title="fields" Url="html/86d164c7-e5df-48f9-b025-e20797b6963e.htm" />
+    <HelpKINode Title="methods" Url="html/21a3c27c-7528-4b45-3378-952c33847e60.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ScreenshotService.Draw method" Url="html/26d09033-1a25-e705-7f67-023c94325fe4.htm" />
+  <HelpKINode Title="ScreenshotService.Init method" Url="html/2d0cd40a-99dd-d14b-c1af-693e99a1aa55.htm" />
+  <HelpKINode Title="ScreenshotService.ScreenshotService constructor" Url="html/0e06733a-45b7-e02c-af83-3eb950b9ca69.htm" />
+  <HelpKINode Title="ScreenshotService.TakeScreenshot method" Url="html/b97a23aa-b9df-a77c-d22d-9738ca7c7eab.htm" />
+  <HelpKINode Title="ScreenshotService.Update method" Url="html/82e4ec52-f38b-d61d-8191-005466883fd3.htm" />
+  <HelpKINode Title="ScrollWheel property" Url="html/c0c5e4f9-d28e-38c0-7fcd-866c90e2496b.htm" />
+  <HelpKINode Title="Show method" Url="html/150b44c1-6b2c-a9ae-23d3-27464eebab73.htm" />
+  <HelpKINode Title="ShowPopup method" Url="html/b6b4ddc4-ce16-e1d6-f935-df6bb103f046.htm" />
+  <HelpKINode Title="SpriteBatch property" Url="html/d278d6eb-442f-e6b2-a8e1-1c89f21157ca.htm" />
+  <HelpKINode Title="StartHeld method" Url="html/eb6bc949-f138-dbd2-0860-c906bac6fa77.htm" />
+  <HelpKINode Title="StartPressed method" Url="html/488e5891-073f-6d5a-a42c-c2f852b8d3cd.htm" />
+  <HelpKINode Title="StartReleased method" Url="html/eec9373b-67b2-5127-fb6f-bab2e6d73fc6.htm" />
+  <HelpKINode Title="TakeScreenshot method" Url="html/b97a23aa-b9df-a77c-d22d-9738ca7c7eab.htm" />
+  <HelpKINode Title="Tap enumeration member" Url="html/aa2b542f-7b04-4a3f-79be-2ac06d674e96.htm" />
+  <HelpKINode Title="Timestamp property" Url="html/6b39f37d-433c-6e4b-976e-5ba8ae55cd89.htm" />
+  <HelpKINode Title="Update method">
+    <HelpKINode Title="EngineServices.Update Method " Url="html/b6a7aa1c-63a2-5c66-7ce0-9140c7c32798.htm" />
+    <HelpKINode Title="GameService.Update Method " Url="html/f1172207-da35-4ece-ccbf-2d6e66f4acce.htm" />
+    <HelpKINode Title="IGameScreen.Update Method " Url="html/a71c6efe-70db-c558-7c97-3fce1bf657a2.htm" />
+    <HelpKINode Title="InputService.GamePadHandler.Update Method " Url="html/9bc50e7c-861f-e1ea-72c0-1cc5d3b68b43.htm" />
+    <HelpKINode Title="InputService.KeyboardHandler.Update Method " Url="html/81b8d3d1-31d4-b70b-5d51-6fb45e51014f.htm" />
+    <HelpKINode Title="InputService.MouseHandler.Update Method " Url="html/201a9170-75af-df47-45e3-5f404bb6cd70.htm" />
+    <HelpKINode Title="InputService.PhoneInputHandler.Update Method " Url="html/7f64fdb5-36f4-4b2d-3a3f-23ad0f6ee624.htm" />
+    <HelpKINode Title="InputService.Update Method " Url="html/2901743d-f53c-fab7-e311-4ce94c59ca0d.htm" />
+    <HelpKINode Title="RapidEngine.Update Method " Url="html/9c79c080-69d1-8672-9a6d-affe6374cc5a.htm" />
+    <HelpKINode Title="ScreenService.Update Method " Url="html/231634df-fdad-6b58-fd5e-7111379da7f7.htm" />
+    <HelpKINode Title="ScreenshotService.Update Method " Url="html/82e4ec52-f38b-d61d-8191-005466883fd3.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UpdateItem method" Url="html/c0c8cb6b-2238-ea00-7fd0-ed4b917d0c7b.htm" />
+  <HelpKINode Title="UpHeld method" Url="html/a59be580-2c2a-2d2a-4548-bdd7a7ed79e0.htm" />
+  <HelpKINode Title="UpPressed method" Url="html/d3b0ee70-b790-18ba-3701-48873fa63fad.htm" />
+  <HelpKINode Title="UpReleased method" Url="html/a6473461-0902-9b0f-ad92-8eec063aa3c3.htm" />
+  <HelpKINode Title="version">
+    <HelpKINode Title="3.0.0.0" Url="html/a51bc1ca-9026-4874-9ce4-7ae622169a54.htm" />
+    <HelpKINode Title="history" Url="html/b0ba8a36-2901-46dc-9fb7-4cdc47622002.htm" />
+  </HelpKINode>
+  <HelpKINode Title="VerticalDrag enumeration member" Url="html/aa2b542f-7b04-4a3f-79be-2ac06d674e96.htm" />
+  <HelpKINode Title="Welcome" Url="html/32315a1d-3187-44ea-90b0-6f6dbf9e96bc.htm" />
+  <HelpKINode Title="Width property" Url="html/899dffec-bd32-acc0-45c1-6e90228d1ac0.htm" />
+  <HelpKINode Title="X property" Url="html/e127af14-af07-df47-960f-b27479a14402.htm" />
+  <HelpKINode Title="XHeld method" Url="html/a3f17ba9-802b-26f3-1229-4cea0d018bc2.htm" />
+  <HelpKINode Title="XPressed method" Url="html/b3367718-5f63-438d-c0ab-2e4ac35b1b05.htm" />
+  <HelpKINode Title="XReleased method" Url="html/cec85167-8c45-36e9-55f2-4f498732562b.htm" />
+  <HelpKINode Title="Y property" Url="html/9f9757fc-1277-b95b-40e7-7b071479b387.htm" />
+  <HelpKINode Title="YHeld method" Url="html/f0790b48-ca32-f544-00fc-5ab13aae8583.htm" />
+  <HelpKINode Title="YPressed method" Url="html/112c5661-868c-5ef5-636d-c7564360ea07.htm" />
+  <HelpKINode Title="YReleased method" Url="html/d8b51642-fca2-3506-8ef2-2445fb48ec85.htm" />
+</HelpKI>
