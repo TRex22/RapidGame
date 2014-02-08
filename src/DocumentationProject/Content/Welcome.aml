@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="32315a1d-3187-44ea-90b0-6f6dbf9e96bc" revisionNumber="1">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>A simple framework that aims to make starting up new XNA and MonoGame projects for Windows, Linux and others. 
+      Porting projects to different systems should only require minor changes.</para>
+		</introduction>
+
+		<section>
+			<title>Getting Started</title>
+			<content>
+				<para>How to use The Backward Compatible RapidXNA 3.0:</para>
+
+				<list class="bullet">
+					<listItem>
+						<para>Add a reference to the .dll that corresponds with your current project:
+                    <list class="bullet">
+                      <para>Windows: RapidXNA.dll</para>
+                      <para>Xbox 360: RapidXNA360.dll</para>
+                      <para>Windows Phone 7: RapidXNAWP7.dll (supports Mango, 7.1 only)</para>
+                    </list>
+            </para>
+					</listItem>
+
+					<listItem>
+						<para>Remove the SpriteBatch related code and variables from Game1.cs</para>
+					</listItem>
+
+					<listItem>
+						<para>Create a variable of type RapidXNA.RapidEngine, instantiate it in the LoadContent() method in your Game1.cs</para>
+					</listItem>
+
+					<listItem>
+						<para>Add an Update call to your Update() method in Game1.cs for your instance of RapidXNA.RapidEngine's Update()</para>
+					</listItem>
+        
+          <listItem>
+						<para>Add a Draw call to your Draw() method in Game1.cs for your instance of RapidXNA.RapidEngine's Draw()</para>
+					</listItem>
+          
+          <listItem>
+						<para>Create a new class for your initial game screen (or state if you prefer) and inherit from RapidXNA.DataType.IGameScreen</para>
+					</listItem>
+				</list>
+
+				<para>Please Note More Will be Added Soon. This is an Early, Still In Development, Generated Help File.</para>
+			</content>
+		</section>
+
+		<relatedTopics>
+			<link xlink:href="b0ba8a36-2901-46dc-9fb7-4cdc47622002" />
+      <externalLink>
+          <linkText>RapidGame Home Page</linkText>
+          <linkUri>http://TRex22.GitHub.io/RapidGame</linkUri>
+      </externalLink>
+      <externalLink>
+          <linkText>RapidGame Releases</linkText>
+          <linkUri>http://trex22.github.io/RapidGame/Releases/</linkUri>
+      </externalLink>
+      <externalLink>
+          <linkText>RapidGame GitHub Repository</linkText>
+          <linkUri>https://github.com/TRex22/RapidGame</linkUri>
+      </externalLink>
+      <externalLink>
+          <linkText>RapidXNA Codeplex Site</linkText>
+          <linkUri>http://rapidxna.codeplex.com/</linkUri>
+      </externalLink>
+		</relatedTopics>
+	</developerConceptualDocument>
+</topic>

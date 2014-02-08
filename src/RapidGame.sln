@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XNAWindowsTestGame", "XNAWi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XNAWindowsTestGameContent", "XNAWindowsTestGame\XNAWindowsTestGameContent\XNAWindowsTestGameContent.contentproj", "{9F1549F4-8226-45E7-B712-18B56B06CDDC}"
 EndProject
+Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "DocumentationProject", "DocumentationProject\DocumentationProject.shfbproj", "{BFC63276-E954-4194-B088-36192DD165DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -181,8 +183,29 @@ Global
 		{9F1549F4-8226-45E7-B712-18B56B06CDDC}.Release|x64.ActiveCfg = Release|x86
 		{9F1549F4-8226-45E7-B712-18B56B06CDDC}.Release|x86.ActiveCfg = Release|x86
 		{9F1549F4-8226-45E7-B712-18B56B06CDDC}.Release|Xbox 360.ActiveCfg = Release|x86
+		{BFC63276-E954-4194-B088-36192DD165DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFC63276-E954-4194-B088-36192DD165DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFC63276-E954-4194-B088-36192DD165DE}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{BFC63276-E954-4194-B088-36192DD165DE}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{BFC63276-E954-4194-B088-36192DD165DE}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{BFC63276-E954-4194-B088-36192DD165DE}.Debug|Windows Phone.ActiveCfg = Debug|Any CPU
+		{BFC63276-E954-4194-B088-36192DD165DE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BFC63276-E954-4194-B088-36192DD165DE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BFC63276-E954-4194-B088-36192DD165DE}.Debug|Xbox 360.ActiveCfg = Debug|Any CPU
+		{BFC63276-E954-4194-B088-36192DD165DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFC63276-E954-4194-B088-36192DD165DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFC63276-E954-4194-B088-36192DD165DE}.Release|ARM.ActiveCfg = Release|Any CPU
+		{BFC63276-E954-4194-B088-36192DD165DE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BFC63276-E954-4194-B088-36192DD165DE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{BFC63276-E954-4194-B088-36192DD165DE}.Release|Windows Phone.ActiveCfg = Release|Any CPU
+		{BFC63276-E954-4194-B088-36192DD165DE}.Release|x64.ActiveCfg = Release|Any CPU
+		{BFC63276-E954-4194-B088-36192DD165DE}.Release|x86.ActiveCfg = Release|Any CPU
+		{BFC63276-E954-4194-B088-36192DD165DE}.Release|Xbox 360.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal
