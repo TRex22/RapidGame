@@ -1,15 +1,16 @@
 ﻿using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
+using RapidXNA.Models;
 
 
 namespace XNAWindowsTestGame
 {
-    class InitialGameScreen : RapidXNA.Interfaces.IGameScreen
+    class InitialGameScreen : GameScreen
     {
         public override void Load()
         {
-            Engine.ScreenService.Pause();
+            Engine.ScreenService.DrawEnabled = true;
         }
 
         public override void Update(GameTime gameTime)

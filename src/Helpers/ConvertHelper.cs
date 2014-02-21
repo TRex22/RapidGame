@@ -5,6 +5,7 @@ using System.Reflection;
 
 namespace RapidGame.Helpers
 {
+	/*TODO JMC Cleanup Opperation*/
     public class ConvertHelper
     {
         public string SystemColourToName(Color colour)

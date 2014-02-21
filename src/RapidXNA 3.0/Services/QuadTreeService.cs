@@ -3,6 +3,8 @@ using System.Linq;
 using Microsoft.Xna.Framework;
 
 /*TODO JMC http://www.xnawiki.com/index.php/QuadTree*/
+/*Cleanup code and split classes
+ Inherit from IRapidService*/
 /*Note this is only for XNA*/
 namespace RapidXNA.Services
 {

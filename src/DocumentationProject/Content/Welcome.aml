@@ -14,10 +14,10 @@
 				<list class="bullet">
 					<listItem>
 						<para>Add a reference to the .dll that corresponds with your current project:
-                    <list class="bullet">
-                      <para>Windows: RapidXNA.dll</para>
-                      <para>Xbox 360: RapidXNA360.dll</para>
-                      <para>Windows Phone 7: RapidXNAWP7.dll (supports Mango, 7.1 only)</para>
+                    <list>
+                      <listItem>Windows: RapidXNA.dll</listItem>
+                      <listItem>Xbox 360: RapidXNA360.dll</listItem>
+                      <listItem>Windows Phone 7: RapidXNAWP7.dll (supports Mango, 7.1 only)</listItem>
                     </list>
             </para>
 					</listItem>

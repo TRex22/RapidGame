@@ -7,7 +7,8 @@ namespace RapidXNA.Services
 {
     /*http://wellroundedgeek.com/post/2011/01/25/Simple-XNA-Cross-Platform-Settings-Manager.aspx*/
     #region application settings
-    /*TODO JMC properly implement There should no be two classes in same cs*/
+    /*TODO JMC properly implement There should no be two classes in same cs
+     Also add + fix documentation*/
     /// <summary>
     /// 
     /// </summary>

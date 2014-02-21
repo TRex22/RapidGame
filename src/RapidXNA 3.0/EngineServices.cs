@@ -2,18 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
+using RapidXNA.Models;
 using RapidXNA.Services;
-
+/*TODO JMC Make sure models are truly models*/
 namespace RapidXNA
 {
-    /// <summary>
-    /// 
-    /// </summary>
     public class EngineServices
     {
         private readonly RapidEngine _rapidEngine;
+        /*TODO JMC Implement QuadTree Service and Convert service and others*/
+        //private readonly ConvertService _convertService;
+
         /// <summary>
-        /// 
+        /// The default constructor instantiates a local object of the RapidEngine.
         /// </summary>
         /// <param name="rapidEngine"></param>
         public EngineServices(RapidEngine rapidEngine)
@@ -21,8 +22,20 @@ namespace RapidXNA
             _rapidEngine = rapidEngine; 
         }
 
+        public void Exit(Game game)
+        {
+            try
+            {
+                GC.Collect();
+                game.Exit();
+            }
+            catch (InvalidOperationException e)
+            {
+                throw new InvalidOperationException("The current platform does not allow games to exit.", e);
+            }
+        }
 
-        private readonly Dictionary<int, GameService> _services = new Dictionary<int, GameService>();
+        private readonly Dictionary<int, RapidService> _services = new Dictionary<int, RapidService>();
 
         /// <summary>
         /// Seeding value for Service IDs
@@ -44,6 +57,7 @@ namespace RapidXNA
                 }
             }
 
+            /*TODO JMC Throw proper logic exception and document it*/
             throw new Exception("You need to add a service of T to be able to retrieve the first service.");
         }
 
@@ -52,7 +66,7 @@ namespace RapidXNA
         /// </summary>
         /// <param name="i">The Service ID to retrieve</param>
         /// <returns>The service of ID</returns>
-        public GameService this[int i]
+        public RapidService this[int i]
         {
             get
             {
@@ -68,7 +82,7 @@ namespace RapidXNA
         /// </summary>
         /// <param name="service">The Service instance to add</param>
         /// <returns>The ID of the added service</returns>
-        public int Add(GameService service)
+        public int Add(RapidService service)
         {
             _services.Add(_serviceSeed, service);
             service.Engine = _rapidEngine;
@@ -80,7 +94,7 @@ namespace RapidXNA
 
         /// <summary>
         /// Update all the services
-        /// - Updates screenservice last for most up-to-date input snapshots
+        /// - Updates ScreenService last for most up-to-date input snapshots
         /// </summary>
         public void Update(GameTime gameTime)
         {

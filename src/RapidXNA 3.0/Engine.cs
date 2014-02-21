@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using RapidXNA.Interfaces;
+using RapidXNA.Models;
 using RapidXNA.Services;
 
 namespace RapidXNA
@@ -18,43 +19,55 @@ namespace RapidXNA
      * Resharper Parameters rules evaluate
      * Past TODO's close
      * Perhaps have local configs for WP7 and XBOX to solve problem
+     * Do some parallel stuff
+     * Cuda implementation as well
      */
 
     /// <summary>
-    /// The Main Part of RapidXNA. This is the engine method.
+    /// The Main Part of RapidXNA. This is the engine class.
+    /// The Audio framework requires certain input and so it will
+    /// be an overloaded constructor. That way there will be backwards
+    /// Compatibility for older projects.
     /// </summary>
     public class RapidEngine
     {
-        /// <summary>
-        /// Instances of the major XNA libraries we will need
-        /// </summary>
         private readonly GraphicsDevice _graphicsDevice;
         /// <summary>
-        /// The Graphics Device Object
+        /// The Graphics Device Object. This is the object responsible for connecting to the internal
+        /// XNA framework's GraphicsDevice object in the Rapid framework. 
+        /// For more information please refer to <see href="http://msdn.microsoft.com/en-us/library/microsoft.xna.framework.graphics.graphicsdevice.aspx">XNA Documentation</see>
         /// </summary>
         public GraphicsDevice GraphicsDevice { get { return _graphicsDevice; } }
         private readonly ContentManager _contentManagerManager;
         /// <summary>
-        /// The Conetent Manager Object
+        /// The Content Manager Object. This is the object responsible for connecting to the internal
+        /// XNA framework's ContentManager object in the Rapid framework.
+        /// For more information please refer to <see href="http://msdn.microsoft.com/en-us/library/microsoft.xna.framework.content.contentmanager.aspx">XNA Documentation</see>
         /// </summary>
         public ContentManager ContentManager { get { return _contentManagerManager; } }
         private readonly SpriteBatch _spriteBatch;
         /// <summary>
         /// The Sprite Batch Object
+        /// For more information please refer to <see href="http://msdn.microsoft.com/en-us/library/microsoft.xna.framework.graphics.spritebatch.aspx">XNA Documentation</see>
         /// </summary>
         public SpriteBatch SpriteBatch { get { return _spriteBatch;  } }
+
         private readonly EngineServices _engineServices;
         /// <summary>
-        /// An object of the Egine Services
+        /// An object of the Engine Services. This allows a gateway to all the available engine services which are not
+        /// directly accessible.
         /// </summary>
         public EngineServices EngineServices { get { return _engineServices; } }
         
         /// <summary>
-        /// Quick Access Screen Service
+        /// Quick Access Screen Service. This is one of the Engine Services which is directly accessible.
+        /// This service controls the screens created through the RapidXNA framework.
         /// </summary>
         public ScreenService ScreenService { get { return (ScreenService)_engineServices[0]; } }
+        /*TODO JMC check the documentation for the input service*/
         /// <summary>
-        /// Quick Access Input Service
+        /// Quick Access Input Service. This is one of the Engine Services which is directly accessible.
+        /// The Input Service helps to deal with different types of inputs for different platforms.
         /// </summary>
         public InputService InputService { get { return (InputService)_engineServices[1]; } }
 
@@ -71,6 +84,8 @@ namespace RapidXNA
         
         /// <summary>
         /// Rapid Engine Default Constructor Without Audio Framework.
+        /// The Default colours can be controlled by using the SettingsService.
+        /// <seealso cref="SettingsManager.LoadSettings"/>
         /// </summary>
         /// <param name="game"></param>
         /// <param name="graphicsDevice"></param>
@@ -80,7 +95,7 @@ namespace RapidXNA
             Game game, 
             GraphicsDevice graphicsDevice, 
             ContentManager contentManagerManager, 
-            IGameScreen initialGameScreen)
+            GameScreen initialGameScreen)
         {
 
             /*TODO JMC Find a better fix*/
@@ -99,23 +114,29 @@ namespace RapidXNA
             _engineServices = new EngineServices(this);
             _engineServices.Add(new ScreenService());
             _engineServices.Add(new InputService());
-            //_engineServices.Add(new AudioEngine());
-
+            
             ScreenService.Show(initialGameScreen);
         }
-
+        /*TODO JMC Check:
+         * Check the see also here
+         * http://msdn.microsoft.com/en-us/library/bb203874.aspx
+         * http://msdn.microsoft.com/en-us/library/microsoft.xna.framework.game.exit.aspx
+         * http://stackoverflow.com/questions/12649967/xna-game-isnt-exiting-after-calling-game-exit*/
         /// <summary>
-        /// Allow exiting of the game
+        /// Allow exiting of the game.
+        /// This will also force an immediate garbage collection of all generations.
+        /// <seealso cref="EngineServices.Exit"/>
         /// </summary>
         public void Exit()
         {
-            _game.Exit();
+            _engineServices.Exit(_game);
         }
 
         
 
         /// <summary>
         /// Normal XNA Update
+        /// For more information please refer to <see href="http://msdn.microsoft.com/en-us/library/microsoft.xna.framework.game.update.aspx">XNA Documentation</see>
         /// </summary>
         public void Update(GameTime gameTime)
         {
@@ -124,6 +145,9 @@ namespace RapidXNA
 
         /// <summary>
         /// Normal XNA Draw
+        /// The Default colours can be controlled by using the SettingsService.
+        /// <seealso cref="SettingsManager.LoadSettings"/>
+        /// For more information please refer to <see href="http://msdn.microsoft.com/en-us/library/microsoft.xna.framework.game.draw.aspx">XNA Documentation</see>
         /// </summary>
         public void Draw(GameTime gameTime)
         {

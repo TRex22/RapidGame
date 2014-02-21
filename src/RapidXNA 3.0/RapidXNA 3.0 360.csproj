@@ -54,10 +54,12 @@
   <ItemGroup>
     <Compile Include="Engine.cs" />
     <Compile Include="Interfaces\IGameScreen.cs" />
+    <Compile Include="Interfaces\IRapidService.cs" />
+    <Compile Include="Models\GameScreen.cs" />
+    <Compile Include="Models\RapidService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EngineServices.cs" />
     <Compile Include="Services\ConvertService.cs" />
-    <Compile Include="Services\GameService.cs" />
     <Compile Include="Services\InputService.cs" />
     <Compile Include="Services\QuadTreeService.cs" />
     <Compile Include="Services\ScreenService.cs" />

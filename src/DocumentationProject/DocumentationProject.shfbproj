@@ -28,7 +28,7 @@
     </TransformComponentArguments>
     <DocumentationSources>
       <DocumentationSource sourceFile="..\RapidXNA 3.0\bin\x86\Debug\RapidXNA3.0.xml" xmlns="" />
-      <DocumentationSource sourceFile="..\RapidXNA 3.0\bin\x86\Debug\RapidXNA3.0.dll" xmlns="" />
+      <DocumentationSource sourceFile="..\RapidXNA 3.0\bin\x86\Debug\RapidXNA3.0.dll" />
     </DocumentationSources>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
     <HelpFileFormat>HtmlHelp1, Website</HelpFileFormat>
@@ -37,10 +37,10 @@
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
     <CppCommentsFixup>True</CppCommentsFixup>
     <CleanIntermediates>True</CleanIntermediates>
-    <MaximumGroupParts>2</MaximumGroupParts>
+    <MaximumGroupParts>4</MaximumGroupParts>
     <NamespaceGrouping>False</NamespaceGrouping>
-    <SyntaxFilters>C#, Visual Basic, Managed C++</SyntaxFilters>
-    <SdkLinkTarget>Blank</SdkLinkTarget>
+    <SyntaxFilters>Standard</SyntaxFilters>
+    <SdkLinkTarget>Top</SdkLinkTarget>
     <RootNamespaceTitle>Libraries</RootNamespaceTitle>
     <RootNamespaceContainer>False</RootNamespaceContainer>
     <PresentationStyle>VS2010</PresentationStyle>
@@ -52,6 +52,14 @@
     <ContentPlacement>AboveNamespaces</ContentPlacement>
     <ProjectSummary>A simple framework that aims to make starting up new XNA and MonoGame projects for Windows, Linux and others. Porting projects to different systems should only require minor changes.</ProjectSummary>
     <VisibleItems>Attributes, ExplicitInterfaceImplementations, InheritedMembers, InheritedFrameworkMembers, Protected, SealedProtected</VisibleItems>
+    <PlugInConfigurations>
+      <PlugInConfig id="Version Builder" enabled="True" xmlns="">
+        <configuration>
+          <currentProject label="RapidGame" version="1" ripOldApis="False" />
+          <versions />
+        </configuration>
+      </PlugInConfig>
+    </PlugInConfigurations>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->

@@ -1,11 +1,13 @@
 ﻿//using System.Drawing;
 
+using RapidXNA.Models;
+
 namespace RapidXNA.Services
 {
     /// <summary>
     /// 
     /// </summary>
-    public class ConvertHelper
+    public class ConvertService : RapidService
     {
         /*TODO JMC Properly Implement*/
         /*public string SystemColourToName(Color colour)
@@ -94,5 +96,19 @@ namespace RapidXNA.Services
             return color;*/
         //    throw new NotImplementedException();
         //}
+        public override void Init()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override void Draw(Microsoft.Xna.Framework.GameTime gameTime)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
