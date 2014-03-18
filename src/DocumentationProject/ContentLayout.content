@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Topics>
+  <Topic id="32315a1d-3187-44ea-90b0-6f6dbf9e96bc" visible="True" isDefault="true" isSelected="true" title="Welcome to the RapidGame Documentation">
+    <HelpKeywords>
+      <HelpKeyword index="K" term="Welcome" />
+    </HelpKeywords>
+  </Topic>
+  <Topic id="b0ba8a36-2901-46dc-9fb7-4cdc47622002" visible="True" isExpanded="true" title="Version History">
+    <HelpKeywords>
+      <HelpKeyword index="K" term="version, history" />
+    </HelpKeywords>
+    <Topic id="a51bc1ca-9026-4874-9ce4-7ae622169a54" visible="True" title="Version 1.0.0.0">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version, 3.0.0.0" />
+      </HelpKeywords>
+    </Topic>
+  </Topic>
+</Topics>

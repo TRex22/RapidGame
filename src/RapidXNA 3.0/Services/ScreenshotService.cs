@@ -6,11 +6,11 @@ using System;
 using System.IO;
 using System.Threading;
 using Microsoft.Xna.Framework.Graphics;
-using RapidXNA_3._0.Interfaces;
+using RapidXNA.Models;
 
-namespace RapidXNA_3._0.Services
+namespace RapidXNA.Services
 {
-    public class ScreenshotService : GameService
+    public class ScreenshotService : RapidService
     {
         /// <summary>
         /// Hook onto the RapidEngine FinalDraw event
@@ -53,7 +53,7 @@ namespace RapidXNA_3._0.Services
 #if WINDOWS
                 try
                 {
-                    string targetDirectory = Directory.GetCurrentDirectory() + @"\Screenshots\";
+                    var targetDirectory = Directory.GetCurrentDirectory() + @"\Screenshots\";
                     if (!Directory.Exists(targetDirectory))
                     {
                         Directory.CreateDirectory(targetDirectory);
@@ -102,6 +102,8 @@ namespace RapidXNA_3._0.Services
 #endif
             }
         }
+
+        /*TODO JMC Find a better option, perhaps edit IRapidService*/
 
         public override void Init()
         {

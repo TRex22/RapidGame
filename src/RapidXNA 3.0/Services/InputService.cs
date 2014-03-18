@@ -2,17 +2,15 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
-using RapidXNA_3._0.Interfaces;
-
-
 #if WINDOWS_PHONE
 using Microsoft.Xna.Framework.Input.Touch;
 #endif
+using RapidXNA.Models;
 
 
-namespace RapidXNA_3._0.Services
+namespace RapidXNA.Services
 {
-    public class InputService : GameService
+    public class InputService : RapidService
     {
         /// <summary>
         /// Contains reference to all the input types supported (nicely wrapped for convenience and ease of use)
@@ -312,12 +310,12 @@ namespace RapidXNA_3._0.Services
         {
 
 #if WINDOWS_PHONE
-        List<GestureSample> _GestureSamples = new List<GestureSample>();
+            readonly List<GestureSample> _gestureSamples = new List<GestureSample>();
 #endif
             public List<GestureSample> GestureSamples
             {
 #if WINDOWS_PHONE
-            get { return _GestureSamples; }
+            get { return _gestureSamples; }
 #else
                 get { return new List<GestureSample>(); } //Should rethink this
 #endif
@@ -326,11 +324,11 @@ namespace RapidXNA_3._0.Services
             public void Update(GameTime gameTime)
             {
 #if WINDOWS_PHONE
-            _GestureSamples.Clear();
+            _gestureSamples.Clear();
             while (Microsoft.Xna.Framework.Input.Touch.TouchPanel.IsGestureAvailable)
             {
                 var gs = Microsoft.Xna.Framework.Input.Touch.TouchPanel.ReadGesture();
-                _GestureSamples.Add(gs);
+                _gestureSamples.Add(gs);
             }
 #endif
             }

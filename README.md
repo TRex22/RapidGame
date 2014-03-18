@@ -9,9 +9,8 @@ https://rapidxna.codeplex.com
 About RapidGame
 ==============
 This is my attempt at migrating RapidXNA made by @edg3 to GitHub,
-Upgrading it to work with MonoGame, and also getting it to work 
-in its 2.0 Alpha version with XNA, since I dont think that version
-was functional.
+Upgrading it to work with MonoGame, and also getting a final 
+version 3.0 working.
 
 Releases
 ========
