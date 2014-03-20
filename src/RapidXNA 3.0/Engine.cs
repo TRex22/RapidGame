@@ -85,6 +85,8 @@ namespace RapidXNA
         /// <summary>
         /// Rapid Engine Default Constructor Without Audio Framework.
         /// The Default colours can be controlled by using the SettingsService.
+        /// This method has been depreciated.
+        /// To use this method all exit calls must be made in the game1.cs class.
         /// <seealso cref="SettingsManager.LoadSettings"/>
         /// </summary>
         /// <param name="game"></param>
@@ -117,11 +119,14 @@ namespace RapidXNA
             
             ScreenService.Show(initialGameScreen);
         }
+        
         /*TODO JMC Check:
          * Check the see also here
          * http://msdn.microsoft.com/en-us/library/bb203874.aspx
          * http://msdn.microsoft.com/en-us/library/microsoft.xna.framework.game.exit.aspx
          * http://stackoverflow.com/questions/12649967/xna-game-isnt-exiting-after-calling-game-exit*/
+         
+         
         /// <summary>
         /// Allow exiting of the game.
         /// This will also force an immediate garbage collection of all generations.
