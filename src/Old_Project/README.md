@@ -7,6 +7,7 @@ I want to try and salvage that code and convert it to run on C#
 The basic screen will just display one screen matrix as an initial test.
 
 This code here wont function in this state. It is here for reference only.
+Also This code is SDL version 1
 
 The one project can be found:
 https://github.com/TRex22/DBFProject
