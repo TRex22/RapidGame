@@ -19,10 +19,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RapidGame_linux_x86", "RapidGame_linux_x86\RapidGame_linux_x86.csproj", "{44399E40-C1AF-48AF-9D05-5F7D3EEBB477}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RapidGame_win_x86", "RapidGame_win_x86\RapidGame_win_x86.csproj", "{D527DD16-29C6-4349-B595-34B979217D73}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XNAWindowsTestGame", "XNAWindowsTestGame\XNAWindowsTestGame\XNAWindowsTestGame.csproj", "{CA6FC267-4BB6-4FCE-9953-7C3EB390F571}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XNAWindowsTestGameContent", "XNAWindowsTestGame\XNAWindowsTestGameContent\XNAWindowsTestGameContent.contentproj", "{9F1549F4-8226-45E7-B712-18B56B06CDDC}"
@@ -111,42 +107,6 @@ Global
 		{CE2BCEEE-F439-4C7C-98EE-1182494C877C}.Release|x86.Build.0 = Release|Xbox 360
 		{CE2BCEEE-F439-4C7C-98EE-1182494C877C}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
 		{CE2BCEEE-F439-4C7C-98EE-1182494C877C}.Release|Xbox 360.Build.0 = Release|Xbox 360
-		{44399E40-C1AF-48AF-9D05-5F7D3EEBB477}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{44399E40-C1AF-48AF-9D05-5F7D3EEBB477}.Debug|ARM.ActiveCfg = Debug|x86
-		{44399E40-C1AF-48AF-9D05-5F7D3EEBB477}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{44399E40-C1AF-48AF-9D05-5F7D3EEBB477}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{44399E40-C1AF-48AF-9D05-5F7D3EEBB477}.Debug|Windows Phone.ActiveCfg = Debug|x86
-		{44399E40-C1AF-48AF-9D05-5F7D3EEBB477}.Debug|x64.ActiveCfg = Debug|x86
-		{44399E40-C1AF-48AF-9D05-5F7D3EEBB477}.Debug|x86.ActiveCfg = Debug|x86
-		{44399E40-C1AF-48AF-9D05-5F7D3EEBB477}.Debug|x86.Build.0 = Debug|x86
-		{44399E40-C1AF-48AF-9D05-5F7D3EEBB477}.Debug|Xbox 360.ActiveCfg = Debug|x86
-		{44399E40-C1AF-48AF-9D05-5F7D3EEBB477}.Release|Any CPU.ActiveCfg = Release|x86
-		{44399E40-C1AF-48AF-9D05-5F7D3EEBB477}.Release|ARM.ActiveCfg = Release|x86
-		{44399E40-C1AF-48AF-9D05-5F7D3EEBB477}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{44399E40-C1AF-48AF-9D05-5F7D3EEBB477}.Release|Mixed Platforms.Build.0 = Release|x86
-		{44399E40-C1AF-48AF-9D05-5F7D3EEBB477}.Release|Windows Phone.ActiveCfg = Release|x86
-		{44399E40-C1AF-48AF-9D05-5F7D3EEBB477}.Release|x64.ActiveCfg = Release|x86
-		{44399E40-C1AF-48AF-9D05-5F7D3EEBB477}.Release|x86.ActiveCfg = Release|x86
-		{44399E40-C1AF-48AF-9D05-5F7D3EEBB477}.Release|x86.Build.0 = Release|x86
-		{44399E40-C1AF-48AF-9D05-5F7D3EEBB477}.Release|Xbox 360.ActiveCfg = Release|x86
-		{D527DD16-29C6-4349-B595-34B979217D73}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{D527DD16-29C6-4349-B595-34B979217D73}.Debug|ARM.ActiveCfg = Debug|x86
-		{D527DD16-29C6-4349-B595-34B979217D73}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{D527DD16-29C6-4349-B595-34B979217D73}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{D527DD16-29C6-4349-B595-34B979217D73}.Debug|Windows Phone.ActiveCfg = Debug|x86
-		{D527DD16-29C6-4349-B595-34B979217D73}.Debug|x64.ActiveCfg = Debug|x86
-		{D527DD16-29C6-4349-B595-34B979217D73}.Debug|x86.ActiveCfg = Debug|x86
-		{D527DD16-29C6-4349-B595-34B979217D73}.Debug|x86.Build.0 = Debug|x86
-		{D527DD16-29C6-4349-B595-34B979217D73}.Debug|Xbox 360.ActiveCfg = Debug|x86
-		{D527DD16-29C6-4349-B595-34B979217D73}.Release|Any CPU.ActiveCfg = Release|x86
-		{D527DD16-29C6-4349-B595-34B979217D73}.Release|ARM.ActiveCfg = Release|x86
-		{D527DD16-29C6-4349-B595-34B979217D73}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{D527DD16-29C6-4349-B595-34B979217D73}.Release|Mixed Platforms.Build.0 = Release|x86
-		{D527DD16-29C6-4349-B595-34B979217D73}.Release|Windows Phone.ActiveCfg = Release|x86
-		{D527DD16-29C6-4349-B595-34B979217D73}.Release|x64.ActiveCfg = Release|x86
-		{D527DD16-29C6-4349-B595-34B979217D73}.Release|x86.ActiveCfg = Release|x86
-		{D527DD16-29C6-4349-B595-34B979217D73}.Release|x86.Build.0 = Release|x86
-		{D527DD16-29C6-4349-B595-34B979217D73}.Release|Xbox 360.ActiveCfg = Release|x86
 		{CA6FC267-4BB6-4FCE-9953-7C3EB390F571}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{CA6FC267-4BB6-4FCE-9953-7C3EB390F571}.Debug|ARM.ActiveCfg = Debug|x86
 		{CA6FC267-4BB6-4FCE-9953-7C3EB390F571}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
