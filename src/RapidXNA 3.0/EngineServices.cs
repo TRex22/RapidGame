@@ -7,6 +7,9 @@ using RapidXNA.Services;
 /*TODO JMC Make sure models are truly models*/
 namespace RapidXNA
 {
+    /// <summary>
+    /// The RapidXNA core services.
+    /// </summary>
     public class EngineServices
     {
         private readonly RapidEngine _rapidEngine;
@@ -22,6 +25,17 @@ namespace RapidXNA
             _rapidEngine = rapidEngine; 
         }
 
+        /// <summary>
+        /// This function should theoretically kill the main instance of the game and the RapidEngine.
+        /// There is a bug in RapidXNA 3.0 where this may not happen.
+        /// Rather use the XNA exit function to kill the game.
+        /// </summary>
+        /// <param name="game"></param>
+        /// <exception cref="InvalidOperationException">
+        /// This function should theoretically kill the main instance of the game and the RapidEngine.
+        /// There is a bug in RapidXNA 3.0 where this may not happen.
+        /// Rather use the XNA exit function to kill the game.
+        /// </exception>
         public void Exit(Game game)
         {
             try
