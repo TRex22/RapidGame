@@ -44,20 +44,16 @@ namespace Rapid_Game_SDL_Experiment_1
             else
             {
                 var window = SDL2.SDL.SDL_CreateWindow(title, SDL.SDL_WINDOWPOS_UNDEFINED, SDL.SDL_WINDOWPOS_UNDEFINED, width, height, SDL.SDL_WindowFlags.SDL_WINDOW_SHOWN);
-                if (window.Equals(null))
+                if (window.Equals(null)) 
                 {
                     Console.Out.Write("SDL window failed: " + SDL.SDL_GetError());
-                    SDL2.SDL.SDL_Quit();
+                    SDL2.SDL.SDL_Quit(); 
                 }
                 else
                 {
                     //Get window surface
                     var screenSurfacePtr = SDL.SDL_GetWindowSurface(window);
-                    var rect = new SDL.SDL_Rect();
-                    rect.x = 0;
-                    rect.y = 0;
-                    rect.w = width;
-                    rect.h = height;
+                    var rect = new SDL.SDL_Rect {x = 0, y = 0, w = width, h = height};
                     //Fill the surface white
                     createScreen(rect, screenSurfacePtr);
 
@@ -66,7 +62,7 @@ namespace Rapid_Game_SDL_Experiment_1
 
                     //Wait two seconds
                     SDL.SDL_Delay(2000);
-                    SDL.SDL_DestroyWindow(window);
+                    SDL .SDL_DestroyWindow(window);
                 }
             }
             SDL2.SDL.SDL_Quit();
@@ -80,7 +76,6 @@ namespace Rapid_Game_SDL_Experiment_1
 
         public static void createScreen(SDL.SDL_Rect screenPtr, IntPtr screen)
         {
-           
            //SDL.SDL_FillRect(screen.userdata, ref fuckyou, SDL.SDL_MapRGB(screen.format, 0xFF, 0xFF, 0xFF));
         }
 
