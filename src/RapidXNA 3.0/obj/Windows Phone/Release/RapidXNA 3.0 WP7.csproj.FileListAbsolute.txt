@@ -1,0 +1,5 @@
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA 3.0\bin\Windows Phone\Release\RapidXNA3.0_WP7.dll
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA 3.0\bin\Windows Phone\Release\RapidXNA3.0_WP7.pdb
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA 3.0\obj\Windows Phone\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA 3.0\obj\Windows Phone\Release\RapidXNA3.0_WP7.dll
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA 3.0\obj\Windows Phone\Release\RapidXNA3.0_WP7.pdb

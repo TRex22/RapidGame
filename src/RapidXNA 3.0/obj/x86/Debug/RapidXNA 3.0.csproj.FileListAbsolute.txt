@@ -1,0 +1,6 @@
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA 3.0\bin\x86\Debug\RapidXNA3.0.xml
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA 3.0\bin\x86\Debug\RapidXNA3.0.dll
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA 3.0\bin\x86\Debug\RapidXNA3.0.pdb
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA 3.0\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA 3.0\obj\x86\Debug\RapidXNA3.0.dll
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA 3.0\obj\x86\Debug\RapidXNA3.0.pdb

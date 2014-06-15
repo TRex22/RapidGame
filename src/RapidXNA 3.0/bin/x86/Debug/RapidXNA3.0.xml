@@ -1,0 +1,431 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RapidXNA3.0</name>
+    </assembly>
+    <members>
+        <member name="T:RapidXNA.RapidEngine">
+            <summary>
+            The Main Part of RapidXNA. This is the engine class.
+            The Audio framework requires certain input and so it will
+            be an overloaded constructor. That way there will be backwards
+            Compatibility for older projects.
+            </summary>
+        </member>
+        <member name="M:RapidXNA.RapidEngine.#ctor(Microsoft.Xna.Framework.Game,Microsoft.Xna.Framework.Graphics.GraphicsDevice,Microsoft.Xna.Framework.Content.ContentManager,RapidXNA.Models.GameScreen)">
+            <summary>
+            Rapid Engine Default Constructor Without Audio Framework.
+            The Default colours can be controlled by using the SettingsService.
+            This method has been depreciated.
+            To use this method all exit calls must be made in the game1.cs class.
+            <seealso cref="M:RapidXNA.Services.SettingsManager.LoadSettings"/>
+            </summary>
+            <param name="game"></param>
+            <param name="graphicsDevice"></param>
+            <param name="contentManagerManager"></param>
+            <param name="initialGameScreen"></param>
+        </member>
+        <member name="M:RapidXNA.RapidEngine.Exit">
+            <summary>
+            Allow exiting of the game.
+            This will also force an immediate garbage collection of all generations.
+            <seealso cref="!:EngineServices.Exit"/>
+            </summary>
+        </member>
+        <member name="M:RapidXNA.RapidEngine.Update(Microsoft.Xna.Framework.GameTime)">
+            <summary>
+            Normal XNA Update
+            For more information please refer to <see href="http://msdn.microsoft.com/en-us/library/microsoft.xna.framework.game.update.aspx">XNA Documentation</see>
+            </summary>
+        </member>
+        <member name="M:RapidXNA.RapidEngine.Draw(Microsoft.Xna.Framework.GameTime)">
+            <summary>
+            Normal XNA Draw
+            The Default colours can be controlled by using the SettingsService.
+            <seealso cref="M:RapidXNA.Services.SettingsManager.LoadSettings"/>
+            For more information please refer to <see href="http://msdn.microsoft.com/en-us/library/microsoft.xna.framework.game.draw.aspx">XNA Documentation</see>
+            </summary>
+        </member>
+        <member name="P:RapidXNA.RapidEngine.GraphicsDevice">
+            <summary>
+            The Graphics Device Object. This is the object responsible for connecting to the internal
+            XNA framework's GraphicsDevice object in the Rapid framework. 
+            For more information please refer to <see href="http://msdn.microsoft.com/en-us/library/microsoft.xna.framework.graphics.graphicsdevice.aspx">XNA Documentation</see>
+            </summary>
+        </member>
+        <member name="P:RapidXNA.RapidEngine.ContentManager">
+            <summary>
+            The Content Manager Object. This is the object responsible for connecting to the internal
+            XNA framework's ContentManager object in the Rapid framework.
+            For more information please refer to <see href="http://msdn.microsoft.com/en-us/library/microsoft.xna.framework.content.contentmanager.aspx">XNA Documentation</see>
+            </summary>
+        </member>
+        <member name="P:RapidXNA.RapidEngine.SpriteBatch">
+            <summary>
+            The Sprite Batch Object
+            For more information please refer to <see href="http://msdn.microsoft.com/en-us/library/microsoft.xna.framework.graphics.spritebatch.aspx">XNA Documentation</see>
+            </summary>
+        </member>
+        <member name="P:RapidXNA.RapidEngine.EngineServices">
+            <summary>
+            An object of the Engine Services. This allows a gateway to all the available engine services which are not
+            directly accessible.
+            </summary>
+        </member>
+        <member name="P:RapidXNA.RapidEngine.ScreenService">
+            <summary>
+            Quick Access Screen Service. This is one of the Engine Services which is directly accessible.
+            This service controls the screens created through the RapidXNA framework.
+            </summary>
+        </member>
+        <member name="P:RapidXNA.RapidEngine.InputService">
+            <summary>
+            Quick Access Input Service. This is one of the Engine Services which is directly accessible.
+            The Input Service helps to deal with different types of inputs for different platforms.
+            </summary>
+        </member>
+        <member name="E:RapidXNA.RapidEngine.OnFinalDraw">
+            <summary>
+            Event handler for Final Draw
+            </summary>
+        </member>
+        <member name="T:RapidXNA.OnFinalDrawEventHandler">
+            <summary>
+            Event delegate for Final Draw
+            </summary>
+            <param name="renderTarget">The renderTarget instance from RapidEngine</param>
+        </member>
+        <member name="M:RapidXNA.Interfaces.IGameScreen.Load">
+            <summary>
+            Normal Load, Update, Draw methods
+            Load is threaded
+            </summary>
+        </member>
+        <member name="M:RapidXNA.Interfaces.IGameScreen.PreLoad">
+            <summary>
+            Methods for Load, Update, Draw for use when making a loading screen for a given game screen
+            - This Update and Draw is used while waiting for the asynchronous load to finish
+            - PreLoad is a synchronous load called before the asynchronous load starts
+            </summary>
+        </member>
+        <member name="F:RapidXNA.Models.GameScreen.Engine">
+            <summary>
+            Engine instance for the game screen to leverage
+            </summary>
+        </member>
+        <member name="F:RapidXNA.Models.GameScreen.LoadScreen">
+            <summary>
+            Lets ScreenService know if this screen has a LoadScreen section
+            </summary>
+        </member>
+        <member name="M:RapidXNA.Models.GameScreen.Load">
+            <summary>
+            Normal Load, Update, Draw methods
+            Load is threaded
+            </summary>
+        </member>
+        <member name="M:RapidXNA.Models.GameScreen.PreLoad">
+            <summary>
+            Methods for Load, Update, Draw for use when making a loading screen for a given game screen
+            - This Update and Draw is used while waiting for the asynchronous load to finish
+            - PreLoad is a synchronous load called before the asynchronous load starts
+            </summary>
+        </member>
+        <member name="T:RapidXNA.Services.ConvertService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:RapidXNA.Models.RapidService">
+            <summary>
+            This is the model which produces other services for RapidXNA.
+            </summary>
+        </member>
+        <member name="T:RapidXNA.Interfaces.IRapidService">
+            <summary>
+            This is the interface used to create new services for RapidXNA.
+            </summary>
+        </member>
+        <member name="M:RapidXNA.Interfaces.IRapidService.Init">
+            <summary>
+            Over-ridable XNA Init function which is called after the Engine is set (so full engine access can be given in this function)
+            <remarks>Note: Services will probably never need an actual Load(), but Init() can serve that purpose</remarks>
+            </summary>
+        </member>
+        <member name="M:RapidXNA.Interfaces.IRapidService.Update(Microsoft.Xna.Framework.GameTime)">
+            <summary>
+            Over-ridable Normal XNA Update function.
+            For more information please refer to <see href="http://msdn.microsoft.com/en-us/library/microsoft.xna.framework.game.update.aspx">XNA Documentation</see>
+            </summary>
+        </member>
+        <member name="M:RapidXNA.Interfaces.IRapidService.Draw(Microsoft.Xna.Framework.GameTime)">
+            <summary>
+            Over-ridable Normal XNA Draw function.
+            For more information please refer to <see href="http://msdn.microsoft.com/en-us/library/microsoft.xna.framework.game.draw.aspx">XNA Documentation</see>
+            </summary>
+        </member>
+        <member name="F:RapidXNA.Models.RapidService.Engine">
+            <summary>
+            Engine instance for the Service to use
+            </summary>
+        </member>
+        <member name="M:RapidXNA.Models.RapidService.Init">
+            <summary>
+            Over-ridable XNA Init function which is called after the Engine is set (so full engine access can be given in this function)
+            <remarks>Note: Services will probably never need an actual Load(), but Init() can serve that purpose</remarks>
+            </summary>
+        </member>
+        <member name="M:RapidXNA.Models.RapidService.Update(Microsoft.Xna.Framework.GameTime)">
+            <summary>
+            Over-ridable Normal XNA Update function.
+            For more information please refer to <see href="http://msdn.microsoft.com/en-us/library/microsoft.xna.framework.game.update.aspx">XNA Documentation</see>
+            </summary>
+        </member>
+        <member name="M:RapidXNA.Models.RapidService.Draw(Microsoft.Xna.Framework.GameTime)">
+            <summary>
+            Over-ridable Normal XNA Draw function.
+            For more information please refer to <see href="http://msdn.microsoft.com/en-us/library/microsoft.xna.framework.game.draw.aspx">XNA Documentation</see>
+            </summary>
+        </member>
+        <member name="F:RapidXNA.Models.RapidService.DrawEnabled">
+            <summary>
+            DrawEnabled: tells RapidEngine if this Service needs to draw anything
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:RapidXNA.Services.ConvertService.Init" -->
+        <member name="T:RapidXNA.EngineServices">
+            <summary>
+            The RapidXNA core services.
+            </summary>
+        </member>
+        <member name="M:RapidXNA.EngineServices.#ctor(RapidXNA.RapidEngine)">
+            <summary>
+            The default constructor instantiates a local object of the RapidEngine.
+            </summary>
+            <param name="rapidEngine"></param>
+        </member>
+        <member name="M:RapidXNA.EngineServices.Exit(Microsoft.Xna.Framework.Game)">
+            <summary>
+            This function should theoretically kill the main instance of the game and the RapidEngine.
+            There is a bug in RapidXNA 3.0 where this may not happen.
+            Rather use the XNA exit function to kill the game.
+            </summary>
+            <param name="game"></param>
+            <exception cref="T:System.InvalidOperationException">
+            This function should theoretically kill the main instance of the game and the RapidEngine.
+            There is a bug in RapidXNA 3.0 where this may not happen.
+            Rather use the XNA exit function to kill the game.
+            </exception>
+        </member>
+        <member name="F:RapidXNA.EngineServices._serviceSeed">
+            <summary>
+            Seeding value for Service IDs
+            </summary>
+        </member>
+        <member name="M:RapidXNA.EngineServices.First``1">
+            <summary>
+            Gives the first instance found of a Service type
+            </summary>
+            <typeparam name="T">The type of service you need to access</typeparam>
+            <returns>The first instance of type T in services</returns>
+        </member>
+        <member name="M:RapidXNA.EngineServices.Add(RapidXNA.Models.RapidService)">
+            <summary>
+            Add a service to the Services structure
+            </summary>
+            <param name="service">The Service instance to add</param>
+            <returns>The ID of the added service</returns>
+        </member>
+        <member name="M:RapidXNA.EngineServices.Update(Microsoft.Xna.Framework.GameTime)">
+            <summary>
+            Update all the services
+            - Updates ScreenService last for most up-to-date input snapshots
+            </summary>
+        </member>
+        <member name="M:RapidXNA.EngineServices.Draw(Microsoft.Xna.Framework.GameTime)">
+            <summary>
+            Draws each service that has DrawEnabled=true
+            - No special ordering
+            </summary>
+        </member>
+        <member name="P:RapidXNA.EngineServices.Item(System.Int32)">
+            <summary>
+            Retrieve a service by ID
+            </summary>
+            <param name="i">The Service ID to retrieve</param>
+            <returns>The service of ID</returns>
+        </member>
+        <member name="T:RapidXNA.Services.AppSettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:RapidXNA.Services.AppSettings.#ctor">
+            <summary>
+            Sets Default Hardcoded Settings
+            </summary>
+        </member>
+        <member name="P:RapidXNA.Services.AppSettings.HasRunOnce">
+            <summary>
+            Has Run Once setting to determine whether settings need to be generated.
+            </summary>
+        </member>
+        <member name="P:RapidXNA.Services.AppSettings.IsFullScreen">
+            <summary>
+            Determine fullscreen true or false
+            </summary>
+        </member>
+        <member name="P:RapidXNA.Services.AppSettings.EnableMusic">
+            <summary>
+            Bool to Enable/Disable Music
+            </summary>
+        </member>
+        <member name="P:RapidXNA.Services.AppSettings.EnableSfx">
+            <summary>
+            Bool to Enable/Disable SFX
+            </summary>
+        </member>
+        <member name="F:RapidXNA.Services.InputService._keyboard">
+            <summary>
+            Contains reference to all the input types supported (nicely wrapped for convenience and ease of use)
+            </summary>
+        </member>
+        <member name="M:RapidXNA.Services.InputService.KeyboardHandler.KeyPress(Microsoft.Xna.Framework.Input.Keys)">
+            <summary>
+            Check if a key was pressed, this will trigger exclusively over KeyHeld
+            </summary>
+            <param name="k">The key to check</param>
+            <returns></returns>
+        </member>
+        <member name="M:RapidXNA.Services.InputService.KeyboardHandler.KeyHeld(Microsoft.Xna.Framework.Input.Keys)">
+            <summary>
+            Check if a key is currently being held down, this wont trigger at initial press
+            </summary>
+            <param name="k">The key to check</param>
+            <returns></returns>
+        </member>
+        <member name="M:RapidXNA.Services.InputService.KeyboardHandler.KeyLeft(Microsoft.Xna.Framework.Input.Keys)">
+            <summary>
+            Check if a key was released
+            </summary>
+            <param name="k">The key to check</param>
+            <returns></returns>
+        </member>
+        <member name="M:RapidXNA.Services.InputService.KeyboardHandler.AddKey(Microsoft.Xna.Framework.Input.Keys)">
+            <summary>
+            Add a key to the list of keys you want the pressed length of time for
+            </summary>
+            <param name="k">The key to check</param>
+        </member>
+        <member name="M:RapidXNA.Services.InputService.KeyboardHandler.HeldFor(Microsoft.Xna.Framework.Input.Keys)">
+            <summary>
+            Checks how long a key was pressed for so far in millisecond
+            </summary>
+            <param name="k">The key to check</param>
+            <returns></returns>
+        </member>
+        <member name="M:RapidXNA.Services.InputService.KeyboardHandler.ReleasedTime(Microsoft.Xna.Framework.Input.Keys)">
+            <summary>
+            Check for how long a key was pressed for after release
+            </summary>
+            <param name="k">The key to check</param>
+            <returns></returns>
+        </member>
+        <member name="M:RapidXNA.Services.InputService.GamePadHandler.LeftTriggerValue(System.Int32)">
+            <summary>
+            Triggers functions
+            </summary>
+        </member>
+        <member name="M:RapidXNA.Services.InputService.GamePadHandler.LeftBumberPressed(System.Int32)">
+            <summary>
+            Bumpers
+            </summary>
+        </member>
+        <member name="M:RapidXNA.Services.InputService.GamePadHandler.LeftStick(System.Int32)">
+            <summary>
+            Sticks
+            </summary>
+        </member>
+        <member name="M:RapidXNA.Services.InputService.GamePadHandler.LeftPressed(System.Int32)">
+            <summary>
+            DPAD
+            </summary>
+        </member>
+        <member name="M:RapidXNA.Services.ScreenService.#ctor">
+            <summary>
+            Let RapidEngine know this Service Draws to the screen
+            </summary>
+        </member>
+        <member name="F:RapidXNA.Services.ScreenService._gameScreens">
+            <summary>
+            List (faking stack functionality) containing the game screens and popup screens
+            </summary>
+        </member>
+        <member name="F:RapidXNA.Services.ScreenService._popupScreens">
+            <summary>
+            List (faking stack functionality) containing the game screens and popup screens
+            </summary>
+        </member>
+        <member name="F:RapidXNA.Services.ScreenService._pause">
+            <summary>
+            Helpers to allow functionality to pause the game
+            </summary>
+        </member>
+        <member name="M:RapidXNA.Services.ScreenService.Update(Microsoft.Xna.Framework.GameTime)">
+            <summary>
+            Update either the top popup screen or the top game screen
+            - Adjusts according to if the screen has a loadscreen or on
+            </summary>
+        </member>
+        <member name="M:RapidXNA.Services.ScreenService.Draw(Microsoft.Xna.Framework.GameTime)">
+            <summary>
+            Draws the top game screen, and then if there is a popup screen draws the top popup screen on top of the game screen
+            - Adjusts depending on whether the screens are loading or not
+            </summary>
+        </member>
+        <member name="M:RapidXNA.Services.ScreenService.Show(RapidXNA.Models.GameScreen)">
+            <summary>
+            Add a new game screen to the top of the stack
+            - You cannot add a game screen multiple times
+            </summary>
+            <param name="gs">The IGameScreen to show.</param>
+        </member>
+        <member name="M:RapidXNA.Services.ScreenService.ShowPopup(RapidXNA.Models.GameScreen)">
+            <summary>
+            Add a new popup screen to the top of the stack
+            - You cannot add a popup screen multiple times
+            </summary>
+            <param name="gs">The IGameScreen to popup.</param>
+        </member>
+        <member name="M:RapidXNA.Services.ScreenService.Remove">
+            <summary>
+            Remove the top game screen
+            </summary>
+        </member>
+        <member name="M:RapidXNA.Services.ScreenService.RemovePopup">
+            <summary>
+            Remove the top popup
+            </summary>
+        </member>
+        <member name="M:RapidXNA.Services.ScreenshotService.#ctor">
+            <summary>
+            Hook onto the RapidEngine FinalDraw event
+            </summary>
+        </member>
+        <member name="F:RapidXNA.Services.ScreenshotService._renderTarget">
+            <summary>
+            Gets a copy of the rendertarget
+            </summary>
+        </member>
+        <member name="M:RapidXNA.Services.ScreenshotService.TakeScreenshot">
+            <summary>
+            Take and save a screenshot
+            </summary>
+        </member>
+        <member name="M:RapidXNA.Services.ScreenshotService.AsyncSaveScreenshot">
+            <summary>
+            Asynchronously save the screenshot according to which platform you are on
+            </summary>
+        </member>
+    </members>
+</doc>

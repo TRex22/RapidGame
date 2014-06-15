@@ -1,0 +1,9 @@
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\XNAWindowsTestGame\XNAWindowsTestGame\bin\x86\Debug\XNAWindowsTestGame.exe
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\XNAWindowsTestGame\XNAWindowsTestGame\bin\x86\Debug\XNAWindowsTestGame.pdb
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\XNAWindowsTestGame\XNAWindowsTestGame\bin\x86\Debug\RapidXNA3.0.dll
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\XNAWindowsTestGame\XNAWindowsTestGame\bin\x86\Debug\RapidXNA3.0.pdb
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\XNAWindowsTestGame\XNAWindowsTestGame\bin\x86\Debug\RapidXNA3.0.xml
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\XNAWindowsTestGame\XNAWindowsTestGame\obj\x86\Debug\XNAWindowsTestGame.csprojResolveAssemblyReference.cache
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\XNAWindowsTestGame\XNAWindowsTestGame\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\XNAWindowsTestGame\XNAWindowsTestGame\obj\x86\Debug\XNAWindowsTestGame.exe
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\XNAWindowsTestGame\XNAWindowsTestGame\obj\x86\Debug\XNAWindowsTestGame.pdb

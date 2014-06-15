@@ -1,0 +1,6 @@
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA 3.0\bin\Xbox 360\Release\RapidXNA3.0_360.dll
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA 3.0\bin\Xbox 360\Release\RapidXNA3.0_360.pdb
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA 3.0\obj\Xbox 360\Release\RapidXNA 3.0 360.csprojResolveAssemblyReference.cache
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA 3.0\obj\Xbox 360\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA 3.0\obj\Xbox 360\Release\RapidXNA3.0_360.dll
+C:\Users\Jason\Dropbox\Projects\GitHub\RapidGame\src\RapidXNA 3.0\obj\Xbox 360\Release\RapidXNA3.0_360.pdb
