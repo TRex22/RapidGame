@@ -15,12 +15,12 @@ namespace RapidXNA
      * Implement data structures
      * Merge helpers
      * Start screen issue
-     * implement error capillary rise ie catches bubble to an error service
+     * implement error capillary rise i.e. catches bubble to an error service
      * Resharper Parameters rules evaluate
      * Past TODO's close
      * Perhaps have local configs for WP7 and XBOX to solve problem
      * Do some parallel stuff
-     * Cuda implementation as well
+     * CUDA implementation as well
      */
 
     /// <summary>
@@ -72,7 +72,7 @@ namespace RapidXNA
         public InputService InputService { get { return (InputService)_engineServices[1]; } }
 
         /// <summary>
-        /// Quick access to the UI Service. This is ony of the Engine Services which is directly accessible.
+        /// Quick access to the UI Service. This is the only of the Engine Services which is directly accessible.
         /// The UI Service gives some basic UI functionality to RapidGame in an easy-to-use manner.
         /// </summary>
         public UIService UIService { get { return (UIService)_engineServices[2]; } }

@@ -5,21 +5,27 @@ using RapidXNA.Models.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace RapidXNA.Services
 {
+    /// <summary>
+    /// Quick access to the UI Service. This is the only of the Engine Services which is directly accessible.
+    /// The UI Service gives some basic UI functionality to RapidGame in an easy-to-use manner.
+    /// </summary>
     public class UIService : RapidService
     {
         private Texture2D _blank;
+        /// <summary>
+        /// This initiates the UIService.
+        /// </summary>
         public override void Init()
         {
             _blank = new Texture2D(Engine.GraphicsDevice, 1, 1);
 
-            Color[] c_data = new Color[1];
-            _blank.GetData<Color>(c_data);
-            c_data[0] = Color.White;
-            _blank.SetData<Color>(c_data);
+            var cData = new Color[1];
+            _blank.GetData(cData);
+            cData[0] = Color.White;
+            _blank.SetData(cData);
 
             //Default to after the other services.
             UpdateOrder = 1;
@@ -30,58 +36,66 @@ namespace RapidXNA.Services
             DrawEnabled = true;
         }
 
-        private List<UIBlank> _content = new List<UIBlank>();
+        private readonly List<UIBlank> _content = new List<UIBlank>();
 
         /// <summary>
         /// Register a UI item.
         /// </summary>
-        /// <param name="ui_item">The item to register</param>
-        public void Register(UIBlank ui_item)
+        /// <param name="uiItem">The item to register</param>
+        public void Register(UIBlank uiItem)
         {
-            if (!_content.Contains(ui_item))
-                _content.Add(ui_item);
+            if (!_content.Contains(uiItem))
+                _content.Add(uiItem);
         }
 
         /// <summary>
-        /// Deregistter a UI item, this is to be used when a screen is never reused but registered UI elements.
+        /// De-register a UI item, this is to be used when a screen is never reused but registered UI elements.
         /// </summary>
-        /// <param name="ui_item">The item to deregister.</param>
-        public void Deregister(UIBlank ui_item)
+        /// <param name="uiItem">The item to De-register.</param>
+        public void Deregister(UIBlank uiItem)
         {
-            if (_content.Contains(ui_item))
-                _content.Remove(ui_item);
+            if (_content.Contains(uiItem))
+                _content.Remove(uiItem);
         }
 
         /// <summary>
-        /// Deactivate all UI elements, this is to simplify UI workflow.
+        /// Deactivate all UI elements, this is to simplify UI work-flow.
         /// </summary>
         public void DeactivateAll()
         {
-            for (int i = 0; i < _content.Count; i++)
-                _content[i].IsActive = false;
+            foreach (var t in _content)
+                t.IsActive = false;
         }
 
+        /// <summary>
+        /// Update the UI created by the UIService
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Update(GameTime gameTime)
         {
-            var _updateList = (from item in _content
+            var updateList = (from item in _content
                                where item.IsActive
                                select item).ToList();
 
-            for (int i = 0; i < _updateList.Count; i++)
-                _updateList[i].Update(gameTime, this);
+            foreach (var t in updateList)
+                t.Update(gameTime, this);
         }
 
+        /// <summary>
+        /// Draw the UI created by the UIService
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Draw(GameTime gameTime)
         {
-            var _drawList = (from item in _content
+            var drawList = (from item in _content
                              where item.IsActive
                              orderby item.SortOrder
                              select item).ToList();
-            if (_drawList.Count > 0)
+            if (drawList.Count > 0)
             {
                 Engine.SpriteBatch.Begin();
-                for (int i = 0; i < _drawList.Count; i++)
-                    _drawList[i].Draw(gameTime, this);
+                foreach (var t in drawList)
+                    t.Draw(gameTime, this);
                 Engine.SpriteBatch.End();
             }
         }
@@ -96,8 +110,11 @@ namespace RapidXNA.Services
             Engine.SpriteBatch.Draw(_blank, position, color);
         }
 
-        private SpriteFont _defaultFont = null;
+        private SpriteFont _defaultFont;
 
+        /// <summary>
+        /// This is the constructor method for the default font.
+        /// </summary>
         public SpriteFont DefaultFont
         {
             get { return _defaultFont; }
@@ -106,7 +123,6 @@ namespace RapidXNA.Services
 
         /// <summary>
         /// Draw text using the set default font.
-        /// 
         /// Be sure you set the UIService DefaultFont property before using this method.
         /// </summary>
         /// <param name="text">The text you want to display.</param>
