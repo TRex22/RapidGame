@@ -13,6 +13,12 @@ namespace RapidXNA.Services
         public ScreenService()
         {
             DrawEnabled = true;
+
+            //This service needs to update last.
+            UpdateOrder = int.MaxValue;
+
+            //This service needs to draw first (usually)
+            DrawOrder = -999;
         }
 
         /// <summary>

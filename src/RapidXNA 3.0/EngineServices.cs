@@ -112,12 +112,16 @@ namespace RapidXNA
         /// </summary>
         public void Update(GameTime gameTime)
         {
-            for (var i = 1; i < _services.Count; i++)
+            var _orderedServices = (from item in _services.Values
+                                    orderby item.UpdateOrder
+                                    select item).ToList();
+
+            for (var i = 0; i < _orderedServices.Count; i++)
             {
-                _services[i].Update(gameTime);
+                _orderedServices[i].Update(gameTime);
             }
             //Update the ScreenService last
-            _services[0].Update(gameTime);
+            //_services[0].Update(gameTime); //no longer needed`
         }
 
         /// <summary>
@@ -126,9 +130,14 @@ namespace RapidXNA
         /// </summary>
         public void Draw(GameTime gameTime)
         {
-            foreach (var service in _services.Values.Where(service => service.DrawEnabled))
+            var _orderedServices = (from item in _services.Values
+                                    where item.DrawEnabled
+                                    orderby item.DrawOrder
+                                    select item).ToList();
+
+            for (int i = 0; i < _orderedServices.Count; i++)
             {
-                service.Draw(gameTime);
+                _orderedServices[i].Draw(gameTime);
             }
         }
     }

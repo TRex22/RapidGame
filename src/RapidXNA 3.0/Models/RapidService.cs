@@ -14,6 +14,16 @@ namespace RapidXNA.Models
         public RapidEngine Engine;
 
         /// <summary>
+        /// Used to adjust the order in which services need to be updated.
+        /// </summary>
+        public int UpdateOrder;
+
+        /// <summary>
+        /// Used to adjust the order in which services need to be drawn.
+        /// </summary>
+        public int DrawOrder;
+
+        /// <summary>
         /// Over-ridable XNA Init function which is called after the Engine is set (so full engine access can be given in this function)
         /// <remarks>Note: Services will probably never need an actual Load(), but Init() can serve that purpose</remarks>
         /// </summary>

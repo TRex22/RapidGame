@@ -71,6 +71,12 @@ namespace RapidXNA
         /// </summary>
         public InputService InputService { get { return (InputService)_engineServices[1]; } }
 
+        /// <summary>
+        /// Quick access to the UI Service. This is ony of the Engine Services which is directly accessible.
+        /// The UI Service gives some basic UI functionality to RapidGame in an easy-to-use manner.
+        /// </summary>
+        public UIService UIService { get { return (UIService)_engineServices[2]; } }
+
 
         /// <summary>
         /// Event handler for Final Draw
@@ -116,6 +122,7 @@ namespace RapidXNA
             _engineServices = new EngineServices(this);
             _engineServices.Add(new ScreenService());
             _engineServices.Add(new InputService());
+            _engineServices.Add(new UIService());
             
             ScreenService.Show(initialGameScreen);
         }

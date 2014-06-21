@@ -21,10 +21,12 @@ namespace XNAWindowsTestGame
         private RapidEngine _rapidEngine;
         //SpriteBatch _spriteBatch;
 
-        public Game1()
+        public Game1() 
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+
+            IsMouseVisible = true;
         }
 
         /// <summary>

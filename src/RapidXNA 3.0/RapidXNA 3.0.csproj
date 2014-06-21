@@ -104,6 +104,8 @@
     <Compile Include="Engine.cs" />
     <Compile Include="Models\GameScreen.cs" />
     <Compile Include="Interfaces\IGameScreen.cs" />
+    <Compile Include="Models\UI\UIBlank.cs" />
+    <Compile Include="Models\UI\UIRect.cs" />
     <Compile Include="Services\ConvertService.cs" />
     <Compile Include="Interfaces\IRapidService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -114,6 +116,7 @@
     <Compile Include="Services\QuadTreeService.cs" />
     <Compile Include="Services\ScreenService.cs" />
     <Compile Include="Services\ScreenshotService.cs" />
+    <Compile Include="Services\UIService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="gear-hammer.ico" />
