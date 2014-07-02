@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. RapidGame.tests", "1. RapidGame.tests.csproj", "{B9845590-0151-45A3-ABD1-167E3A80C31A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0. RapidGame.core", "..\RapidGame.core\0. RapidGame.core.csproj", "{EF5E0F86-56C6-4EB9-AB78-25C54376429E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{75BD6DE3-303A-4950-8DB7-0131BBF282A7}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\.gitattributes = ..\..\.gitattributes
+		..\..\.gitignore = ..\..\.gitignore
+		..\..\DOCUMENTATION.md = ..\..\DOCUMENTATION.md
+		..\..\LICENSE = ..\..\LICENSE
+		..\..\README.md = ..\..\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9845590-0151-45A3-ABD1-167E3A80C31A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9845590-0151-45A3-ABD1-167E3A80C31A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9845590-0151-45A3-ABD1-167E3A80C31A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9845590-0151-45A3-ABD1-167E3A80C31A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF5E0F86-56C6-4EB9-AB78-25C54376429E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF5E0F86-56C6-4EB9-AB78-25C54376429E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF5E0F86-56C6-4EB9-AB78-25C54376429E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF5E0F86-56C6-4EB9-AB78-25C54376429E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
