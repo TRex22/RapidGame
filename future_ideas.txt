@@ -1,0 +1,30 @@
+I have quite a few ideas for the direction RapidGame should go.
+
+I would like the framework to be well designed from the offset and quite flexible.
+The diagram attached I did during a coms lecture. (It was an intro to Java OOP, I have been to way too many of those) Its not necessarily a 100% correct diagram.
+
+The problem with RapidXNA are too severe to sort of get around and then do some horrible voodoo to fix. rather we have an opportunity to redesign and make something really cool.
+
+We need to setup a standard and some design documents. I use Resharper which standardises my code to either default (What I use) or a defined way. I am a little OCD and when my Visual Studios picks up spelling mistakes in comments or code renames or even just arbitrary code like using String instead of var, I tend to change it. I don't mean anything by it but when I see the highlighting it does get to me. We need a standard way of creating APIs ect...
+
+I really liked what you did with services. At Entelect I helped to standardise an API subsystem, where I helped to create a generic class which I called a builder. Im sure there is some proper name for it and it has been used before. It works on the same principle as factories in MVC type applications but for classes and types of code rather than models. I would like to change it a bit so that we have a main builder which defines how the other builders need to operate. This would be in the core dll. 
+
+Every tentacle of the framework and the extended dlls of the framework would use generics for the different defined parts, such as services or extended built in game features.
+
+Also different parts of the framework would probably have to be split up to allow for maximum support for different technologies. There will also be the need for wrappers (and a WrapperBuilder) to connect to different frameworks. The engine should be the head of everything, ie calling all the needed functions, frameworks and environs. The game and game maker will only have to worry about game specific code and resources which are then piped into the engine in a readable way.
+
+The diagram attached allows for the programmer to add or remove any modular component (even external ie SDL 2) from his specific project allowing for great flexibility. 
+
+It would also be useful if there were 'pipes' or 'tunnels' which allowed direct access to the lower and lowest levels of abstraction if needed.
+
+One thing we definitely need is to use an auto-builder and CI (continuous integration tester).
+
+Also the license. The MIT license might not be the way to go. Maybe zlib? like SDL 2. Even that could be problematic. Not really sure.
+
+We should probably make a GitHub group called RapidGame if we step up the development.
+
+Here a cool Steam Developer talk I found. The youtube talk is very informative about SDL 2.
+https://www.youtube.com/watch?v=MeMPCSqQ-34
+
+I forgot documentation. Its pretty important to make a good framework.
+Auto Generated as well as some written stuff and perhaps tutorials.
